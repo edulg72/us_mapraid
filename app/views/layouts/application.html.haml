@@ -1,0 +1,31 @@
+!!! 5
+%html
+  %head
+    %title= t('app-title')
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    %header.navbar.navbar-fixed-top.bg-info
+      %nav.navbar-inner
+        .container
+          .row
+            .col-sm-8.col-md-8.col-lg-8
+              %h4= t('app-title')
+            .col-sm-4.col-md-4.col-lg-4
+              %ol.breadcrumb.text-right
+                - for i in 0...@nav.size
+                  - if i == 0
+                    %li.active.small= t(@nav[i].keys[0])
+                  - else
+                    %li.small
+                      %a{ :href => @nav[i][@nav[i].keys[0]]}= @nav[i].keys[0]
+    #main{:role => "main"}
+      .container
+        .row
+          .span12
+            = yield
+    %footer.container
+      .row
+        .span12
+          .text-center (c)2015 edulg72@gmail.com

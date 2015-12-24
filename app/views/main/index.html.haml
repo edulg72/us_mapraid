@@ -1,0 +1,11 @@
+.container
+  .row
+    - @areas.order('id').each do |a|    
+      .col-sm-12.col-md-6.col-lg-4
+        .panel.panel-default
+          .panel-heading
+            .panel-title= a.name
+          .map
+            = render partial: "#{a.map_name}" 
+          Segmentos desconectados
+          %span.badge= a.segments.disconnected.count
