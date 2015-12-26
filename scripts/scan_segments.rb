@@ -15,7 +15,7 @@ require 'pg'
 require 'json'
 
 if ARGV.size < 7
-  puts "Usage: ruby scan_segments.rb <user> <password> <west longitude> <north latitude> <east longitude> <south latitude> <step> [transactions per analyze]"
+  puts "Usage: ruby scan_segments.rb <user> <password> <west longitude> <north latitude> <east longitude> <south latitude> <step>"
   exit
 end
 
@@ -26,7 +26,6 @@ LatNorte = ARGV[3].to_f
 LongLeste = ARGV[4].to_f
 LatSul = ARGV[5].to_f
 Passo = ARGV[6].to_f
-LimitTransactions = (ARGV.size > 7 ? ARGV[7].to_i : 100)
 
 puts "Starting analysis on [#{LongOeste} #{LatNorte}] - [#{LongLeste} #{LatSul}]"
 
@@ -47,7 +46,8 @@ db.prepare('insere_segmento',"insert into segments (id,longitude,latitude,roadty
 
 db.exec_params('delete from streets where id in (select street_id from segments where longitude between $1 and $2 and latitude between $3 and $4)',[LongOeste,LongLeste,LatSul,LatNorte])
 db.exec_params('delete from segments where longitude between $1 and $2 and latitude between $3 and $4',[LongOeste,LongLeste,LatSul,LatNorte])
-db.exec('vacuum')
+db.exec('vacuum streets')
+db.exec('vacuum segments')
 
 def busca(db,agent,longOeste,latNorte,longLeste,latSul,passo,exec)
   lonIni = longOeste
@@ -59,7 +59,6 @@ def busca(db,agent,longOeste,latNorte,longLeste,latSul,passo,exec)
       latFim = [(latIni - passo).round(13), latSul].max
       latFim = latIni - passo if (latIni - latFim) < (passo / 2)
       area = [lonIni, latIni, lonFim, latFim]
-      puts "=> [(#{lonIni} #{latIni}),(#{lonFim} #{latFim})]"
 
       begin
         wme = agent.get "https://www.waze.com/row-Descartes-live/app/Features?roadTypes=1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C10%2C15%2C16%2C17%2C18%2C19%2C20&zoom=3&bbox=#{area.join('%2C')}"
@@ -95,10 +94,9 @@ def busca(db,agent,longOeste,latNorte,longLeste,latSul,passo,exec)
             db.exec_prepared('insere_rua', [s['id'],s['name'],s['cityID'],s['isEmpty']])
           end
         end
-        db.exec('vacuum')
+        db.exec('vacuum streets')
 
         # Coleta os dados sobre os segmentos na area
-        count = 0
         json['segments']['objects'].each do |s|
           seg = db.exec_params('select extract(epoch from last_edit_on) as updatedon from segments where id = $1',[s['id']])
           # Se o segmento é novo ou sua data de alteração é diferente da anterior então insere/altera o banco
@@ -106,14 +104,9 @@ def busca(db,agent,longOeste,latNorte,longLeste,latSul,passo,exec)
             db.exec_params('delete from segments where id = $1',[s['id']]) if seg.ntuples > 0
             (longitude, latitude) = s['geometry']['coordinates'][(s['geometry']['coordinates'].size / 2)]
             db.exec_prepared('insere_segmento',[s['id'], longitude, latitude, s['roadType'], s['level'], s['lockRank'], (s['updatedOn'].nil? ? s['createdBy'] : s['updatedBy']), (s['updatedOn'].nil? ? Time.at(s['createdOn']/1000) : Time.at(s['updatedOn']/1000)), s['primaryStreetID'],s['length'],((s['fwdDirection'] and s['toConnections'].size > 0) or (s['revDirection'] and s['fromConnections'].size > 0)),s['fwdDirection'],s['revDirection'],s['fwdMaxSpeed'],s['revMaxSpeed']])
-            count += 1
-            if count > LimitTransactions
-              puts "Vacuuming..."
-              db.exec('vacuum')
-              count = 0
-            end
           end
         end
+        db.exec('vacuum segments')
 
       rescue Mechanize::ResponseCodeError, NoMethodError
        # Caso o problema tenha sido no tamanho do pacote de resposta, divide a area em 4 pedidos menores (limitado a 3 reducoes)
