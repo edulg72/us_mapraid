@@ -2,19 +2,12 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.1.4'
 
-### OpenShift Online changes:
-
 # Fix the conflict with the system 'rake':
 gem 'rake', '~> 0.9.6'
 
 # Support for databases and environment.
 # Use 'sqlite3' for testing and development and mysql and postgresql
 # for production.
-#
-# To speed up the 'git push' process you can exclude gems from bundle install:
-# For example, if you use rails + mysql, you can:
-#
-# $ rhc env set BUNDLE_WITHOUT="development test postgresql"
 #
 group :development, :test do
 #  gem 'pg'
@@ -25,8 +18,6 @@ end
 group :production, :postgresql do
   gem 'pg'
 end
-
-### / OpenShift changes
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
