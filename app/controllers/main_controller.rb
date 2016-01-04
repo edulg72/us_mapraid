@@ -6,14 +6,21 @@ class MainController < ApplicationController
   end
   
   def segments
-    @city = CityMapraid.find(params['id'])
+    @area = CityMapraid.find(params['id'])
     @update = Update.find('segments')
-    @nav = [{@city.name => "/segments/#{@city.gid}"},{ t('nav-first-page') => '/'}]
+    @nav = [{@area.name => "/segments/#{@area.gid}"},{ t('nav-first-page') => '/'}]
+  end
+  
+  def segments_state
+    @area = Area.find(params[:id])
+    @update = Update.find('segments')
+    @nav = [{@area.name => "#"},{ t('nav-first-page') => '/'}]
+    render :segments
   end
 
   def admin
     @areas = Area.others
-    @nav = [{ t('nav-first-page') => '/'}]
+    @nav = [{'Admin' => "#"},{ t('nav-first-page') => '/'}]
     render :index
   end
 end
