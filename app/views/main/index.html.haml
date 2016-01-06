@@ -13,5 +13,5 @@
               %a{:href => "/segments_state/#{a.id}"} Segmentos desconectados
               %span.badge= a.segments.drivable.disconnected.count
             %li.list-group-item
-              %a{:href => "/segments_state/#{a.id}"} Segmentos com elevações exageradas
+              %a{:href => "/segments_state/#{a.id}"} Segmentos con elevaci&oacute;n exagerada
               %span.badge= a.segments.where('level < -3 or level > 3').size
