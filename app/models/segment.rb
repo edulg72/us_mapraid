@@ -1,6 +1,7 @@
 class Segment < ActiveRecord::Base
-  has_one :editor, foreign_key: :last_edit_by, class: :user
+  belongs_to :editor, foreign_key: :last_edit_by, class_name: 'User'
   belongs_to :street 
+  belongs_to :city, foreign_key: :city_id, class_name: 'CityMapraid'
 
   scope :drivable, -> {where('roadtype in (1,2,3,4,6,7,8,15,17,20)')}
   scope :disconnected, -> {where('not connected')}

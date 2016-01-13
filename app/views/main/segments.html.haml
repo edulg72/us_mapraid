@@ -1,7 +1,16 @@
 - cache [@area.class.name,@area.id,@update.updated_at] do
   .page-header
-    %h2
+    %h3
       = @area.name
+      - if @area.class.to_s == 'Area'
+        %small.dropdown
+          %button.btn.btn-default.dropdown-toggle{'type' => "button", 'id' => "dropdownCities", 'data-toggle' => "dropdown", 'aria-haspopup' => "true", 'aria-expanded' => "true"}
+            Cidade
+            %span.caret
+          %ul.dropdown-menu{ 'aria-labelledby' => "dropdownCities"}
+            - @area.cities.order(:name).each do |c|
+              %li
+                %a{:href => "/segments/#{c.gid}"}= c.name
       %small= "#{t('updated-at')} #{ @update.updated_at.strftime('%d/%m/%Y %H:%M')}"
   #accordion.panel-group{:role => "tablist", 'aria-multiselecttable' => "true"}
     - if @area.segments.drivable.disconnected.size > 0
@@ -63,5 +72,5 @@
                 %tr
                   %td
                     %a{href: "https://www.waze.com/editor/?zoom=5&lat=#{segment.latitude}&lon=#{segment.longitude}&segments=#{segment.id}", target: 'WME'}= segment.id
-                  %td= segment.last_edit_on.strftime('%s/%m/%Y %H:%M')
+                  %td= segment.last_edit_on.strftime('%d/%m/%Y %H:%M')
                   %td= "#{segment.editor.username}(#{segment.editor.rank})"
