@@ -1,4 +1,6 @@
 class Segment < ActiveRecord::Base
+  self.table_name = 'vw_segments'
+  
   belongs_to :editor, foreign_key: :last_edit_by, class_name: 'User'
   belongs_to :street 
   belongs_to :city, foreign_key: :city_id, class_name: 'CityMapraid'
