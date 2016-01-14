@@ -21,6 +21,7 @@ class MainController < ApplicationController
 
   def admin
     @areas = Area.others
+    @update = Update.find('segments')
     @nav = [{'Admin' => "#"},{ t('nav-first-page') => '/'}]
     render :index
   end
