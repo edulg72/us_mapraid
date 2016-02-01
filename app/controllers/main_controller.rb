@@ -1,7 +1,7 @@
 class MainController < ApplicationController
 
   def index
-    @areas = Area.mapraid
+    @areas = Area.states
     @update = Update.find('segments')
     @nav = [{ t('nav-first-page') => '/'}]
   end
@@ -17,12 +17,5 @@ class MainController < ApplicationController
     @update = Update.find('segments')
     @nav = [{@area.name => "#"},{ t('nav-first-page') => '/'}]
     render :segments
-  end
-
-  def admin
-    @areas = Area.others
-    @update = Update.find('segments')
-    @nav = [{'Admin' => "#"},{ t('nav-first-page') => '/'}]
-    render :index
   end
 end

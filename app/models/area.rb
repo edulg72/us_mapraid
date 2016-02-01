@@ -6,4 +6,5 @@ class Area < ActiveRecord::Base
   
   scope :mapraid, -> {where('id in (1,2,3)')}
   scope :others, -> {where('id not in (1,2,3)')}
+  scope :states, -> {where('id in (4,5)')}
 end
