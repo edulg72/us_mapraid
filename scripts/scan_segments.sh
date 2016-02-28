@@ -1489,7 +1489,7 @@ case "$3" in
     ruby scan_segments.rb $1 $2 -103.47 21.02 -103.2 20.93 0.09
   ;;
   *)
-    echo "Sintaxe: buscaSegments_Mexico.sh <usuario> <senha> <abbreviation de el estado>"
+    echo "Sintaxe: scan_segments.sh <usuario> <senha> <abreviatura de el estado>"
     exit 1
 esac
 
