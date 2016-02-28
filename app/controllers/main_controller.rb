@@ -1,7 +1,7 @@
 class MainController < ApplicationController
 
   def index
-    @areas = Area.states
+    @areas = Area.all
     @update = Update.find('segments')
     @nav = [{ t('nav-first-page') => '/'}]
   end

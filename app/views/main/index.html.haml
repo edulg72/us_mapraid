@@ -1,17 +1,18 @@
 .container
   .row
-    - @areas.order('id').each do |a|    
-      .col-sm-12.col-md-6.col-lg-4
-        .panel.panel-default
-          .panel-heading
-            .panel-title= a.name
-          .panel-body
-            .map
-              = render partial: "#{a.map_name}"
-          %ul.list-group
-            %li.list-group-item
-              %a{:href => "/segments_area/#{a.id}"} Segmentos desconectados
-              %span.badge= a.segments.drivable.disconnected.count
-            %li.list-group-item
-              %a{:href => "/segments_area/#{a.id}"} Segmentos con elevaci&oacute;n exagerada
-              %span.badge= a.segments.where('level < -3 or level > 3').size
+    - @areas.order('name').each do |a|
+      - if (a.segments.drivable.disconnected.count + a.segments.where('level < -3 or level > 3').count + a.segments.important.without_speed.count) > 0
+        .col-sm-12.col-md-6.col-lg-4
+          .panel.panel-default
+            .panel-heading
+              .panel-title= a.name
+            %ul.list-group
+              %li.list-group-item
+                %a{:href => "/segments_area/#{a.id}"} Segmentos desconectados
+                %span.badge= a.segments.drivable.disconnected.count
+              %li.list-group-item
+                %a{:href => "/segments_area/#{a.id}"} Segmentos con elevaci&oacute;n exagerada
+                %span.badge= a.segments.where('level < -3 or level > 3').count
+              %li.list-group-item
+                %a{:href => "/segments_area/#{a.id}"} Segmentos sin velocidad
+                %span.badge= a.segments.important.without_speed.count

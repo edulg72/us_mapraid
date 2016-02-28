@@ -1,104 +1,1497 @@
 #!/bin/bash
 
-cd /var/www/segments/scripts/
+cd /var/www/states/scripts/
 
 echo "Start: $(date '+%d/%m/%Y %H:%M:%S')"
 
-# León
-ruby scan_segments.rb $1 $2 -102.096 21.3302 -101.318 20.6874 0.09
-
-# Merida
-ruby scan_segments.rb $1 $2 -89.8878 21.206 -89.2721 20.6017 0.09
-
-# Queretaro
-ruby scan_segments.rb $1 $2 -100.597 20.971 -100.041 20.2855 0.09
-
-# Distrito Federal
-ruby scan_segments.rb $1 $2 -99.28 19.6 -99.01 19.51 0.09
-ruby scan_segments.rb $1 $2 -99.28 19.51 -99.01 19.42 0.09
-ruby scan_segments.rb $1 $2 -99.37 19.42 -98.92 19.33 0.09
-ruby scan_segments.rb $1 $2 -99.37 19.33 -98.92 19.24 0.09
-ruby scan_segments.rb $1 $2 -99.37 19.24 -98.92 19.15 0.09
-ruby scan_segments.rb $1 $2 -99.37 19.15 -98.92 19.06 0.09
-ruby scan_segments.rb $1 $2 -99.19 19.06 -99.01 18.97 0.09
-
-# Sonora
-ruby scan_segments.rb $1 $2 -114.97 32.5 -114.52 32.41 0.09
-ruby scan_segments.rb $1 $2 -115.06 32.41 -114.16 32.32 0.09
-ruby scan_segments.rb $1 $2 -115.06 32.32 -113.89 32.23 0.09
-ruby scan_segments.rb $1 $2 -115.06 32.23 -113.62 32.14 0.09
-ruby scan_segments.rb $1 $2 -115.06 32.14 -113.35 32.05 0.09
-ruby scan_segments.rb $1 $2 -114.97 32.05 -112.99 31.96 0.09
-ruby scan_segments.rb $1 $2 -114.97 31.96 -112.72 31.87 0.09
-ruby scan_segments.rb $1 $2 -114.97 31.87 -112.45 31.78 0.09
-ruby scan_segments.rb $1 $2 -114.79 31.78 -112.18 31.69 0.09
-ruby scan_segments.rb $1 $2 -114.52 31.69 -111.91 31.6 0.09
-ruby scan_segments.rb $1 $2 -114.34 31.6 -111.55 31.51 0.09
-ruby scan_segments.rb $1 $2 -114.25 31.51 -113.98 31.42 0.09
-ruby scan_segments.rb $1 $2 -113.71 31.51 -111.28 31.42 0.09
-ruby scan_segments.rb $1 $2 -113.71 31.42 -108.67 31.33 0.09
-ruby scan_segments.rb $1 $2 -113.71 31.33 -108.67 31.24 0.09
-ruby scan_segments.rb $1 $2 -113.26 31.24 -108.76 31.15 0.09
-ruby scan_segments.rb $1 $2 -113.17 31.15 -108.67 31.06 0.09
-ruby scan_segments.rb $1 $2 -113.17 31.06 -108.67 30.97 0.09
-ruby scan_segments.rb $1 $2 -113.17 30.97 -108.76 30.88 0.09
-ruby scan_segments.rb $1 $2 -113.17 30.88 -108.85 30.79 0.09
-ruby scan_segments.rb $1 $2 -113.17 30.79 -108.85 30.7 0.09
-ruby scan_segments.rb $1 $2 -113.17 30.7 -108.76 30.61 0.09
-ruby scan_segments.rb $1 $2 -113.08 30.61 -108.58 30.52 0.09
-ruby scan_segments.rb $1 $2 -112.99 30.52 -108.58 30.43 0.09
-ruby scan_segments.rb $1 $2 -112.9 30.43 -108.58 30.34 0.09
-ruby scan_segments.rb $1 $2 -112.9 30.34 -108.49 30.25 0.09
-ruby scan_segments.rb $1 $2 -112.81 30.25 -108.58 30.16 0.09
-ruby scan_segments.rb $1 $2 -112.81 30.16 -108.58 30.07 0.09
-ruby scan_segments.rb $1 $2 -112.81 30.07 -108.58 29.98 0.09
-ruby scan_segments.rb $1 $2 -112.81 29.98 -108.58 29.89 0.09
-ruby scan_segments.rb $1 $2 -112.72 29.89 -108.58 29.8 0.09
-ruby scan_segments.rb $1 $2 -112.63 29.8 -108.49 29.71 0.09
-ruby scan_segments.rb $1 $2 -112.63 29.71 -108.58 29.62 0.09
-ruby scan_segments.rb $1 $2 -112.54 29.62 -108.58 29.53 0.09
-ruby scan_segments.rb $1 $2 -112.45 29.53 -108.58 29.44 0.09
-ruby scan_segments.rb $1 $2 -112.45 29.44 -108.67 29.35 0.09
-ruby scan_segments.rb $1 $2 -112.45 29.35 -108.58 29.26 0.09
-ruby scan_segments.rb $1 $2 -112.54 29.26 -108.67 29.17 0.09
-ruby scan_segments.rb $1 $2 -112.54 29.17 -108.67 29.08 0.09
-ruby scan_segments.rb $1 $2 -112.54 29.08 -108.67 28.99 0.09
-ruby scan_segments.rb $1 $2 -112.54 28.99 -108.67 28.9 0.09
-ruby scan_segments.rb $1 $2 -112.63 28.9 -112.18 28.81 0.09
-ruby scan_segments.rb $1 $2 -112.09 28.9 -108.58 28.81 0.09
-ruby scan_segments.rb $1 $2 -112.63 28.81 -112.18 28.72 0.09
-ruby scan_segments.rb $1 $2 -112.0 28.81 -108.58 28.72 0.09
-ruby scan_segments.rb $1 $2 -112.63 28.72 -112.54 28.63 0.09
-ruby scan_segments.rb $1 $2 -112.36 28.72 -112.27 28.63 0.09
-ruby scan_segments.rb $1 $2 -112.0 28.72 -108.49 28.63 0.09
-ruby scan_segments.rb $1 $2 -111.82 28.63 -108.49 28.54 0.09
-ruby scan_segments.rb $1 $2 -111.82 28.54 -108.49 28.45 0.09
-ruby scan_segments.rb $1 $2 -111.73 28.45 -108.4 28.36 0.09
-ruby scan_segments.rb $1 $2 -111.55 28.36 -108.49 28.27 0.09
-ruby scan_segments.rb $1 $2 -111.46 28.27 -108.76 28.18 0.09
-ruby scan_segments.rb $1 $2 -111.37 28.18 -109.03 28.09 0.09
-ruby scan_segments.rb $1 $2 -111.37 28.09 -108.94 28.0 0.09
-ruby scan_segments.rb $1 $2 -111.46 28.0 -111.28 27.91 0.09
-ruby scan_segments.rb $1 $2 -111.19 28.0 -108.85 27.91 0.09
-ruby scan_segments.rb $1 $2 -111.01 27.91 -110.83 27.82 0.09
-ruby scan_segments.rb $1 $2 -110.74 27.91 -108.85 27.82 0.09
-ruby scan_segments.rb $1 $2 -110.65 27.82 -108.76 27.73 0.09
-ruby scan_segments.rb $1 $2 -110.65 27.73 -108.67 27.64 0.09
-ruby scan_segments.rb $1 $2 -110.65 27.64 -108.58 27.55 0.09
-ruby scan_segments.rb $1 $2 -110.65 27.55 -108.58 27.46 0.09
-ruby scan_segments.rb $1 $2 -110.65 27.46 -108.58 27.37 0.09
-ruby scan_segments.rb $1 $2 -110.65 27.37 -108.58 27.28 0.09
-ruby scan_segments.rb $1 $2 -110.47 27.28 -108.58 27.19 0.09
-ruby scan_segments.rb $1 $2 -110.38 27.19 -108.58 27.1 0.09
-ruby scan_segments.rb $1 $2 -110.11 27.1 -108.49 27.01 0.09
-ruby scan_segments.rb $1 $2 -110.02 27.01 -108.4 26.92 0.09
-ruby scan_segments.rb $1 $2 -109.93 26.92 -108.49 26.83 0.09
-ruby scan_segments.rb $1 $2 -109.93 26.83 -108.49 26.74 0.09
-ruby scan_segments.rb $1 $2 -109.84 26.74 -108.58 26.65 0.09
-ruby scan_segments.rb $1 $2 -109.48 26.65 -108.67 26.56 0.09
-ruby scan_segments.rb $1 $2 -109.39 26.56 -108.76 26.47 0.09
-ruby scan_segments.rb $1 $2 -109.3 26.47 -108.76 26.38 0.09
-ruby scan_segments.rb $1 $2 -109.3 26.38 -109.03 26.29 0.09
+case "$3" in
+  AG)
+    ruby scan_segments.rb $1 $2 -102.43 22.43 -102.16 22.34 0.09
+    ruby scan_segments.rb $1 $2 -102.61 22.34 -102.07 22.25 0.09
+    ruby scan_segments.rb $1 $2 -102.7 22.25 -101.98 22.16 0.09
+    ruby scan_segments.rb $1 $2 -102.79 22.16 -101.98 22.07 0.09
+    ruby scan_segments.rb $1 $2 -102.79 22.07 -101.89 21.98 0.09
+    ruby scan_segments.rb $1 $2 -102.88 21.98 -101.89 21.89 0.09
+    ruby scan_segments.rb $1 $2 -102.88 21.89 -101.89 21.8 0.09
+    ruby scan_segments.rb $1 $2 -102.88 21.8 -102.07 21.71 0.09
+    ruby scan_segments.rb $1 $2 -102.88 21.71 -102.7 21.62 0.09
+    ruby scan_segments.rb $1 $2 -102.52 21.71 -102.07 21.62 0.09
+  ;;
+  BN)
+    ruby scan_segments.rb $1 $2 -115.86 32.73 -114.69 32.64 0.09
+    ruby scan_segments.rb $1 $2 -116.94 32.64 -114.69 32.55 0.09
+    ruby scan_segments.rb $1 $2 -117.21 32.55 -114.78 32.46 0.09
+    ruby scan_segments.rb $1 $2 -117.39 32.46 -117.21 32.37 0.09
+    ruby scan_segments.rb $1 $2 -117.12 32.46 -114.87 32.37 0.09
+    ruby scan_segments.rb $1 $2 -117.12 32.37 -114.96 32.28 0.09
+    ruby scan_segments.rb $1 $2 -117.12 32.28 -114.96 32.19 0.09
+    ruby scan_segments.rb $1 $2 -116.94 32.19 -114.96 32.1 0.09
+    ruby scan_segments.rb $1 $2 -116.94 32.1 -114.96 32.01 0.09
+    ruby scan_segments.rb $1 $2 -116.94 32.01 -114.96 31.92 0.09
+    ruby scan_segments.rb $1 $2 -116.76 31.92 -114.78 31.83 0.09
+    ruby scan_segments.rb $1 $2 -116.85 31.83 -114.78 31.74 0.09
+    ruby scan_segments.rb $1 $2 -116.76 31.74 -114.78 31.65 0.09
+    ruby scan_segments.rb $1 $2 -116.76 31.65 -114.69 31.56 0.09
+    ruby scan_segments.rb $1 $2 -116.76 31.56 -114.78 31.47 0.09
+    ruby scan_segments.rb $1 $2 -116.67 31.47 -114.78 31.38 0.09
+    ruby scan_segments.rb $1 $2 -116.49 31.38 -114.78 31.29 0.09
+    ruby scan_segments.rb $1 $2 -116.49 31.29 -114.87 31.2 0.09
+    ruby scan_segments.rb $1 $2 -116.4 31.2 -114.87 31.11 0.09
+    ruby scan_segments.rb $1 $2 -116.4 31.11 -114.78 31.02 0.09
+    ruby scan_segments.rb $1 $2 -116.4 31.02 -114.69 30.93 0.09
+    ruby scan_segments.rb $1 $2 -116.31 30.93 -114.69 30.84 0.09
+    ruby scan_segments.rb $1 $2 -116.13 30.84 -114.69 30.75 0.09
+    ruby scan_segments.rb $1 $2 -116.13 30.75 -114.69 30.66 0.09
+    ruby scan_segments.rb $1 $2 -116.04 30.66 -114.6 30.57 0.09
+    ruby scan_segments.rb $1 $2 -116.13 30.57 -114.6 30.48 0.09
+    ruby scan_segments.rb $1 $2 -116.13 30.48 -114.6 30.39 0.09
+    ruby scan_segments.rb $1 $2 -116.04 30.39 -114.6 30.3 0.09
+    ruby scan_segments.rb $1 $2 -115.86 30.3 -114.6 30.21 0.09
+    ruby scan_segments.rb $1 $2 -115.86 30.21 -114.6 30.12 0.09
+    ruby scan_segments.rb $1 $2 -115.86 30.12 -114.42 30.03 0.09
+    ruby scan_segments.rb $1 $2 -115.86 30.03 -114.33 29.94 0.09
+    ruby scan_segments.rb $1 $2 -115.77 29.94 -114.33 29.85 0.09
+    ruby scan_segments.rb $1 $2 -115.86 29.85 -114.24 29.76 0.09
+    ruby scan_segments.rb $1 $2 -115.77 29.76 -114.06 29.67 0.09
+    ruby scan_segments.rb $1 $2 -115.59 29.67 -113.97 29.58 0.09
+    ruby scan_segments.rb $1 $2 -115.41 29.58 -113.88 29.49 0.09
+    ruby scan_segments.rb $1 $2 -113.61 29.58 -113.43 29.49 0.09
+    ruby scan_segments.rb $1 $2 -115.32 29.49 -113.7 29.4 0.09
+    ruby scan_segments.rb $1 $2 -113.61 29.49 -113.34 29.4 0.09
+    ruby scan_segments.rb $1 $2 -115.05 29.4 -113.34 29.31 0.09
+    ruby scan_segments.rb $1 $2 -114.96 29.31 -113.61 29.22 0.09
+    ruby scan_segments.rb $1 $2 -113.52 29.31 -113.16 29.22 0.09
+    ruby scan_segments.rb $1 $2 -118.38 29.22 -118.2 29.13 0.09
+    ruby scan_segments.rb $1 $2 -114.87 29.22 -113.52 29.13 0.09
+    ruby scan_segments.rb $1 $2 -113.43 29.22 -113.16 29.13 0.09
+    ruby scan_segments.rb $1 $2 -118.38 29.13 -118.2 29.04 0.09
+    ruby scan_segments.rb $1 $2 -114.78 29.13 -113.43 29.04 0.09
+    ruby scan_segments.rb $1 $2 -113.34 29.13 -113.07 29.04 0.09
+    ruby scan_segments.rb $1 $2 -118.38 29.04 -118.2 28.95 0.09
+    ruby scan_segments.rb $1 $2 -114.69 29.04 -113.34 28.95 0.09
+    ruby scan_segments.rb $1 $2 -113.25 29.04 -113.07 28.95 0.09
+    ruby scan_segments.rb $1 $2 -118.38 28.95 -118.2 28.86 0.09
+    ruby scan_segments.rb $1 $2 -114.6 28.95 -113.34 28.86 0.09
+    ruby scan_segments.rb $1 $2 -113.07 28.95 -112.98 28.86 0.09
+    ruby scan_segments.rb $1 $2 -118.29 28.86 -118.2 28.77 0.09
+    ruby scan_segments.rb $1 $2 -114.42 28.86 -113.16 28.77 0.09
+    ruby scan_segments.rb $1 $2 -113.07 28.86 -112.89 28.77 0.09
+    ruby scan_segments.rb $1 $2 -114.42 28.77 -113.16 28.68 0.09
+    ruby scan_segments.rb $1 $2 -112.98 28.77 -112.89 28.68 0.09
+    ruby scan_segments.rb $1 $2 -112.62 28.77 -112.53 28.68 0.09
+    ruby scan_segments.rb $1 $2 -114.33 28.68 -113.07 28.59 0.09
+    ruby scan_segments.rb $1 $2 -112.98 28.68 -112.71 28.59 0.09
+    ruby scan_segments.rb $1 $2 -112.62 28.68 -112.53 28.59 0.09
+    ruby scan_segments.rb $1 $2 -114.24 28.59 -113.07 28.5 0.09
+    ruby scan_segments.rb $1 $2 -112.8 28.59 -112.71 28.5 0.09
+    ruby scan_segments.rb $1 $2 -114.15 28.5 -112.8 28.41 0.09
+    ruby scan_segments.rb $1 $2 -115.32 28.41 -115.14 28.32 0.09
+    ruby scan_segments.rb $1 $2 -114.15 28.41 -112.8 28.32 0.09
+    ruby scan_segments.rb $1 $2 -115.68 28.32 -115.5 28.23 0.09
+    ruby scan_segments.rb $1 $2 -115.32 28.32 -115.14 28.23 0.09
+    ruby scan_segments.rb $1 $2 -114.15 28.32 -112.8 28.23 0.09
+    ruby scan_segments.rb $1 $2 -115.32 28.23 -115.14 28.14 0.09
+    ruby scan_segments.rb $1 $2 -114.15 28.23 -112.71 28.14 0.09
+    ruby scan_segments.rb $1 $2 -115.41 28.14 -115.14 28.05 0.09
+    ruby scan_segments.rb $1 $2 -114.24 28.14 -112.71 28.05 0.09
+    ruby scan_segments.rb $1 $2 -115.32 28.05 -115.14 27.96 0.09
+    ruby scan_segments.rb $1 $2 -114.33 28.05 -112.71 27.96 0.09
+    ruby scan_segments.rb $1 $2 -114.33 27.96 -112.71 27.87 0.09
+  ;;
+  BS)
+    ruby scan_segments.rb $1 $2 -115.24 27.96 -115.15 27.87 0.09
+    ruby scan_segments.rb $1 $2 -114.43 27.96 -112.72 27.87 0.09
+    ruby scan_segments.rb $1 $2 -115.24 27.87 -112.63 27.78 0.09
+    ruby scan_segments.rb $1 $2 -115.06 27.78 -112.54 27.69 0.09
+    ruby scan_segments.rb $1 $2 -114.97 27.69 -112.45 27.6 0.09
+    ruby scan_segments.rb $1 $2 -114.79 27.6 -112.27 27.51 0.09
+    ruby scan_segments.rb $1 $2 -114.7 27.51 -112.27 27.42 0.09
+    ruby scan_segments.rb $1 $2 -111.91 27.51 -111.82 27.42 0.09
+    ruby scan_segments.rb $1 $2 -114.52 27.42 -112.18 27.33 0.09
+    ruby scan_segments.rb $1 $2 -114.52 27.33 -112.0 27.24 0.09
+    ruby scan_segments.rb $1 $2 -114.52 27.24 -112.0 27.15 0.09
+    ruby scan_segments.rb $1 $2 -114.43 27.15 -111.91 27.06 0.09
+    ruby scan_segments.rb $1 $2 -114.16 27.06 -111.82 26.97 0.09
+    ruby scan_segments.rb $1 $2 -113.89 26.97 -111.73 26.88 0.09
+    ruby scan_segments.rb $1 $2 -113.8 26.88 -111.64 26.79 0.09
+    ruby scan_segments.rb $1 $2 -113.71 26.79 -113.44 26.7 0.09
+    ruby scan_segments.rb $1 $2 -113.35 26.79 -111.55 26.7 0.09
+    ruby scan_segments.rb $1 $2 -113.26 26.7 -111.55 26.61 0.09
+    ruby scan_segments.rb $1 $2 -111.46 26.7 -111.37 26.61 0.09
+    ruby scan_segments.rb $1 $2 -113.08 26.61 -111.37 26.52 0.09
+    ruby scan_segments.rb $1 $2 -112.99 26.52 -111.37 26.43 0.09
+    ruby scan_segments.rb $1 $2 -112.9 26.43 -111.37 26.34 0.09
+    ruby scan_segments.rb $1 $2 -112.72 26.34 -111.37 26.25 0.09
+    ruby scan_segments.rb $1 $2 -112.54 26.25 -111.28 26.16 0.09
+    ruby scan_segments.rb $1 $2 -112.36 26.16 -111.19 26.07 0.09
+    ruby scan_segments.rb $1 $2 -111.1 26.16 -111.01 26.07 0.09
+    ruby scan_segments.rb $1 $2 -113.08 26.07 -112.99 25.98 0.09
+    ruby scan_segments.rb $1 $2 -112.36 26.07 -111.28 25.98 0.09
+    ruby scan_segments.rb $1 $2 -111.19 26.07 -111.01 25.98 0.09
+    ruby scan_segments.rb $1 $2 -112.27 25.98 -111.01 25.89 0.09
+    ruby scan_segments.rb $1 $2 -112.18 25.89 -111.1 25.8 0.09
+    ruby scan_segments.rb $1 $2 -112.18 25.8 -111.19 25.71 0.09
+    ruby scan_segments.rb $1 $2 -111.1 25.8 -111.01 25.71 0.09
+    ruby scan_segments.rb $1 $2 -110.83 25.8 -110.74 25.71 0.09
+    ruby scan_segments.rb $1 $2 -112.18 25.71 -111.19 25.62 0.09
+    ruby scan_segments.rb $1 $2 -111.1 25.71 -111.01 25.62 0.09
+    ruby scan_segments.rb $1 $2 -110.83 25.71 -110.74 25.62 0.09
+    ruby scan_segments.rb $1 $2 -112.18 25.62 -111.01 25.53 0.09
+    ruby scan_segments.rb $1 $2 -110.83 25.62 -110.74 25.53 0.09
+    ruby scan_segments.rb $1 $2 -112.18 25.53 -111.01 25.44 0.09
+    ruby scan_segments.rb $1 $2 -112.18 25.44 -110.92 25.35 0.09
+    ruby scan_segments.rb $1 $2 -112.18 25.35 -110.92 25.26 0.09
+    ruby scan_segments.rb $1 $2 -110.74 25.35 -110.65 25.26 0.09
+    ruby scan_segments.rb $1 $2 -112.18 25.26 -110.83 25.17 0.09
+    ruby scan_segments.rb $1 $2 -110.74 25.26 -110.65 25.17 0.09
+    ruby scan_segments.rb $1 $2 -112.27 25.17 -110.83 25.08 0.09
+    ruby scan_segments.rb $1 $2 -110.74 25.17 -110.65 25.08 0.09
+    ruby scan_segments.rb $1 $2 -110.56 25.17 -110.47 25.08 0.09
+    ruby scan_segments.rb $1 $2 -112.27 25.08 -110.56 24.99 0.09
+    ruby scan_segments.rb $1 $2 -110.02 25.08 -109.93 24.99 0.09
+    ruby scan_segments.rb $1 $2 -115.78 24.99 -115.69 24.9 0.09
+    ruby scan_segments.rb $1 $2 -112.27 24.99 -110.47 24.9 0.09
+    ruby scan_segments.rb $1 $2 -112.36 24.9 -110.47 24.81 0.09
+    ruby scan_segments.rb $1 $2 -112.36 24.81 -110.65 24.72 0.09
+    ruby scan_segments.rb $1 $2 -112.18 24.72 -112.09 24.63 0.09
+    ruby scan_segments.rb $1 $2 -112.0 24.72 -110.65 24.63 0.09
+    ruby scan_segments.rb $1 $2 -112.18 24.63 -112.0 24.54 0.09
+    ruby scan_segments.rb $1 $2 -111.91 24.63 -110.65 24.54 0.09
+    ruby scan_segments.rb $1 $2 -110.47 24.63 -110.29 24.54 0.09
+    ruby scan_segments.rb $1 $2 -112.09 24.54 -110.65 24.45 0.09
+    ruby scan_segments.rb $1 $2 -110.47 24.54 -110.2 24.45 0.09
+    ruby scan_segments.rb $1 $2 -111.91 24.45 -110.65 24.36 0.09
+    ruby scan_segments.rb $1 $2 -110.38 24.45 -110.29 24.36 0.09
+    ruby scan_segments.rb $1 $2 -110.02 24.45 -109.84 24.36 0.09
+    ruby scan_segments.rb $1 $2 -111.82 24.36 -111.64 24.27 0.09
+    ruby scan_segments.rb $1 $2 -111.55 24.36 -110.56 24.27 0.09
+    ruby scan_segments.rb $1 $2 -110.38 24.36 -110.11 24.27 0.09
+    ruby scan_segments.rb $1 $2 -110.02 24.36 -109.84 24.27 0.09
+    ruby scan_segments.rb $1 $2 -111.37 24.27 -110.02 24.18 0.09
+    ruby scan_segments.rb $1 $2 -109.93 24.27 -109.75 24.18 0.09
+    ruby scan_segments.rb $1 $2 -111.19 24.18 -109.75 24.09 0.09
+    ruby scan_segments.rb $1 $2 -111.1 24.09 -109.75 24.0 0.09
+    ruby scan_segments.rb $1 $2 -110.92 24.0 -109.75 23.91 0.09
+    ruby scan_segments.rb $1 $2 -110.83 23.91 -109.66 23.82 0.09
+    ruby scan_segments.rb $1 $2 -110.74 23.82 -109.66 23.73 0.09
+    ruby scan_segments.rb $1 $2 -110.65 23.73 -109.66 23.64 0.09
+    ruby scan_segments.rb $1 $2 -110.56 23.64 -109.39 23.55 0.09
+    ruby scan_segments.rb $1 $2 -110.38 23.55 -109.39 23.46 0.09
+    ruby scan_segments.rb $1 $2 -110.29 23.46 -109.39 23.37 0.09
+    ruby scan_segments.rb $1 $2 -110.29 23.37 -109.39 23.28 0.09
+    ruby scan_segments.rb $1 $2 -110.2 23.28 -109.39 23.19 0.09
+    ruby scan_segments.rb $1 $2 -110.2 23.19 -109.39 23.1 0.09
+    ruby scan_segments.rb $1 $2 -110.2 23.1 -109.48 23.01 0.09
+    ruby scan_segments.rb $1 $2 -110.11 23.01 -109.66 22.92 0.09
+    ruby scan_segments.rb $1 $2 -110.11 22.92 -109.75 22.83 0.09
+    ruby scan_segments.rb $1 $2 -110.83 19.41 -110.74 19.32 0.09
+    ruby scan_segments.rb $1 $2 -110.83 19.32 -110.74 19.23 0.09
+    ruby scan_segments.rb $1 $2 -111.1 18.87 -110.83 18.78 0.09
+    ruby scan_segments.rb $1 $2 -111.1 18.78 -110.83 18.69 0.09
+    ruby scan_segments.rb $1 $2 -114.79 18.42 -114.61 18.33 0.09
+  ;;
+  CA)
+    ruby scan_segments.rb $1 $2 -102.42 29.89 -101.79 29.8 0.09
+    ruby scan_segments.rb $1 $2 -101.61 29.89 -101.52 29.8 0.09
+    ruby scan_segments.rb $1 $2 -102.78 29.8 -101.34 29.71 0.09
+    ruby scan_segments.rb $1 $2 -102.78 29.71 -101.16 29.62 0.09
+    ruby scan_segments.rb $1 $2 -102.87 29.62 -101.16 29.53 0.09
+    ruby scan_segments.rb $1 $2 -102.87 29.53 -100.98 29.44 0.09
+    ruby scan_segments.rb $1 $2 -102.96 29.44 -100.89 29.35 0.09
+    ruby scan_segments.rb $1 $2 -102.96 29.35 -100.8 29.26 0.09
+    ruby scan_segments.rb $1 $2 -103.05 29.26 -100.71 29.17 0.09
+    ruby scan_segments.rb $1 $2 -103.14 29.17 -100.62 29.08 0.09
+    ruby scan_segments.rb $1 $2 -103.5 29.08 -103.23 28.99 0.09
+    ruby scan_segments.rb $1 $2 -103.14 29.08 -100.62 28.99 0.09
+    ruby scan_segments.rb $1 $2 -103.5 28.99 -100.53 28.9 0.09
+    ruby scan_segments.rb $1 $2 -103.5 28.9 -100.53 28.81 0.09
+    ruby scan_segments.rb $1 $2 -103.59 28.81 -100.44 28.72 0.09
+    ruby scan_segments.rb $1 $2 -103.59 28.72 -100.44 28.63 0.09
+    ruby scan_segments.rb $1 $2 -103.77 28.63 -100.35 28.54 0.09
+    ruby scan_segments.rb $1 $2 -103.77 28.54 -100.26 28.45 0.09
+    ruby scan_segments.rb $1 $2 -103.86 28.45 -100.26 28.36 0.09
+    ruby scan_segments.rb $1 $2 -103.86 28.36 -100.26 28.27 0.09
+    ruby scan_segments.rb $1 $2 -103.86 28.27 -100.17 28.18 0.09
+    ruby scan_segments.rb $1 $2 -103.95 28.18 -99.99 28.09 0.09
+    ruby scan_segments.rb $1 $2 -104.04 28.09 -99.9 28.0 0.09
+    ruby scan_segments.rb $1 $2 -104.04 28.0 -99.9 27.91 0.09
+    ruby scan_segments.rb $1 $2 -104.04 27.91 -99.81 27.82 0.09
+    ruby scan_segments.rb $1 $2 -104.04 27.82 -99.81 27.73 0.09
+    ruby scan_segments.rb $1 $2 -104.04 27.73 -99.81 27.64 0.09
+    ruby scan_segments.rb $1 $2 -104.04 27.64 -100.35 27.55 0.09
+    ruby scan_segments.rb $1 $2 -104.04 27.55 -100.44 27.46 0.09
+    ruby scan_segments.rb $1 $2 -104.04 27.46 -100.44 27.37 0.09
+    ruby scan_segments.rb $1 $2 -103.95 27.37 -100.44 27.28 0.09
+    ruby scan_segments.rb $1 $2 -103.95 27.28 -100.8 27.19 0.09
+    ruby scan_segments.rb $1 $2 -103.95 27.19 -100.62 27.1 0.09
+    ruby scan_segments.rb $1 $2 -103.95 27.1 -100.53 27.01 0.09
+    ruby scan_segments.rb $1 $2 -104.04 27.01 -100.53 26.92 0.09
+    ruby scan_segments.rb $1 $2 -104.04 26.92 -100.53 26.83 0.09
+    ruby scan_segments.rb $1 $2 -103.95 26.83 -100.53 26.74 0.09
+    ruby scan_segments.rb $1 $2 -103.95 26.74 -100.62 26.65 0.09
+    ruby scan_segments.rb $1 $2 -103.68 26.65 -100.89 26.56 0.09
+    ruby scan_segments.rb $1 $2 -103.59 26.56 -101.07 26.47 0.09
+    ruby scan_segments.rb $1 $2 -103.59 26.47 -101.16 26.38 0.09
+    ruby scan_segments.rb $1 $2 -103.59 26.38 -101.16 26.29 0.09
+    ruby scan_segments.rb $1 $2 -103.59 26.29 -101.07 26.2 0.09
+    ruby scan_segments.rb $1 $2 -103.5 26.2 -100.89 26.11 0.09
+    ruby scan_segments.rb $1 $2 -103.5 26.11 -100.89 26.02 0.09
+    ruby scan_segments.rb $1 $2 -103.5 26.02 -100.8 25.93 0.09
+    ruby scan_segments.rb $1 $2 -103.5 25.93 -100.8 25.84 0.09
+    ruby scan_segments.rb $1 $2 -103.41 25.84 -100.8 25.75 0.09
+    ruby scan_segments.rb $1 $2 -103.5 25.75 -100.71 25.66 0.09
+    ruby scan_segments.rb $1 $2 -103.59 25.66 -100.62 25.57 0.09
+    ruby scan_segments.rb $1 $2 -103.59 25.57 -100.53 25.48 0.09
+    ruby scan_segments.rb $1 $2 -103.59 25.48 -100.44 25.39 0.09
+    ruby scan_segments.rb $1 $2 -103.59 25.39 -100.17 25.3 0.09
+    ruby scan_segments.rb $1 $2 -103.59 25.3 -100.17 25.21 0.09
+    ruby scan_segments.rb $1 $2 -103.59 25.21 -100.71 25.12 0.09
+    ruby scan_segments.rb $1 $2 -100.44 25.21 -100.26 25.12 0.09
+    ruby scan_segments.rb $1 $2 -103.5 25.12 -102.6 25.03 0.09
+    ruby scan_segments.rb $1 $2 -102.15 25.12 -100.71 25.03 0.09
+    ruby scan_segments.rb $1 $2 -103.41 25.03 -102.69 24.94 0.09
+    ruby scan_segments.rb $1 $2 -101.97 25.03 -100.71 24.94 0.09
+    ruby scan_segments.rb $1 $2 -103.41 24.94 -102.87 24.85 0.09
+    ruby scan_segments.rb $1 $2 -101.88 24.94 -100.71 24.85 0.09
+    ruby scan_segments.rb $1 $2 -103.32 24.85 -102.87 24.76 0.09
+    ruby scan_segments.rb $1 $2 -101.79 24.85 -100.8 24.76 0.09
+    ruby scan_segments.rb $1 $2 -102.96 24.76 -102.87 24.67 0.09
+    ruby scan_segments.rb $1 $2 -101.7 24.76 -101.43 24.67 0.09
+    ruby scan_segments.rb $1 $2 -101.34 24.76 -100.71 24.67 0.09
+    ruby scan_segments.rb $1 $2 -101.25 24.67 -100.71 24.58 0.09
+    ruby scan_segments.rb $1 $2 -101.16 24.58 -100.8 24.49 0.09
+  ;;
+  CH)
+    ruby scan_segments.rb $1 $2 -108.23 31.79 -106.34 31.7 0.09
+    ruby scan_segments.rb $1 $2 -108.23 31.7 -106.25 31.61 0.09
+    ruby scan_segments.rb $1 $2 -108.23 31.61 -106.16 31.52 0.09
+    ruby scan_segments.rb $1 $2 -108.23 31.52 -106.07 31.43 0.09
+    ruby scan_segments.rb $1 $2 -108.23 31.43 -105.89 31.34 0.09
+    ruby scan_segments.rb $1 $2 -108.86 31.34 -105.8 31.25 0.09
+    ruby scan_segments.rb $1 $2 -108.77 31.25 -105.71 31.16 0.09
+    ruby scan_segments.rb $1 $2 -108.77 31.16 -105.53 31.07 0.09
+    ruby scan_segments.rb $1 $2 -108.77 31.07 -105.44 30.98 0.09
+    ruby scan_segments.rb $1 $2 -108.77 30.98 -105.35 30.89 0.09
+    ruby scan_segments.rb $1 $2 -108.77 30.89 -105.17 30.8 0.09
+    ruby scan_segments.rb $1 $2 -108.68 30.8 -105.08 30.71 0.09
+    ruby scan_segments.rb $1 $2 -108.68 30.71 -104.9 30.62 0.09
+    ruby scan_segments.rb $1 $2 -108.68 30.62 -104.81 30.53 0.09
+    ruby scan_segments.rb $1 $2 -108.59 30.53 -104.81 30.44 0.09
+    ruby scan_segments.rb $1 $2 -108.59 30.44 -104.81 30.35 0.09
+    ruby scan_segments.rb $1 $2 -108.59 30.35 -104.72 30.26 0.09
+    ruby scan_segments.rb $1 $2 -108.59 30.26 -104.63 30.17 0.09
+    ruby scan_segments.rb $1 $2 -108.59 30.17 -104.63 30.08 0.09
+    ruby scan_segments.rb $1 $2 -108.59 30.08 -104.63 29.99 0.09
+    ruby scan_segments.rb $1 $2 -108.59 29.99 -104.63 29.9 0.09
+    ruby scan_segments.rb $1 $2 -108.59 29.9 -104.54 29.81 0.09
+    ruby scan_segments.rb $1 $2 -108.59 29.81 -104.54 29.72 0.09
+    ruby scan_segments.rb $1 $2 -108.5 29.72 -104.45 29.63 0.09
+    ruby scan_segments.rb $1 $2 -108.5 29.63 -104.27 29.54 0.09
+    ruby scan_segments.rb $1 $2 -108.5 29.54 -104.18 29.45 0.09
+    ruby scan_segments.rb $1 $2 -108.59 29.45 -104.09 29.36 0.09
+    ruby scan_segments.rb $1 $2 -108.59 29.36 -103.73 29.27 0.09
+    ruby scan_segments.rb $1 $2 -108.59 29.27 -103.64 29.18 0.09
+    ruby scan_segments.rb $1 $2 -108.59 29.18 -103.46 29.09 0.09
+    ruby scan_segments.rb $1 $2 -108.68 29.09 -103.37 29.0 0.09
+    ruby scan_segments.rb $1 $2 -108.68 29.0 -103.37 28.91 0.09
+    ruby scan_segments.rb $1 $2 -108.68 28.91 -103.37 28.82 0.09
+    ruby scan_segments.rb $1 $2 -108.68 28.82 -103.37 28.73 0.09
+    ruby scan_segments.rb $1 $2 -108.68 28.73 -103.46 28.64 0.09
+    ruby scan_segments.rb $1 $2 -108.68 28.64 -103.55 28.55 0.09
+    ruby scan_segments.rb $1 $2 -108.68 28.55 -103.64 28.46 0.09
+    ruby scan_segments.rb $1 $2 -108.68 28.46 -103.73 28.37 0.09
+    ruby scan_segments.rb $1 $2 -109.04 28.37 -103.73 28.28 0.09
+    ruby scan_segments.rb $1 $2 -109.04 28.28 -103.73 28.19 0.09
+    ruby scan_segments.rb $1 $2 -109.04 28.19 -103.82 28.1 0.09
+    ruby scan_segments.rb $1 $2 -109.04 28.1 -103.82 28.01 0.09
+    ruby scan_segments.rb $1 $2 -108.95 28.01 -103.91 27.92 0.09
+    ruby scan_segments.rb $1 $2 -108.86 27.92 -103.91 27.83 0.09
+    ruby scan_segments.rb $1 $2 -108.86 27.83 -103.91 27.74 0.09
+    ruby scan_segments.rb $1 $2 -108.86 27.74 -104.0 27.65 0.09
+    ruby scan_segments.rb $1 $2 -108.68 27.65 -103.91 27.56 0.09
+    ruby scan_segments.rb $1 $2 -108.68 27.56 -103.91 27.47 0.09
+    ruby scan_segments.rb $1 $2 -108.59 27.47 -103.91 27.38 0.09
+    ruby scan_segments.rb $1 $2 -108.59 27.38 -103.91 27.29 0.09
+    ruby scan_segments.rb $1 $2 -108.68 27.29 -103.91 27.2 0.09
+    ruby scan_segments.rb $1 $2 -108.68 27.2 -103.82 27.11 0.09
+    ruby scan_segments.rb $1 $2 -108.68 27.11 -103.82 27.02 0.09
+    ruby scan_segments.rb $1 $2 -108.14 27.02 -103.82 26.93 0.09
+    ruby scan_segments.rb $1 $2 -108.14 26.93 -103.91 26.84 0.09
+    ruby scan_segments.rb $1 $2 -108.05 26.84 -103.82 26.75 0.09
+    ruby scan_segments.rb $1 $2 -108.05 26.75 -106.16 26.66 0.09
+    ruby scan_segments.rb $1 $2 -105.98 26.75 -104.09 26.66 0.09
+    ruby scan_segments.rb $1 $2 -104.0 26.75 -103.82 26.66 0.09
+    ruby scan_segments.rb $1 $2 -108.05 26.66 -106.25 26.57 0.09
+    ruby scan_segments.rb $1 $2 -105.89 26.66 -104.45 26.57 0.09
+    ruby scan_segments.rb $1 $2 -107.96 26.57 -106.25 26.48 0.09
+    ruby scan_segments.rb $1 $2 -105.71 26.57 -104.63 26.48 0.09
+    ruby scan_segments.rb $1 $2 -107.96 26.48 -106.25 26.39 0.09
+    ruby scan_segments.rb $1 $2 -105.53 26.48 -105.26 26.39 0.09
+    ruby scan_segments.rb $1 $2 -104.99 26.48 -104.63 26.39 0.09
+    ruby scan_segments.rb $1 $2 -107.87 26.39 -106.25 26.3 0.09
+    ruby scan_segments.rb $1 $2 -107.87 26.3 -106.34 26.21 0.09
+    ruby scan_segments.rb $1 $2 -107.78 26.21 -106.43 26.12 0.09
+    ruby scan_segments.rb $1 $2 -107.6 26.12 -106.43 26.03 0.09
+    ruby scan_segments.rb $1 $2 -107.42 26.03 -106.52 25.94 0.09
+    ruby scan_segments.rb $1 $2 -107.33 25.94 -106.43 25.85 0.09
+    ruby scan_segments.rb $1 $2 -107.33 25.85 -106.43 25.76 0.09
+    ruby scan_segments.rb $1 $2 -107.24 25.76 -106.52 25.67 0.09
+    ruby scan_segments.rb $1 $2 -106.97 25.67 -106.61 25.58 0.09
+  ;;
+  CL)
+    ruby scan_segments.rb $1 $2 -103.72 19.57 -103.54 19.48 0.09
+    ruby scan_segments.rb $1 $2 -104.08 19.48 -103.54 19.39 0.09
+    ruby scan_segments.rb $1 $2 -104.44 19.39 -103.45 19.3 0.09
+    ruby scan_segments.rb $1 $2 -104.62 19.3 -103.45 19.21 0.09
+    ruby scan_segments.rb $1 $2 -104.71 19.21 -103.45 19.12 0.09
+    ruby scan_segments.rb $1 $2 -104.53 19.12 -103.45 19.03 0.09
+    ruby scan_segments.rb $1 $2 -104.35 19.03 -103.45 18.94 0.09
+    ruby scan_segments.rb $1 $2 -104.17 18.94 -103.45 18.85 0.09
+    ruby scan_segments.rb $1 $2 -103.99 18.85 -103.63 18.76 0.09
+    ruby scan_segments.rb $1 $2 -103.9 18.76 -103.72 18.67 0.09
+  ;;
+  CM)
+    ruby scan_segments.rb $1 $2 -92.39 20.97 -92.21 20.88 0.09
+    ruby scan_segments.rb $1 $2 -90.41 20.88 -90.32 20.79 0.09
+    ruby scan_segments.rb $1 $2 -90.5 20.79 -90.32 20.7 0.09
+    ruby scan_segments.rb $1 $2 -90.5 20.7 -90.32 20.61 0.09
+    ruby scan_segments.rb $1 $2 -90.5 20.61 -90.32 20.52 0.09
+    ruby scan_segments.rb $1 $2 -90.59 20.52 -89.96 20.43 0.09
+    ruby scan_segments.rb $1 $2 -90.5 20.43 -89.87 20.34 0.09
+    ruby scan_segments.rb $1 $2 -90.5 20.34 -89.78 20.25 0.09
+    ruby scan_segments.rb $1 $2 -92.03 20.25 -91.94 20.16 0.09
+    ruby scan_segments.rb $1 $2 -90.5 20.25 -89.78 20.16 0.09
+    ruby scan_segments.rb $1 $2 -90.5 20.16 -89.69 20.07 0.09
+    ruby scan_segments.rb $1 $2 -91.04 20.07 -90.95 19.98 0.09
+    ruby scan_segments.rb $1 $2 -90.5 20.07 -89.6 19.98 0.09
+    ruby scan_segments.rb $1 $2 -90.5 19.98 -89.51 19.89 0.09
+    ruby scan_segments.rb $1 $2 -90.68 19.89 -89.42 19.8 0.09
+    ruby scan_segments.rb $1 $2 -90.68 19.8 -89.42 19.71 0.09
+    ruby scan_segments.rb $1 $2 -90.77 19.71 -89.33 19.62 0.09
+    ruby scan_segments.rb $1 $2 -90.77 19.62 -89.24 19.53 0.09
+    ruby scan_segments.rb $1 $2 -90.77 19.53 -89.15 19.44 0.09
+    ruby scan_segments.rb $1 $2 -90.77 19.44 -89.06 19.35 0.09
+    ruby scan_segments.rb $1 $2 -90.86 19.35 -88.97 19.26 0.09
+    ruby scan_segments.rb $1 $2 -90.95 19.26 -88.97 19.17 0.09
+    ruby scan_segments.rb $1 $2 -91.13 19.17 -88.97 19.08 0.09
+    ruby scan_segments.rb $1 $2 -91.22 19.08 -88.97 18.99 0.09
+    ruby scan_segments.rb $1 $2 -91.4 18.99 -89.06 18.9 0.09
+    ruby scan_segments.rb $1 $2 -91.49 18.9 -89.06 18.81 0.09
+    ruby scan_segments.rb $1 $2 -91.67 18.81 -89.06 18.72 0.09
+    ruby scan_segments.rb $1 $2 -92.48 18.72 -91.49 18.63 0.09
+    ruby scan_segments.rb $1 $2 -91.31 18.72 -89.06 18.63 0.09
+    ruby scan_segments.rb $1 $2 -92.48 18.63 -91.76 18.54 0.09
+    ruby scan_segments.rb $1 $2 -91.4 18.63 -88.97 18.54 0.09
+    ruby scan_segments.rb $1 $2 -92.48 18.54 -88.97 18.45 0.09
+    ruby scan_segments.rb $1 $2 -92.39 18.45 -88.97 18.36 0.09
+    ruby scan_segments.rb $1 $2 -92.21 18.36 -88.97 18.27 0.09
+    ruby scan_segments.rb $1 $2 -92.21 18.27 -88.97 18.18 0.09
+    ruby scan_segments.rb $1 $2 -92.21 18.18 -88.97 18.09 0.09
+    ruby scan_segments.rb $1 $2 -92.12 18.09 -89.06 18.0 0.09
+    ruby scan_segments.rb $1 $2 -92.03 18.0 -91.58 17.91 0.09
+    ruby scan_segments.rb $1 $2 -91.31 18.0 -89.06 17.91 0.09
+    ruby scan_segments.rb $1 $2 -91.76 17.91 -91.67 17.82 0.09
+    ruby scan_segments.rb $1 $2 -91.13 17.91 -89.06 17.82 0.09
+    ruby scan_segments.rb $1 $2 -91.04 17.82 -89.06 17.73 0.09
+  ;;
+  CP)
+    ruby scan_segments.rb $1 $2 -93.36 17.98 -93.09 17.89 0.09
+    ruby scan_segments.rb $1 $2 -92.01 17.98 -91.92 17.89 0.09
+    ruby scan_segments.rb $1 $2 -93.45 17.89 -92.91 17.8 0.09
+    ruby scan_segments.rb $1 $2 -92.28 17.89 -91.74 17.8 0.09
+    ruby scan_segments.rb $1 $2 -93.45 17.8 -92.91 17.71 0.09
+    ruby scan_segments.rb $1 $2 -92.28 17.8 -91.65 17.71 0.09
+    ruby scan_segments.rb $1 $2 -93.45 17.71 -92.91 17.62 0.09
+    ruby scan_segments.rb $1 $2 -92.46 17.71 -91.56 17.62 0.09
+    ruby scan_segments.rb $1 $2 -93.54 17.62 -92.91 17.53 0.09
+    ruby scan_segments.rb $1 $2 -92.55 17.62 -91.56 17.53 0.09
+    ruby scan_segments.rb $1 $2 -93.54 17.53 -92.82 17.44 0.09
+    ruby scan_segments.rb $1 $2 -92.64 17.53 -91.47 17.44 0.09
+    ruby scan_segments.rb $1 $2 -93.63 17.44 -91.38 17.35 0.09
+    ruby scan_segments.rb $1 $2 -93.72 17.35 -91.29 17.26 0.09
+    ruby scan_segments.rb $1 $2 -93.9 17.26 -91.2 17.17 0.09
+    ruby scan_segments.rb $1 $2 -93.9 17.17 -91.2 17.08 0.09
+    ruby scan_segments.rb $1 $2 -93.99 17.08 -91.11 16.99 0.09
+    ruby scan_segments.rb $1 $2 -93.99 16.99 -91.02 16.9 0.09
+    ruby scan_segments.rb $1 $2 -94.08 16.9 -90.84 16.81 0.09
+    ruby scan_segments.rb $1 $2 -94.17 16.81 -90.66 16.72 0.09
+    ruby scan_segments.rb $1 $2 -94.17 16.72 -90.57 16.63 0.09
+    ruby scan_segments.rb $1 $2 -94.17 16.63 -90.57 16.54 0.09
+    ruby scan_segments.rb $1 $2 -94.17 16.54 -90.39 16.45 0.09
+    ruby scan_segments.rb $1 $2 -94.17 16.45 -90.3 16.36 0.09
+    ruby scan_segments.rb $1 $2 -94.17 16.36 -90.39 16.27 0.09
+    ruby scan_segments.rb $1 $2 -94.17 16.27 -90.39 16.18 0.09
+    ruby scan_segments.rb $1 $2 -94.17 16.18 -90.39 16.09 0.09
+    ruby scan_segments.rb $1 $2 -94.17 16.09 -90.39 16.0 0.09
+    ruby scan_segments.rb $1 $2 -94.08 16.0 -91.74 15.91 0.09
+    ruby scan_segments.rb $1 $2 -93.81 15.91 -91.74 15.82 0.09
+    ruby scan_segments.rb $1 $2 -93.72 15.82 -91.83 15.73 0.09
+    ruby scan_segments.rb $1 $2 -93.54 15.73 -91.92 15.64 0.09
+    ruby scan_segments.rb $1 $2 -93.45 15.64 -91.92 15.55 0.09
+    ruby scan_segments.rb $1 $2 -93.36 15.55 -92.01 15.46 0.09
+    ruby scan_segments.rb $1 $2 -93.27 15.46 -92.01 15.37 0.09
+    ruby scan_segments.rb $1 $2 -93.09 15.37 -92.1 15.28 0.09
+    ruby scan_segments.rb $1 $2 -93.0 15.28 -92.1 15.19 0.09
+    ruby scan_segments.rb $1 $2 -92.91 15.19 -92.01 15.1 0.09
+    ruby scan_segments.rb $1 $2 -92.82 15.1 -92.01 15.01 0.09
+    ruby scan_segments.rb $1 $2 -92.73 15.01 -92.01 14.92 0.09
+    ruby scan_segments.rb $1 $2 -92.64 14.92 -92.1 14.83 0.09
+    ruby scan_segments.rb $1 $2 -92.55 14.83 -92.1 14.74 0.09
+    ruby scan_segments.rb $1 $2 -92.46 14.74 -92.1 14.65 0.09
+    ruby scan_segments.rb $1 $2 -92.37 14.65 -92.1 14.56 0.09
+    ruby scan_segments.rb $1 $2 -92.28 14.56 -92.19 14.47 0.09
+  ;;
+  DF)
+    ruby scan_segments.rb $1 $2 -99.25 19.55 -98.98 19.46 0.09
+    ruby scan_segments.rb $1 $2 -99.25 19.46 -98.98 19.37 0.09
+    ruby scan_segments.rb $1 $2 -99.34 19.37 -98.89 19.28 0.09
+    ruby scan_segments.rb $1 $2 -99.34 19.28 -98.8 19.19 0.09
+    ruby scan_segments.rb $1 $2 -99.34 19.19 -98.8 19.1 0.09
+    ruby scan_segments.rb $1 $2 -99.25 19.1 -98.8 19.01 0.09
+  ;;
+  DU)
+    ruby scan_segments.rb $1 $2 -106.29 26.85 -105.93 26.76 0.09
+    ruby scan_segments.rb $1 $2 -104.49 26.85 -103.86 26.76 0.09
+    ruby scan_segments.rb $1 $2 -106.29 26.76 -105.84 26.67 0.09
+    ruby scan_segments.rb $1 $2 -104.58 26.76 -103.68 26.67 0.09
+    ruby scan_segments.rb $1 $2 -106.38 26.67 -105.66 26.58 0.09
+    ruby scan_segments.rb $1 $2 -104.67 26.67 -103.59 26.58 0.09
+    ruby scan_segments.rb $1 $2 -106.38 26.58 -105.39 26.49 0.09
+    ruby scan_segments.rb $1 $2 -105.3 26.58 -104.94 26.49 0.09
+    ruby scan_segments.rb $1 $2 -104.67 26.58 -103.5 26.49 0.09
+    ruby scan_segments.rb $1 $2 -106.38 26.49 -103.41 26.4 0.09
+    ruby scan_segments.rb $1 $2 -106.47 26.4 -103.41 26.31 0.09
+    ruby scan_segments.rb $1 $2 -106.56 26.31 -103.41 26.22 0.09
+    ruby scan_segments.rb $1 $2 -106.56 26.22 -103.41 26.13 0.09
+    ruby scan_segments.rb $1 $2 -106.56 26.13 -103.41 26.04 0.09
+    ruby scan_segments.rb $1 $2 -106.65 26.04 -103.41 25.95 0.09
+    ruby scan_segments.rb $1 $2 -106.56 25.95 -103.41 25.86 0.09
+    ruby scan_segments.rb $1 $2 -106.65 25.86 -103.32 25.77 0.09
+    ruby scan_segments.rb $1 $2 -107.19 25.77 -106.92 25.68 0.09
+    ruby scan_segments.rb $1 $2 -106.74 25.77 -103.32 25.68 0.09
+    ruby scan_segments.rb $1 $2 -107.28 25.68 -103.41 25.59 0.09
+    ruby scan_segments.rb $1 $2 -107.28 25.59 -103.5 25.5 0.09
+    ruby scan_segments.rb $1 $2 -107.28 25.5 -103.41 25.41 0.09
+    ruby scan_segments.rb $1 $2 -107.28 25.41 -103.5 25.32 0.09
+    ruby scan_segments.rb $1 $2 -107.28 25.32 -103.5 25.23 0.09
+    ruby scan_segments.rb $1 $2 -107.28 25.23 -103.41 25.14 0.09
+    ruby scan_segments.rb $1 $2 -107.28 25.14 -103.32 25.05 0.09
+    ruby scan_segments.rb $1 $2 -107.28 25.05 -103.32 24.96 0.09
+    ruby scan_segments.rb $1 $2 -102.87 25.05 -102.69 24.96 0.09
+    ruby scan_segments.rb $1 $2 -107.19 24.96 -103.23 24.87 0.09
+    ruby scan_segments.rb $1 $2 -102.96 24.96 -102.6 24.87 0.09
+    ruby scan_segments.rb $1 $2 -107.19 24.87 -102.51 24.78 0.09
+    ruby scan_segments.rb $1 $2 -107.01 24.78 -102.6 24.69 0.09
+    ruby scan_segments.rb $1 $2 -106.92 24.69 -102.51 24.6 0.09
+    ruby scan_segments.rb $1 $2 -106.92 24.6 -102.51 24.51 0.09
+    ruby scan_segments.rb $1 $2 -106.83 24.51 -102.51 24.42 0.09
+    ruby scan_segments.rb $1 $2 -106.83 24.42 -103.41 24.33 0.09
+    ruby scan_segments.rb $1 $2 -103.23 24.42 -102.51 24.33 0.09
+    ruby scan_segments.rb $1 $2 -106.74 24.33 -106.47 24.24 0.09
+    ruby scan_segments.rb $1 $2 -106.2 24.33 -103.5 24.24 0.09
+    ruby scan_segments.rb $1 $2 -106.11 24.24 -103.59 24.15 0.09
+    ruby scan_segments.rb $1 $2 -106.11 24.15 -103.68 24.06 0.09
+    ruby scan_segments.rb $1 $2 -106.02 24.06 -103.77 23.97 0.09
+    ruby scan_segments.rb $1 $2 -106.02 23.97 -103.77 23.88 0.09
+    ruby scan_segments.rb $1 $2 -106.02 23.88 -103.77 23.79 0.09
+    ruby scan_segments.rb $1 $2 -106.02 23.79 -103.77 23.7 0.09
+    ruby scan_segments.rb $1 $2 -105.93 23.7 -103.77 23.61 0.09
+    ruby scan_segments.rb $1 $2 -105.84 23.61 -103.77 23.52 0.09
+    ruby scan_segments.rb $1 $2 -105.84 23.52 -103.86 23.43 0.09
+    ruby scan_segments.rb $1 $2 -105.75 23.43 -103.95 23.34 0.09
+    ruby scan_segments.rb $1 $2 -105.75 23.34 -103.95 23.25 0.09
+    ruby scan_segments.rb $1 $2 -105.66 23.25 -104.04 23.16 0.09
+    ruby scan_segments.rb $1 $2 -105.66 23.16 -104.04 23.07 0.09
+    ruby scan_segments.rb $1 $2 -105.48 23.07 -104.04 22.98 0.09
+    ruby scan_segments.rb $1 $2 -105.39 22.98 -104.13 22.89 0.09
+    ruby scan_segments.rb $1 $2 -105.03 22.89 -104.04 22.8 0.09
+    ruby scan_segments.rb $1 $2 -105.03 22.8 -104.04 22.71 0.09
+    ruby scan_segments.rb $1 $2 -105.12 22.71 -104.13 22.62 0.09
+    ruby scan_segments.rb $1 $2 -105.12 22.62 -104.13 22.53 0.09
+    ruby scan_segments.rb $1 $2 -105.03 22.53 -104.22 22.44 0.09
+    ruby scan_segments.rb $1 $2 -104.67 22.44 -104.31 22.35 0.09
+    ruby scan_segments.rb $1 $2 -104.67 22.35 -104.4 22.26 0.09
+  ;;
+  GJ)
+    ruby scan_segments.rb $1 $2 -101.6 21.87 -101.15 21.78 0.09
+    ruby scan_segments.rb $1 $2 -101.69 21.78 -100.88 21.69 0.09
+    ruby scan_segments.rb $1 $2 -100.52 21.78 -100.34 21.69 0.09
+    ruby scan_segments.rb $1 $2 -101.69 21.69 -100.79 21.6 0.09
+    ruby scan_segments.rb $1 $2 -100.52 21.69 -100.16 21.6 0.09
+    ruby scan_segments.rb $1 $2 -101.69 21.6 -100.07 21.51 0.09
+    ruby scan_segments.rb $1 $2 -99.8 21.6 -99.71 21.51 0.09
+    ruby scan_segments.rb $1 $2 -101.69 21.51 -99.71 21.42 0.09
+    ruby scan_segments.rb $1 $2 -101.69 21.42 -99.71 21.33 0.09
+    ruby scan_segments.rb $1 $2 -101.78 21.33 -99.71 21.24 0.09
+    ruby scan_segments.rb $1 $2 -101.87 21.24 -99.71 21.15 0.09
+    ruby scan_segments.rb $1 $2 -101.96 21.15 -99.98 21.06 0.09
+    ruby scan_segments.rb $1 $2 -101.96 21.06 -100.07 20.97 0.09
+    ruby scan_segments.rb $1 $2 -102.05 20.97 -100.07 20.88 0.09
+    ruby scan_segments.rb $1 $2 -102.14 20.88 -100.52 20.79 0.09
+    ruby scan_segments.rb $1 $2 -102.14 20.79 -100.52 20.7 0.09
+    ruby scan_segments.rb $1 $2 -102.05 20.7 -100.52 20.61 0.09
+    ruby scan_segments.rb $1 $2 -102.05 20.61 -100.43 20.52 0.09
+    ruby scan_segments.rb $1 $2 -102.14 20.52 -100.43 20.43 0.09
+    ruby scan_segments.rb $1 $2 -102.14 20.43 -100.34 20.34 0.09
+    ruby scan_segments.rb $1 $2 -102.05 20.34 -100.34 20.25 0.09
+    ruby scan_segments.rb $1 $2 -102.05 20.25 -101.6 20.16 0.09
+    ruby scan_segments.rb $1 $2 -101.51 20.25 -100.34 20.16 0.09
+    ruby scan_segments.rb $1 $2 -101.51 20.16 -100.25 20.07 0.09
+    ruby scan_segments.rb $1 $2 -101.51 20.07 -100.25 19.98 0.09
+    ruby scan_segments.rb $1 $2 -101.06 19.98 -100.43 19.89 0.09
+  ;;
+  GR)
+    ruby scan_segments.rb $1 $2 -100.58 19.07 -100.4 18.98 0.09
+    ruby scan_segments.rb $1 $2 -100.67 18.98 -100.4 18.89 0.09
+    ruby scan_segments.rb $1 $2 -100.85 18.89 -100.4 18.8 0.09
+    ruby scan_segments.rb $1 $2 -100.85 18.8 -100.4 18.71 0.09
+    ruby scan_segments.rb $1 $2 -99.68 18.8 -99.59 18.71 0.09
+    ruby scan_segments.rb $1 $2 -100.85 18.71 -100.31 18.62 0.09
+    ruby scan_segments.rb $1 $2 -99.77 18.71 -99.41 18.62 0.09
+    ruby scan_segments.rb $1 $2 -101.93 18.62 -101.57 18.53 0.09
+    ruby scan_segments.rb $1 $2 -101.39 18.62 -101.12 18.53 0.09
+    ruby scan_segments.rb $1 $2 -100.76 18.62 -100.31 18.53 0.09
+    ruby scan_segments.rb $1 $2 -100.13 18.62 -99.32 18.53 0.09
+    ruby scan_segments.rb $1 $2 -101.93 18.53 -100.94 18.44 0.09
+    ruby scan_segments.rb $1 $2 -100.76 18.53 -100.31 18.44 0.09
+    ruby scan_segments.rb $1 $2 -100.13 18.53 -99.05 18.44 0.09
+    ruby scan_segments.rb $1 $2 -101.93 18.44 -98.96 18.35 0.09
+    ruby scan_segments.rb $1 $2 -101.93 18.35 -98.87 18.26 0.09
+    ruby scan_segments.rb $1 $2 -102.2 18.26 -98.78 18.17 0.09
+    ruby scan_segments.rb $1 $2 -102.2 18.17 -98.6 18.08 0.09
+    ruby scan_segments.rb $1 $2 -102.2 18.08 -98.33 17.99 0.09
+    ruby scan_segments.rb $1 $2 -102.2 17.99 -98.24 17.9 0.09
+    ruby scan_segments.rb $1 $2 -101.84 17.9 -98.24 17.81 0.09
+    ruby scan_segments.rb $1 $2 -101.84 17.81 -98.24 17.72 0.09
+    ruby scan_segments.rb $1 $2 -101.75 17.72 -98.24 17.63 0.09
+    ruby scan_segments.rb $1 $2 -101.66 17.63 -98.24 17.54 0.09
+    ruby scan_segments.rb $1 $2 -101.48 17.54 -98.15 17.45 0.09
+    ruby scan_segments.rb $1 $2 -101.3 17.45 -98.15 17.36 0.09
+    ruby scan_segments.rb $1 $2 -101.21 17.36 -98.15 17.27 0.09
+    ruby scan_segments.rb $1 $2 -101.12 17.27 -98.15 17.18 0.09
+    ruby scan_segments.rb $1 $2 -100.85 17.18 -98.06 17.09 0.09
+    ruby scan_segments.rb $1 $2 -100.58 17.09 -98.06 17.0 0.09
+    ruby scan_segments.rb $1 $2 -100.31 17.0 -97.97 16.91 0.09
+    ruby scan_segments.rb $1 $2 -100.04 16.91 -97.97 16.82 0.09
+    ruby scan_segments.rb $1 $2 -99.95 16.82 -97.97 16.73 0.09
+    ruby scan_segments.rb $1 $2 -99.77 16.73 -98.15 16.64 0.09
+    ruby scan_segments.rb $1 $2 -99.32 16.64 -98.15 16.55 0.09
+    ruby scan_segments.rb $1 $2 -98.96 16.55 -98.33 16.46 0.09
+    ruby scan_segments.rb $1 $2 -98.78 16.46 -98.33 16.37 0.09
+    ruby scan_segments.rb $1 $2 -98.6 16.37 -98.42 16.28 0.09
+  ;;
+  HI)
+    ruby scan_segments.rb $1 $2 -98.7 21.43 -98.43 21.34 0.09
+    ruby scan_segments.rb $1 $2 -99.06 21.34 -98.88 21.25 0.09
+    ruby scan_segments.rb $1 $2 -98.79 21.34 -98.43 21.25 0.09
+    ruby scan_segments.rb $1 $2 -99.24 21.25 -98.16 21.16 0.09
+    ruby scan_segments.rb $1 $2 -99.42 21.16 -98.07 21.07 0.09
+    ruby scan_segments.rb $1 $2 -99.42 21.07 -98.07 20.98 0.09
+    ruby scan_segments.rb $1 $2 -99.51 20.98 -98.16 20.89 0.09
+    ruby scan_segments.rb $1 $2 -99.6 20.89 -98.16 20.8 0.09
+    ruby scan_segments.rb $1 $2 -99.6 20.8 -98.34 20.71 0.09
+    ruby scan_segments.rb $1 $2 -99.69 20.71 -98.43 20.62 0.09
+    ruby scan_segments.rb $1 $2 -98.07 20.71 -97.89 20.62 0.09
+    ruby scan_segments.rb $1 $2 -99.87 20.62 -98.43 20.53 0.09
+    ruby scan_segments.rb $1 $2 -98.25 20.62 -97.89 20.53 0.09
+    ruby scan_segments.rb $1 $2 -99.87 20.53 -98.43 20.44 0.09
+    ruby scan_segments.rb $1 $2 -98.34 20.53 -97.89 20.44 0.09
+    ruby scan_segments.rb $1 $2 -99.87 20.44 -97.98 20.35 0.09
+    ruby scan_segments.rb $1 $2 -99.87 20.35 -98.07 20.26 0.09
+    ruby scan_segments.rb $1 $2 -99.87 20.26 -98.07 20.17 0.09
+    ruby scan_segments.rb $1 $2 -99.6 20.17 -98.07 20.08 0.09
+    ruby scan_segments.rb $1 $2 -99.51 20.08 -98.07 19.99 0.09
+    ruby scan_segments.rb $1 $2 -99.51 19.99 -99.06 19.9 0.09
+    ruby scan_segments.rb $1 $2 -98.97 19.99 -98.07 19.9 0.09
+    ruby scan_segments.rb $1 $2 -99.42 19.9 -99.15 19.81 0.09
+    ruby scan_segments.rb $1 $2 -99.06 19.9 -98.16 19.81 0.09
+    ruby scan_segments.rb $1 $2 -99.42 19.81 -99.15 19.72 0.09
+    ruby scan_segments.rb $1 $2 -99.06 19.81 -98.16 19.72 0.09
+    ruby scan_segments.rb $1 $2 -98.97 19.72 -98.88 19.63 0.09
+    ruby scan_segments.rb $1 $2 -98.7 19.72 -98.07 19.63 0.09
+    ruby scan_segments.rb $1 $2 -98.7 19.63 -98.25 19.54 0.09
+  ;;
+  JA)
+    ruby scan_segments.rb $1 $2 -104.09 22.68 -103.73 22.59 0.09
+    ruby scan_segments.rb $1 $2 -104.09 22.59 -103.73 22.5 0.09
+    ruby scan_segments.rb $1 $2 -104.18 22.5 -103.55 22.41 0.09
+    ruby scan_segments.rb $1 $2 -104.27 22.41 -103.46 22.32 0.09
+    ruby scan_segments.rb $1 $2 -103.37 22.41 -103.19 22.32 0.09
+    ruby scan_segments.rb $1 $2 -104.36 22.32 -103.1 22.23 0.09
+    ruby scan_segments.rb $1 $2 -104.36 22.23 -103.55 22.14 0.09
+    ruby scan_segments.rb $1 $2 -103.46 22.23 -103.01 22.14 0.09
+    ruby scan_segments.rb $1 $2 -104.36 22.14 -103.01 22.05 0.09
+    ruby scan_segments.rb $1 $2 -102.02 22.14 -101.93 22.05 0.09
+    ruby scan_segments.rb $1 $2 -104.36 22.05 -103.1 21.96 0.09
+    ruby scan_segments.rb $1 $2 -102.02 22.05 -101.66 21.96 0.09
+    ruby scan_segments.rb $1 $2 -104.36 21.96 -103.1 21.87 0.09
+    ruby scan_segments.rb $1 $2 -102.02 21.96 -101.57 21.87 0.09
+    ruby scan_segments.rb $1 $2 -104.18 21.87 -103.28 21.78 0.09
+    ruby scan_segments.rb $1 $2 -102.11 21.87 -101.48 21.78 0.09
+    ruby scan_segments.rb $1 $2 -104.18 21.78 -103.46 21.69 0.09
+    ruby scan_segments.rb $1 $2 -102.83 21.78 -102.47 21.69 0.09
+    ruby scan_segments.rb $1 $2 -102.2 21.78 -101.48 21.69 0.09
+    ruby scan_segments.rb $1 $2 -104.0 21.69 -103.55 21.6 0.09
+    ruby scan_segments.rb $1 $2 -102.83 21.69 -101.57 21.6 0.09
+    ruby scan_segments.rb $1 $2 -103.91 21.6 -103.55 21.51 0.09
+    ruby scan_segments.rb $1 $2 -102.83 21.6 -101.57 21.51 0.09
+    ruby scan_segments.rb $1 $2 -103.82 21.51 -103.55 21.42 0.09
+    ruby scan_segments.rb $1 $2 -102.74 21.51 -101.57 21.42 0.09
+    ruby scan_segments.rb $1 $2 -103.82 21.42 -103.55 21.33 0.09
+    ruby scan_segments.rb $1 $2 -102.74 21.42 -101.57 21.33 0.09
+    ruby scan_segments.rb $1 $2 -103.91 21.33 -103.55 21.24 0.09
+    ruby scan_segments.rb $1 $2 -102.83 21.33 -101.57 21.24 0.09
+    ruby scan_segments.rb $1 $2 -104.18 21.24 -103.55 21.15 0.09
+    ruby scan_segments.rb $1 $2 -103.1 21.24 -101.75 21.15 0.09
+    ruby scan_segments.rb $1 $2 -104.27 21.15 -103.46 21.06 0.09
+    ruby scan_segments.rb $1 $2 -103.1 21.15 -101.75 21.06 0.09
+    ruby scan_segments.rb $1 $2 -104.9 21.06 -104.72 20.97 0.09
+    ruby scan_segments.rb $1 $2 -104.27 21.06 -101.84 20.97 0.09
+    ruby scan_segments.rb $1 $2 -105.17 20.97 -104.54 20.88 0.09
+    ruby scan_segments.rb $1 $2 -104.36 20.97 -101.93 20.88 0.09
+    ruby scan_segments.rb $1 $2 -105.26 20.88 -104.45 20.79 0.09
+    ruby scan_segments.rb $1 $2 -104.36 20.88 -102.02 20.79 0.09
+    ruby scan_segments.rb $1 $2 -105.35 20.79 -102.02 20.7 0.09
+    ruby scan_segments.rb $1 $2 -105.35 20.7 -101.93 20.61 0.09
+    ruby scan_segments.rb $1 $2 -105.35 20.61 -101.93 20.52 0.09
+    ruby scan_segments.rb $1 $2 -105.71 20.52 -102.02 20.43 0.09
+    ruby scan_segments.rb $1 $2 -105.71 20.43 -102.02 20.34 0.09
+    ruby scan_segments.rb $1 $2 -105.71 20.34 -102.2 20.25 0.09
+    ruby scan_segments.rb $1 $2 -105.62 20.25 -102.56 20.16 0.09
+    ruby scan_segments.rb $1 $2 -105.62 20.16 -102.65 20.07 0.09
+    ruby scan_segments.rb $1 $2 -105.62 20.07 -103.01 19.98 0.09
+    ruby scan_segments.rb $1 $2 -105.53 19.98 -102.74 19.89 0.09
+    ruby scan_segments.rb $1 $2 -105.44 19.89 -102.74 19.8 0.09
+    ruby scan_segments.rb $1 $2 -105.35 19.8 -102.74 19.71 0.09
+    ruby scan_segments.rb $1 $2 -105.35 19.71 -102.74 19.62 0.09
+    ruby scan_segments.rb $1 $2 -105.26 19.62 -102.74 19.53 0.09
+    ruby scan_segments.rb $1 $2 -105.17 19.53 -102.56 19.44 0.09
+    ruby scan_segments.rb $1 $2 -105.08 19.44 -103.73 19.35 0.09
+    ruby scan_segments.rb $1 $2 -103.64 19.44 -102.56 19.35 0.09
+    ruby scan_segments.rb $1 $2 -104.99 19.35 -104.09 19.26 0.09
+    ruby scan_segments.rb $1 $2 -103.55 19.35 -102.56 19.26 0.09
+    ruby scan_segments.rb $1 $2 -104.9 19.26 -104.45 19.17 0.09
+    ruby scan_segments.rb $1 $2 -103.55 19.26 -102.65 19.17 0.09
+    ruby scan_segments.rb $1 $2 -103.55 19.17 -102.92 19.08 0.09
+    ruby scan_segments.rb $1 $2 -103.55 19.08 -103.01 18.99 0.09
+    ruby scan_segments.rb $1 $2 -103.55 18.99 -103.1 18.9 0.09
+  ;;
+  MC)
+    ruby scan_segments.rb $1 $2 -102.59 20.39 -101.96 20.3 0.09
+    ruby scan_segments.rb $1 $2 -101.69 20.39 -101.42 20.3 0.09
+    ruby scan_segments.rb $1 $2 -102.68 20.3 -101.33 20.21 0.09
+    ruby scan_segments.rb $1 $2 -100.43 20.3 -100.25 20.21 0.09
+    ruby scan_segments.rb $1 $2 -103.04 20.21 -101.42 20.12 0.09
+    ruby scan_segments.rb $1 $2 -100.43 20.21 -100.16 20.12 0.09
+    ruby scan_segments.rb $1 $2 -103.13 20.12 -101.33 20.03 0.09
+    ruby scan_segments.rb $1 $2 -101.24 20.12 -100.97 20.03 0.09
+    ruby scan_segments.rb $1 $2 -100.43 20.12 -100.07 20.03 0.09
+    ruby scan_segments.rb $1 $2 -103.13 20.03 -100.79 19.94 0.09
+    ruby scan_segments.rb $1 $2 -100.7 20.03 -100.07 19.94 0.09
+    ruby scan_segments.rb $1 $2 -103.13 19.94 -100.07 19.85 0.09
+    ruby scan_segments.rb $1 $2 -102.86 19.85 -100.07 19.76 0.09
+    ruby scan_segments.rb $1 $2 -102.86 19.76 -100.07 19.67 0.09
+    ruby scan_segments.rb $1 $2 -102.86 19.67 -100.16 19.58 0.09
+    ruby scan_segments.rb $1 $2 -102.77 19.58 -100.16 19.49 0.09
+    ruby scan_segments.rb $1 $2 -102.77 19.49 -100.16 19.4 0.09
+    ruby scan_segments.rb $1 $2 -102.77 19.4 -100.25 19.31 0.09
+    ruby scan_segments.rb $1 $2 -102.86 19.31 -100.25 19.22 0.09
+    ruby scan_segments.rb $1 $2 -103.04 19.22 -100.25 19.13 0.09
+    ruby scan_segments.rb $1 $2 -103.13 19.13 -100.34 19.04 0.09
+    ruby scan_segments.rb $1 $2 -103.58 19.04 -100.43 18.95 0.09
+    ruby scan_segments.rb $1 $2 -103.67 18.95 -100.52 18.86 0.09
+    ruby scan_segments.rb $1 $2 -103.76 18.86 -100.61 18.77 0.09
+    ruby scan_segments.rb $1 $2 -103.76 18.77 -100.7 18.68 0.09
+    ruby scan_segments.rb $1 $2 -103.76 18.68 -100.7 18.59 0.09
+    ruby scan_segments.rb $1 $2 -103.76 18.59 -100.7 18.5 0.09
+    ruby scan_segments.rb $1 $2 -103.58 18.5 -101.87 18.41 0.09
+    ruby scan_segments.rb $1 $2 -101.6 18.5 -101.33 18.41 0.09
+    ruby scan_segments.rb $1 $2 -101.15 18.5 -100.61 18.41 0.09
+    ruby scan_segments.rb $1 $2 -103.58 18.41 -101.87 18.32 0.09
+    ruby scan_segments.rb $1 $2 -100.97 18.41 -100.61 18.32 0.09
+    ruby scan_segments.rb $1 $2 -103.49 18.32 -101.78 18.23 0.09
+    ruby scan_segments.rb $1 $2 -100.7 18.32 -100.61 18.23 0.09
+    ruby scan_segments.rb $1 $2 -103.31 18.23 -101.87 18.14 0.09
+    ruby scan_segments.rb $1 $2 -102.95 18.14 -102.14 18.05 0.09
+    ruby scan_segments.rb $1 $2 -102.68 18.05 -102.14 17.96 0.09
+    ruby scan_segments.rb $1 $2 -102.32 17.96 -102.05 17.87 0.09
+    ruby scan_segments.rb $1 $2 -102.95 17.42 -102.86 17.33 0.09
+  ;;
+  MR)
+    ruby scan_segments.rb $1 $2 -99.3 19.09 -98.76 19.0 0.09
+    ruby scan_segments.rb $1 $2 -98.67 19.09 -98.49 19.0 0.09
+    ruby scan_segments.rb $1 $2 -99.39 19.0 -98.49 18.91 0.09
+    ruby scan_segments.rb $1 $2 -99.39 18.91 -98.58 18.82 0.09
+    ruby scan_segments.rb $1 $2 -99.48 18.82 -98.58 18.73 0.09
+    ruby scan_segments.rb $1 $2 -99.48 18.73 -98.58 18.64 0.09
+    ruby scan_segments.rb $1 $2 -99.48 18.64 -98.58 18.55 0.09
+    ruby scan_segments.rb $1 $2 -99.39 18.55 -98.58 18.46 0.09
+    ruby scan_segments.rb $1 $2 -99.3 18.46 -98.76 18.37 0.09
+    ruby scan_segments.rb $1 $2 -98.67 18.46 -98.58 18.37 0.09
+    ruby scan_segments.rb $1 $2 -99.03 18.37 -98.94 18.28 0.09
+  ;;
+  MX)
+    ruby scan_segments.rb $1 $2 -100.04 20.32 -99.68 20.23 0.09
+    ruby scan_segments.rb $1 $2 -100.04 20.23 -99.41 20.14 0.09
+    ruby scan_segments.rb $1 $2 -100.13 20.14 -99.41 20.05 0.09
+    ruby scan_segments.rb $1 $2 -99.05 20.14 -98.87 20.05 0.09
+    ruby scan_segments.rb $1 $2 -100.22 20.05 -99.41 19.96 0.09
+    ruby scan_segments.rb $1 $2 -99.23 20.05 -98.78 19.96 0.09
+    ruby scan_segments.rb $1 $2 -100.22 19.96 -99.32 19.87 0.09
+    ruby scan_segments.rb $1 $2 -99.23 19.96 -98.87 19.87 0.09
+    ruby scan_segments.rb $1 $2 -100.22 19.87 -98.6 19.78 0.09
+    ruby scan_segments.rb $1 $2 -100.31 19.78 -98.6 19.69 0.09
+    ruby scan_segments.rb $1 $2 -100.31 19.69 -98.6 19.6 0.09
+    ruby scan_segments.rb $1 $2 -100.31 19.6 -98.6 19.51 0.09
+    ruby scan_segments.rb $1 $2 -100.22 19.51 -98.51 19.42 0.09
+    ruby scan_segments.rb $1 $2 -100.31 19.42 -99.14 19.33 0.09
+    ruby scan_segments.rb $1 $2 -99.05 19.42 -98.51 19.33 0.09
+    ruby scan_segments.rb $1 $2 -100.31 19.33 -99.23 19.24 0.09
+    ruby scan_segments.rb $1 $2 -99.05 19.33 -98.51 19.24 0.09
+    ruby scan_segments.rb $1 $2 -100.4 19.24 -99.23 19.15 0.09
+    ruby scan_segments.rb $1 $2 -98.96 19.24 -98.51 19.15 0.09
+    ruby scan_segments.rb $1 $2 -100.49 19.15 -99.14 19.06 0.09
+    ruby scan_segments.rb $1 $2 -98.96 19.15 -98.51 19.06 0.09
+    ruby scan_segments.rb $1 $2 -100.49 19.06 -99.14 18.97 0.09
+    ruby scan_segments.rb $1 $2 -98.87 19.06 -98.51 18.97 0.09
+    ruby scan_segments.rb $1 $2 -100.49 18.97 -99.23 18.88 0.09
+    ruby scan_segments.rb $1 $2 -98.78 18.97 -98.6 18.88 0.09
+    ruby scan_segments.rb $1 $2 -100.49 18.88 -99.32 18.79 0.09
+    ruby scan_segments.rb $1 $2 -100.49 18.79 -99.32 18.7 0.09
+    ruby scan_segments.rb $1 $2 -100.49 18.7 -99.41 18.61 0.09
+    ruby scan_segments.rb $1 $2 -100.49 18.61 -99.68 18.52 0.09
+    ruby scan_segments.rb $1 $2 -100.49 18.52 -99.95 18.43 0.09
+    ruby scan_segments.rb $1 $2 -100.4 18.43 -100.13 18.34 0.09
+    ruby scan_segments.rb $1 $2 -100.31 18.34 -100.22 18.25 0.09
+  ;;
+  NA)
+    ruby scan_segments.rb $1 $2 -105.45 23.06 -105.09 22.97 0.09
+    ruby scan_segments.rb $1 $2 -105.54 22.97 -104.91 22.88 0.09
+    ruby scan_segments.rb $1 $2 -105.54 22.88 -104.82 22.79 0.09
+    ruby scan_segments.rb $1 $2 -105.54 22.79 -104.82 22.7 0.09
+    ruby scan_segments.rb $1 $2 -105.54 22.7 -104.91 22.61 0.09
+    ruby scan_segments.rb $1 $2 -105.81 22.61 -105.0 22.52 0.09
+    ruby scan_segments.rb $1 $2 -104.91 22.61 -104.73 22.52 0.09
+    ruby scan_segments.rb $1 $2 -105.81 22.52 -104.55 22.43 0.09
+    ruby scan_segments.rb $1 $2 -105.72 22.43 -104.28 22.34 0.09
+    ruby scan_segments.rb $1 $2 -105.72 22.34 -104.28 22.25 0.09
+    ruby scan_segments.rb $1 $2 -105.72 22.25 -104.28 22.16 0.09
+    ruby scan_segments.rb $1 $2 -105.72 22.16 -104.28 22.07 0.09
+    ruby scan_segments.rb $1 $2 -106.08 22.07 -105.99 21.98 0.09
+    ruby scan_segments.rb $1 $2 -105.72 22.07 -104.28 21.98 0.09
+    ruby scan_segments.rb $1 $2 -105.72 21.98 -104.1 21.89 0.09
+    ruby scan_segments.rb $1 $2 -105.9 21.89 -105.81 21.8 0.09
+    ruby scan_segments.rb $1 $2 -105.63 21.89 -104.1 21.8 0.09
+    ruby scan_segments.rb $1 $2 -106.71 21.8 -106.62 21.71 0.09
+    ruby scan_segments.rb $1 $2 -105.54 21.8 -103.92 21.71 0.09
+    ruby scan_segments.rb $1 $2 -106.71 21.71 -106.44 21.62 0.09
+    ruby scan_segments.rb $1 $2 -105.54 21.71 -103.83 21.62 0.09
+    ruby scan_segments.rb $1 $2 -106.71 21.62 -106.44 21.53 0.09
+    ruby scan_segments.rb $1 $2 -105.45 21.62 -103.83 21.53 0.09
+    ruby scan_segments.rb $1 $2 -106.53 21.53 -106.35 21.44 0.09
+    ruby scan_segments.rb $1 $2 -105.36 21.53 -103.74 21.44 0.09
+    ruby scan_segments.rb $1 $2 -106.53 21.44 -106.35 21.35 0.09
+    ruby scan_segments.rb $1 $2 -105.27 21.44 -103.74 21.35 0.09
+    ruby scan_segments.rb $1 $2 -106.35 21.35 -106.17 21.26 0.09
+    ruby scan_segments.rb $1 $2 -105.27 21.35 -103.74 21.26 0.09
+    ruby scan_segments.rb $1 $2 -105.27 21.26 -103.83 21.17 0.09
+    ruby scan_segments.rb $1 $2 -105.27 21.17 -104.01 21.08 0.09
+    ruby scan_segments.rb $1 $2 -105.36 21.08 -104.19 20.99 0.09
+    ruby scan_segments.rb $1 $2 -105.45 20.99 -104.19 20.9 0.09
+    ruby scan_segments.rb $1 $2 -105.54 20.9 -105.09 20.81 0.09
+    ruby scan_segments.rb $1 $2 -104.64 20.9 -104.19 20.81 0.09
+    ruby scan_segments.rb $1 $2 -105.54 20.81 -105.18 20.72 0.09
+    ruby scan_segments.rb $1 $2 -104.55 20.81 -104.28 20.72 0.09
+    ruby scan_segments.rb $1 $2 -105.63 20.72 -105.54 20.63 0.09
+    ruby scan_segments.rb $1 $2 -105.36 20.72 -105.18 20.63 0.09
+    ruby scan_segments.rb $1 $2 -104.46 20.72 -104.19 20.63 0.09
+    ruby scan_segments.rb $1 $2 -104.37 20.63 -104.19 20.54 0.09
+  ;;
+  NL)
+    ruby scan_segments.rb $1 $2 -100.01 27.79 -99.74 27.7 0.09
+    ruby scan_segments.rb $1 $2 -100.46 27.7 -99.65 27.61 0.09
+    ruby scan_segments.rb $1 $2 -100.55 27.61 -99.74 27.52 0.09
+    ruby scan_segments.rb $1 $2 -100.55 27.52 -99.74 27.43 0.09
+    ruby scan_segments.rb $1 $2 -100.82 27.43 -99.74 27.34 0.09
+    ruby scan_segments.rb $1 $2 -100.91 27.34 -99.74 27.25 0.09
+    ruby scan_segments.rb $1 $2 -100.91 27.25 -99.65 27.16 0.09
+    ruby scan_segments.rb $1 $2 -100.91 27.16 -99.65 27.07 0.09
+    ruby scan_segments.rb $1 $2 -100.91 27.07 -100.73 26.98 0.09
+    ruby scan_segments.rb $1 $2 -100.64 27.07 -99.65 26.98 0.09
+    ruby scan_segments.rb $1 $2 -100.64 26.98 -99.74 26.89 0.09
+    ruby scan_segments.rb $1 $2 -100.64 26.89 -99.65 26.8 0.09
+    ruby scan_segments.rb $1 $2 -100.73 26.8 -99.65 26.71 0.09
+    ruby scan_segments.rb $1 $2 -101.18 26.71 -99.56 26.62 0.09
+    ruby scan_segments.rb $1 $2 -101.18 26.62 -99.38 26.53 0.09
+    ruby scan_segments.rb $1 $2 -101.27 26.53 -99.38 26.44 0.09
+    ruby scan_segments.rb $1 $2 -101.27 26.44 -99.38 26.35 0.09
+    ruby scan_segments.rb $1 $2 -101.27 26.35 -99.2 26.26 0.09
+    ruby scan_segments.rb $1 $2 -101.18 26.26 -99.11 26.17 0.09
+    ruby scan_segments.rb $1 $2 -101.09 26.17 -98.93 26.08 0.09
+    ruby scan_segments.rb $1 $2 -101.0 26.08 -98.93 25.99 0.09
+    ruby scan_segments.rb $1 $2 -98.84 26.08 -98.57 25.99 0.09
+    ruby scan_segments.rb $1 $2 -100.91 25.99 -98.48 25.9 0.09
+    ruby scan_segments.rb $1 $2 -100.91 25.9 -98.48 25.81 0.09
+    ruby scan_segments.rb $1 $2 -100.91 25.81 -98.48 25.72 0.09
+    ruby scan_segments.rb $1 $2 -100.91 25.72 -98.48 25.63 0.09
+    ruby scan_segments.rb $1 $2 -100.64 25.63 -98.48 25.54 0.09
+    ruby scan_segments.rb $1 $2 -100.64 25.54 -98.39 25.45 0.09
+    ruby scan_segments.rb $1 $2 -100.55 25.45 -98.39 25.36 0.09
+    ruby scan_segments.rb $1 $2 -100.73 25.36 -100.55 25.27 0.09
+    ruby scan_segments.rb $1 $2 -100.46 25.36 -98.48 25.27 0.09
+    ruby scan_segments.rb $1 $2 -100.82 25.27 -98.57 25.18 0.09
+    ruby scan_segments.rb $1 $2 -100.82 25.18 -98.84 25.09 0.09
+    ruby scan_segments.rb $1 $2 -100.82 25.09 -99.11 25.0 0.09
+    ruby scan_segments.rb $1 $2 -100.91 25.0 -99.11 24.91 0.09
+    ruby scan_segments.rb $1 $2 -100.91 24.91 -99.11 24.82 0.09
+    ruby scan_segments.rb $1 $2 -100.91 24.82 -99.2 24.73 0.09
+    ruby scan_segments.rb $1 $2 -100.91 24.73 -99.47 24.64 0.09
+    ruby scan_segments.rb $1 $2 -100.91 24.64 -99.56 24.55 0.09
+    ruby scan_segments.rb $1 $2 -100.91 24.55 -99.65 24.46 0.09
+    ruby scan_segments.rb $1 $2 -100.82 24.46 -99.56 24.37 0.09
+    ruby scan_segments.rb $1 $2 -100.73 24.37 -99.56 24.28 0.09
+    ruby scan_segments.rb $1 $2 -100.73 24.28 -99.65 24.19 0.09
+    ruby scan_segments.rb $1 $2 -100.73 24.19 -99.56 24.1 0.09
+    ruby scan_segments.rb $1 $2 -100.64 24.1 -99.56 24.01 0.09
+    ruby scan_segments.rb $1 $2 -100.55 24.01 -99.47 23.92 0.09
+    ruby scan_segments.rb $1 $2 -100.55 23.92 -99.38 23.83 0.09
+    ruby scan_segments.rb $1 $2 -100.55 23.83 -99.38 23.74 0.09
+    ruby scan_segments.rb $1 $2 -100.55 23.74 -99.56 23.65 0.09
+    ruby scan_segments.rb $1 $2 -100.55 23.65 -99.83 23.56 0.09
+    ruby scan_segments.rb $1 $2 -100.55 23.56 -99.92 23.47 0.09
+    ruby scan_segments.rb $1 $2 -100.55 23.47 -99.92 23.38 0.09
+    ruby scan_segments.rb $1 $2 -100.55 23.38 -99.92 23.29 0.09
+    ruby scan_segments.rb $1 $2 -100.55 23.29 -100.01 23.2 0.09
+    ruby scan_segments.rb $1 $2 -100.46 23.2 -100.28 23.11 0.09
+  ;;
+  OA)
+    ruby scan_segments.rb $1 $2 -96.68 18.64 -96.41 18.55 0.09
+    ruby scan_segments.rb $1 $2 -96.68 18.55 -96.41 18.46 0.09
+    ruby scan_segments.rb $1 $2 -96.77 18.46 -96.41 18.37 0.09
+    ruby scan_segments.rb $1 $2 -97.76 18.37 -97.49 18.28 0.09
+    ruby scan_segments.rb $1 $2 -96.77 18.37 -96.23 18.28 0.09
+    ruby scan_segments.rb $1 $2 -97.76 18.28 -97.49 18.19 0.09
+    ruby scan_segments.rb $1 $2 -96.95 18.28 -95.87 18.19 0.09
+    ruby scan_segments.rb $1 $2 -97.76 18.19 -97.4 18.1 0.09
+    ruby scan_segments.rb $1 $2 -97.31 18.19 -95.78 18.1 0.09
+    ruby scan_segments.rb $1 $2 -98.21 18.1 -95.78 18.01 0.09
+    ruby scan_segments.rb $1 $2 -98.3 18.01 -95.78 17.92 0.09
+    ruby scan_segments.rb $1 $2 -98.3 17.92 -95.87 17.83 0.09
+    ruby scan_segments.rb $1 $2 -98.39 17.83 -95.87 17.74 0.09
+    ruby scan_segments.rb $1 $2 -98.39 17.74 -95.87 17.65 0.09
+    ruby scan_segments.rb $1 $2 -95.51 17.74 -95.15 17.65 0.09
+    ruby scan_segments.rb $1 $2 -98.39 17.65 -95.24 17.56 0.09
+    ruby scan_segments.rb $1 $2 -98.3 17.56 -95.15 17.47 0.09
+    ruby scan_segments.rb $1 $2 -98.3 17.47 -95.06 17.38 0.09
+    ruby scan_segments.rb $1 $2 -98.21 17.38 -94.97 17.29 0.09
+    ruby scan_segments.rb $1 $2 -98.3 17.29 -94.7 17.2 0.09
+    ruby scan_segments.rb $1 $2 -98.3 17.2 -93.8 17.11 0.09
+    ruby scan_segments.rb $1 $2 -98.12 17.11 -93.8 17.02 0.09
+    ruby scan_segments.rb $1 $2 -98.12 17.02 -93.89 16.93 0.09
+    ruby scan_segments.rb $1 $2 -98.12 16.93 -93.89 16.84 0.09
+    ruby scan_segments.rb $1 $2 -98.12 16.84 -93.89 16.75 0.09
+    ruby scan_segments.rb $1 $2 -98.21 16.75 -94.07 16.66 0.09
+    ruby scan_segments.rb $1 $2 -98.39 16.66 -94.07 16.57 0.09
+    ruby scan_segments.rb $1 $2 -98.39 16.57 -94.07 16.48 0.09
+    ruby scan_segments.rb $1 $2 -98.48 16.48 -94.07 16.39 0.09
+    ruby scan_segments.rb $1 $2 -98.57 16.39 -94.07 16.3 0.09
+    ruby scan_segments.rb $1 $2 -98.57 16.3 -94.07 16.21 0.09
+    ruby scan_segments.rb $1 $2 -98.21 16.21 -94.88 16.12 0.09
+    ruby scan_segments.rb $1 $2 -94.79 16.21 -94.07 16.12 0.09
+    ruby scan_segments.rb $1 $2 -98.03 16.12 -95.24 16.03 0.09
+    ruby scan_segments.rb $1 $2 -94.34 16.12 -94.07 16.03 0.09
+    ruby scan_segments.rb $1 $2 -97.94 16.03 -95.33 15.94 0.09
+    ruby scan_segments.rb $1 $2 -97.4 15.94 -95.51 15.85 0.09
+    ruby scan_segments.rb $1 $2 -97.13 15.85 -95.87 15.76 0.09
+    ruby scan_segments.rb $1 $2 -96.95 15.76 -96.05 15.67 0.09
+    ruby scan_segments.rb $1 $2 -96.59 15.67 -96.41 15.58 0.09
+  ;;
+  PU)
+    ruby scan_segments.rb $1 $2 -97.91 20.86 -97.64 20.77 0.09
+    ruby scan_segments.rb $1 $2 -98.0 20.77 -97.64 20.68 0.09
+    ruby scan_segments.rb $1 $2 -98.0 20.68 -97.55 20.59 0.09
+    ruby scan_segments.rb $1 $2 -98.0 20.59 -97.46 20.5 0.09
+    ruby scan_segments.rb $1 $2 -98.09 20.5 -97.55 20.41 0.09
+    ruby scan_segments.rb $1 $2 -98.18 20.41 -97.64 20.32 0.09
+    ruby scan_segments.rb $1 $2 -98.27 20.32 -97.64 20.23 0.09
+    ruby scan_segments.rb $1 $2 -97.46 20.32 -97.19 20.23 0.09
+    ruby scan_segments.rb $1 $2 -98.18 20.23 -97.01 20.14 0.09
+    ruby scan_segments.rb $1 $2 -98.18 20.14 -97.1 20.05 0.09
+    ruby scan_segments.rb $1 $2 -98.18 20.05 -97.1 19.96 0.09
+    ruby scan_segments.rb $1 $2 -98.27 19.96 -97.19 19.87 0.09
+    ruby scan_segments.rb $1 $2 -98.27 19.87 -97.19 19.78 0.09
+    ruby scan_segments.rb $1 $2 -98.18 19.78 -97.19 19.69 0.09
+    ruby scan_segments.rb $1 $2 -98.18 19.69 -97.28 19.6 0.09
+    ruby scan_segments.rb $1 $2 -97.82 19.6 -97.28 19.51 0.09
+    ruby scan_segments.rb $1 $2 -98.63 19.51 -98.45 19.42 0.09
+    ruby scan_segments.rb $1 $2 -97.73 19.51 -97.19 19.42 0.09
+    ruby scan_segments.rb $1 $2 -98.63 19.42 -98.27 19.33 0.09
+    ruby scan_segments.rb $1 $2 -97.82 19.42 -96.92 19.33 0.09
+    ruby scan_segments.rb $1 $2 -98.63 19.33 -98.27 19.24 0.09
+    ruby scan_segments.rb $1 $2 -98.0 19.33 -97.91 19.24 0.09
+    ruby scan_segments.rb $1 $2 -97.82 19.33 -96.92 19.24 0.09
+    ruby scan_segments.rb $1 $2 -98.63 19.24 -96.92 19.15 0.09
+    ruby scan_segments.rb $1 $2 -98.63 19.15 -97.1 19.06 0.09
+    ruby scan_segments.rb $1 $2 -98.63 19.06 -97.1 18.97 0.09
+    ruby scan_segments.rb $1 $2 -98.63 18.97 -97.1 18.88 0.09
+    ruby scan_segments.rb $1 $2 -98.72 18.88 -97.19 18.79 0.09
+    ruby scan_segments.rb $1 $2 -98.72 18.79 -97.19 18.7 0.09
+    ruby scan_segments.rb $1 $2 -98.72 18.7 -97.01 18.61 0.09
+    ruby scan_segments.rb $1 $2 -98.81 18.61 -97.01 18.52 0.09
+    ruby scan_segments.rb $1 $2 -96.92 18.61 -96.65 18.52 0.09
+    ruby scan_segments.rb $1 $2 -98.9 18.52 -96.56 18.43 0.09
+    ruby scan_segments.rb $1 $2 -98.99 18.43 -96.56 18.34 0.09
+    ruby scan_segments.rb $1 $2 -98.99 18.34 -96.65 18.25 0.09
+    ruby scan_segments.rb $1 $2 -98.99 18.25 -96.83 18.16 0.09
+    ruby scan_segments.rb $1 $2 -98.9 18.16 -97.19 18.07 0.09
+    ruby scan_segments.rb $1 $2 -97.1 18.16 -96.92 18.07 0.09
+    ruby scan_segments.rb $1 $2 -98.72 18.07 -97.55 17.98 0.09
+    ruby scan_segments.rb $1 $2 -97.46 18.07 -97.28 17.98 0.09
+    ruby scan_segments.rb $1 $2 -98.63 17.98 -98.45 17.89 0.09
+    ruby scan_segments.rb $1 $2 -98.36 17.98 -98.09 17.89 0.09
+    ruby scan_segments.rb $1 $2 -97.82 17.98 -97.64 17.89 0.09
+    ruby scan_segments.rb $1 $2 -97.46 17.98 -97.28 17.89 0.09
+  ;;
+  QE)
+    ruby scan_segments.rb $1 $2 -99.87 21.6 -99.6 21.51 0.09
+    ruby scan_segments.rb $1 $2 -99.42 21.6 -99.24 21.51 0.09
+    ruby scan_segments.rb $1 $2 -99.78 21.51 -99.15 21.42 0.09
+    ruby scan_segments.rb $1 $2 -99.87 21.42 -99.06 21.33 0.09
+    ruby scan_segments.rb $1 $2 -99.78 21.33 -98.97 21.24 0.09
+    ruby scan_segments.rb $1 $2 -100.05 21.24 -99.06 21.15 0.09
+    ruby scan_segments.rb $1 $2 -100.14 21.15 -99.15 21.06 0.09
+    ruby scan_segments.rb $1 $2 -100.23 21.06 -99.33 20.97 0.09
+    ruby scan_segments.rb $1 $2 -100.59 20.97 -99.33 20.88 0.09
+    ruby scan_segments.rb $1 $2 -100.59 20.88 -99.42 20.79 0.09
+    ruby scan_segments.rb $1 $2 -100.59 20.79 -99.51 20.7 0.09
+    ruby scan_segments.rb $1 $2 -100.59 20.7 -99.42 20.61 0.09
+    ruby scan_segments.rb $1 $2 -100.59 20.61 -99.6 20.52 0.09
+    ruby scan_segments.rb $1 $2 -100.59 20.52 -99.78 20.43 0.09
+    ruby scan_segments.rb $1 $2 -100.5 20.43 -99.78 20.34 0.09
+    ruby scan_segments.rb $1 $2 -100.41 20.34 -99.78 20.25 0.09
+    ruby scan_segments.rb $1 $2 -100.32 20.25 -99.87 20.16 0.09
+    ruby scan_segments.rb $1 $2 -100.32 20.16 -99.87 20.07 0.09
+    ruby scan_segments.rb $1 $2 -100.23 20.07 -99.96 19.98 0.09
+  ;;
+  QR)
+    ruby scan_segments.rb $1 $2 -87.45 21.61 -86.91 21.52 0.09
+    ruby scan_segments.rb $1 $2 -86.82 21.61 -86.73 21.52 0.09
+    ruby scan_segments.rb $1 $2 -87.54 21.52 -86.73 21.43 0.09
+    ruby scan_segments.rb $1 $2 -87.54 21.43 -86.73 21.34 0.09
+    ruby scan_segments.rb $1 $2 -87.63 21.34 -86.73 21.25 0.09
+    ruby scan_segments.rb $1 $2 -87.63 21.25 -86.64 21.16 0.09
+    ruby scan_segments.rb $1 $2 -87.63 21.16 -86.73 21.07 0.09
+    ruby scan_segments.rb $1 $2 -87.63 21.07 -86.73 20.98 0.09
+    ruby scan_segments.rb $1 $2 -87.63 20.98 -86.82 20.89 0.09
+    ruby scan_segments.rb $1 $2 -87.63 20.89 -86.82 20.8 0.09
+    ruby scan_segments.rb $1 $2 -87.72 20.8 -86.91 20.71 0.09
+    ruby scan_segments.rb $1 $2 -87.72 20.71 -86.91 20.62 0.09
+    ruby scan_segments.rb $1 $2 -87.9 20.62 -86.64 20.53 0.09
+    ruby scan_segments.rb $1 $2 -88.26 20.53 -87.18 20.44 0.09
+    ruby scan_segments.rb $1 $2 -87.0 20.53 -86.73 20.44 0.09
+    ruby scan_segments.rb $1 $2 -88.35 20.44 -87.27 20.35 0.09
+    ruby scan_segments.rb $1 $2 -87.09 20.44 -86.73 20.35 0.09
+    ruby scan_segments.rb $1 $2 -88.44 20.35 -87.27 20.26 0.09
+    ruby scan_segments.rb $1 $2 -87.09 20.35 -86.82 20.26 0.09
+    ruby scan_segments.rb $1 $2 -88.53 20.26 -87.36 20.17 0.09
+    ruby scan_segments.rb $1 $2 -88.8 20.17 -87.36 20.08 0.09
+    ruby scan_segments.rb $1 $2 -88.89 20.08 -87.45 19.99 0.09
+    ruby scan_segments.rb $1 $2 -89.16 19.99 -87.36 19.9 0.09
+    ruby scan_segments.rb $1 $2 -89.43 19.9 -87.36 19.81 0.09
+    ruby scan_segments.rb $1 $2 -89.43 19.81 -87.45 19.72 0.09
+    ruby scan_segments.rb $1 $2 -89.43 19.72 -87.36 19.63 0.09
+    ruby scan_segments.rb $1 $2 -89.43 19.63 -87.36 19.54 0.09
+    ruby scan_segments.rb $1 $2 -89.34 19.54 -87.36 19.45 0.09
+    ruby scan_segments.rb $1 $2 -89.25 19.45 -87.45 19.36 0.09
+    ruby scan_segments.rb $1 $2 -89.16 19.36 -87.36 19.27 0.09
+    ruby scan_segments.rb $1 $2 -89.07 19.27 -87.45 19.18 0.09
+    ruby scan_segments.rb $1 $2 -89.07 19.18 -87.45 19.09 0.09
+    ruby scan_segments.rb $1 $2 -89.07 19.09 -87.54 19.0 0.09
+    ruby scan_segments.rb $1 $2 -89.16 19.0 -87.54 18.91 0.09
+    ruby scan_segments.rb $1 $2 -89.16 18.91 -87.63 18.82 0.09
+    ruby scan_segments.rb $1 $2 -89.16 18.82 -87.63 18.73 0.09
+    ruby scan_segments.rb $1 $2 -87.36 18.82 -87.18 18.73 0.09
+    ruby scan_segments.rb $1 $2 -89.16 18.73 -87.63 18.64 0.09
+    ruby scan_segments.rb $1 $2 -87.27 18.73 -87.18 18.64 0.09
+    ruby scan_segments.rb $1 $2 -89.16 18.64 -88.17 18.55 0.09
+    ruby scan_segments.rb $1 $2 -88.08 18.64 -87.72 18.55 0.09
+    ruby scan_segments.rb $1 $2 -87.36 18.64 -87.18 18.55 0.09
+    ruby scan_segments.rb $1 $2 -89.16 18.55 -88.17 18.46 0.09
+    ruby scan_segments.rb $1 $2 -88.08 18.55 -87.72 18.46 0.09
+    ruby scan_segments.rb $1 $2 -87.36 18.55 -87.27 18.46 0.09
+    ruby scan_segments.rb $1 $2 -89.07 18.46 -88.44 18.37 0.09
+    ruby scan_segments.rb $1 $2 -88.08 18.46 -87.72 18.37 0.09
+    ruby scan_segments.rb $1 $2 -89.07 18.37 -88.53 18.28 0.09
+    ruby scan_segments.rb $1 $2 -87.99 18.37 -87.72 18.28 0.09
+    ruby scan_segments.rb $1 $2 -89.07 18.28 -88.53 18.19 0.09
+    ruby scan_segments.rb $1 $2 -87.9 18.28 -87.81 18.19 0.09
+    ruby scan_segments.rb $1 $2 -89.16 18.19 -88.62 18.1 0.09
+    ruby scan_segments.rb $1 $2 -87.9 18.19 -87.81 18.1 0.09
+    ruby scan_segments.rb $1 $2 -89.16 18.1 -88.62 18.01 0.09
+    ruby scan_segments.rb $1 $2 -89.16 18.01 -88.71 17.92 0.09
+    ruby scan_segments.rb $1 $2 -88.98 17.92 -88.8 17.83 0.09
+  ;;
+  SI)
+    ruby scan_segments.rb $1 $2 -108.38 27.05 -108.02 26.96 0.09
+    ruby scan_segments.rb $1 $2 -108.47 26.96 -107.93 26.87 0.09
+    ruby scan_segments.rb $1 $2 -108.56 26.87 -107.93 26.78 0.09
+    ruby scan_segments.rb $1 $2 -108.56 26.78 -107.93 26.69 0.09
+    ruby scan_segments.rb $1 $2 -108.65 26.69 -107.93 26.6 0.09
+    ruby scan_segments.rb $1 $2 -108.83 26.6 -107.84 26.51 0.09
+    ruby scan_segments.rb $1 $2 -109.19 26.51 -109.1 26.42 0.09
+    ruby scan_segments.rb $1 $2 -108.83 26.51 -107.84 26.42 0.09
+    ruby scan_segments.rb $1 $2 -109.19 26.42 -107.75 26.33 0.09
+    ruby scan_segments.rb $1 $2 -109.37 26.33 -107.75 26.24 0.09
+    ruby scan_segments.rb $1 $2 -109.37 26.24 -107.66 26.15 0.09
+    ruby scan_segments.rb $1 $2 -109.46 26.15 -107.3 26.06 0.09
+    ruby scan_segments.rb $1 $2 -109.46 26.06 -107.3 25.97 0.09
+    ruby scan_segments.rb $1 $2 -109.46 25.97 -107.21 25.88 0.09
+    ruby scan_segments.rb $1 $2 -109.46 25.88 -107.21 25.79 0.09
+    ruby scan_segments.rb $1 $2 -109.46 25.79 -107.12 25.7 0.09
+    ruby scan_segments.rb $1 $2 -109.46 25.7 -107.12 25.61 0.09
+    ruby scan_segments.rb $1 $2 -109.28 25.61 -107.12 25.52 0.09
+    ruby scan_segments.rb $1 $2 -109.1 25.52 -107.12 25.43 0.09
+    ruby scan_segments.rb $1 $2 -108.83 25.43 -107.21 25.34 0.09
+    ruby scan_segments.rb $1 $2 -108.65 25.34 -107.21 25.25 0.09
+    ruby scan_segments.rb $1 $2 -108.47 25.25 -107.21 25.16 0.09
+    ruby scan_segments.rb $1 $2 -108.38 25.16 -107.21 25.07 0.09
+    ruby scan_segments.rb $1 $2 -109.01 25.07 -108.92 24.98 0.09
+    ruby scan_segments.rb $1 $2 -108.29 25.07 -107.12 24.98 0.09
+    ruby scan_segments.rb $1 $2 -108.29 24.98 -107.12 24.89 0.09
+    ruby scan_segments.rb $1 $2 -108.2 24.89 -106.94 24.8 0.09
+    ruby scan_segments.rb $1 $2 -108.11 24.8 -106.85 24.71 0.09
+    ruby scan_segments.rb $1 $2 -108.02 24.71 -106.85 24.62 0.09
+    ruby scan_segments.rb $1 $2 -108.02 24.62 -106.76 24.53 0.09
+    ruby scan_segments.rb $1 $2 -107.84 24.53 -106.76 24.44 0.09
+    ruby scan_segments.rb $1 $2 -107.75 24.44 -106.67 24.35 0.09
+    ruby scan_segments.rb $1 $2 -106.58 24.44 -106.13 24.35 0.09
+    ruby scan_segments.rb $1 $2 -107.57 24.35 -106.04 24.26 0.09
+    ruby scan_segments.rb $1 $2 -107.48 24.26 -106.04 24.17 0.09
+    ruby scan_segments.rb $1 $2 -107.39 24.17 -105.95 24.08 0.09
+    ruby scan_segments.rb $1 $2 -107.21 24.08 -105.95 23.99 0.09
+    ruby scan_segments.rb $1 $2 -107.12 23.99 -105.95 23.9 0.09
+    ruby scan_segments.rb $1 $2 -107.03 23.9 -105.86 23.81 0.09
+    ruby scan_segments.rb $1 $2 -106.94 23.81 -105.86 23.72 0.09
+    ruby scan_segments.rb $1 $2 -106.85 23.72 -105.77 23.63 0.09
+    ruby scan_segments.rb $1 $2 -106.85 23.63 -105.77 23.54 0.09
+    ruby scan_segments.rb $1 $2 -106.76 23.54 -105.68 23.45 0.09
+    ruby scan_segments.rb $1 $2 -106.67 23.45 -105.68 23.36 0.09
+    ruby scan_segments.rb $1 $2 -106.58 23.36 -105.59 23.27 0.09
+    ruby scan_segments.rb $1 $2 -106.49 23.27 -105.59 23.18 0.09
+    ruby scan_segments.rb $1 $2 -106.49 23.18 -105.41 23.09 0.09
+    ruby scan_segments.rb $1 $2 -106.31 23.09 -105.32 23.0 0.09
+    ruby scan_segments.rb $1 $2 -106.22 23.0 -105.41 22.91 0.09
+    ruby scan_segments.rb $1 $2 -106.13 22.91 -105.41 22.82 0.09
+    ruby scan_segments.rb $1 $2 -106.04 22.82 -105.5 22.73 0.09
+    ruby scan_segments.rb $1 $2 -105.95 22.73 -105.41 22.64 0.09
+    ruby scan_segments.rb $1 $2 -105.86 22.64 -105.41 22.55 0.09
+    ruby scan_segments.rb $1 $2 -105.77 22.55 -105.41 22.46 0.09
+  ;;
+  SL)
+    ruby scan_segments.rb $1 $2 -100.95 24.55 -100.68 24.46 0.09
+    ruby scan_segments.rb $1 $2 -101.04 24.46 -100.59 24.37 0.09
+    ruby scan_segments.rb $1 $2 -101.13 24.37 -100.59 24.28 0.09
+    ruby scan_segments.rb $1 $2 -101.22 24.28 -100.59 24.19 0.09
+    ruby scan_segments.rb $1 $2 -101.4 24.19 -100.59 24.1 0.09
+    ruby scan_segments.rb $1 $2 -101.4 24.1 -100.5 24.01 0.09
+    ruby scan_segments.rb $1 $2 -101.4 24.01 -100.5 23.92 0.09
+    ruby scan_segments.rb $1 $2 -101.4 23.92 -100.5 23.83 0.09
+    ruby scan_segments.rb $1 $2 -101.58 23.83 -100.41 23.74 0.09
+    ruby scan_segments.rb $1 $2 -101.67 23.74 -100.41 23.65 0.09
+    ruby scan_segments.rb $1 $2 -101.76 23.65 -100.41 23.56 0.09
+    ruby scan_segments.rb $1 $2 -101.94 23.56 -100.5 23.47 0.09
+    ruby scan_segments.rb $1 $2 -102.03 23.47 -100.41 23.38 0.09
+    ruby scan_segments.rb $1 $2 -102.3 23.38 -100.41 23.29 0.09
+    ruby scan_segments.rb $1 $2 -102.3 23.29 -100.05 23.2 0.09
+    ruby scan_segments.rb $1 $2 -102.3 23.2 -99.96 23.11 0.09
+    ruby scan_segments.rb $1 $2 -102.3 23.11 -99.96 23.02 0.09
+    ruby scan_segments.rb $1 $2 -102.3 23.02 -99.96 22.93 0.09
+    ruby scan_segments.rb $1 $2 -102.3 22.93 -99.96 22.84 0.09
+    ruby scan_segments.rb $1 $2 -102.3 22.84 -99.87 22.75 0.09
+    ruby scan_segments.rb $1 $2 -102.21 22.75 -99.33 22.66 0.09
+    ruby scan_segments.rb $1 $2 -102.12 22.66 -99.24 22.57 0.09
+    ruby scan_segments.rb $1 $2 -101.94 22.57 -101.49 22.48 0.09
+    ruby scan_segments.rb $1 $2 -101.4 22.57 -99.24 22.48 0.09
+    ruby scan_segments.rb $1 $2 -101.85 22.48 -101.67 22.39 0.09
+    ruby scan_segments.rb $1 $2 -101.4 22.48 -99.15 22.39 0.09
+    ruby scan_segments.rb $1 $2 -98.97 22.48 -98.79 22.39 0.09
+    ruby scan_segments.rb $1 $2 -101.49 22.39 -98.43 22.3 0.09
+    ruby scan_segments.rb $1 $2 -101.49 22.3 -98.34 22.21 0.09
+    ruby scan_segments.rb $1 $2 -101.4 22.21 -98.25 22.12 0.09
+    ruby scan_segments.rb $1 $2 -101.4 22.12 -98.25 22.03 0.09
+    ruby scan_segments.rb $1 $2 -101.49 22.03 -98.43 21.94 0.09
+    ruby scan_segments.rb $1 $2 -101.49 21.94 -98.43 21.85 0.09
+    ruby scan_segments.rb $1 $2 -101.49 21.85 -98.43 21.76 0.09
+    ruby scan_segments.rb $1 $2 -101.13 21.76 -98.43 21.67 0.09
+    ruby scan_segments.rb $1 $2 -100.95 21.67 -98.61 21.58 0.09
+    ruby scan_segments.rb $1 $2 -100.86 21.58 -100.5 21.49 0.09
+    ruby scan_segments.rb $1 $2 -100.23 21.58 -98.52 21.49 0.09
+    ruby scan_segments.rb $1 $2 -100.14 21.49 -99.78 21.4 0.09
+    ruby scan_segments.rb $1 $2 -99.69 21.49 -98.52 21.4 0.09
+    ruby scan_segments.rb $1 $2 -99.24 21.4 -98.61 21.31 0.09
+    ruby scan_segments.rb $1 $2 -99.15 21.31 -98.61 21.22 0.09
+    ruby scan_segments.rb $1 $2 -98.97 21.22 -98.7 21.13 0.09
+  ;;
+  SO)
+    ruby scan_segments.rb $1 $2 -114.96 32.51 -114.51 32.42 0.09
+    ruby scan_segments.rb $1 $2 -115.05 32.42 -114.24 32.33 0.09
+    ruby scan_segments.rb $1 $2 -115.05 32.33 -113.97 32.24 0.09
+    ruby scan_segments.rb $1 $2 -115.05 32.24 -113.61 32.15 0.09
+    ruby scan_segments.rb $1 $2 -115.05 32.15 -113.34 32.06 0.09
+    ruby scan_segments.rb $1 $2 -115.05 32.06 -113.07 31.97 0.09
+    ruby scan_segments.rb $1 $2 -115.05 31.97 -112.8 31.88 0.09
+    ruby scan_segments.rb $1 $2 -114.96 31.88 -112.44 31.79 0.09
+    ruby scan_segments.rb $1 $2 -114.87 31.79 -112.17 31.7 0.09
+    ruby scan_segments.rb $1 $2 -114.78 31.7 -111.9 31.61 0.09
+    ruby scan_segments.rb $1 $2 -114.42 31.61 -111.63 31.52 0.09
+    ruby scan_segments.rb $1 $2 -114.24 31.52 -113.97 31.43 0.09
+    ruby scan_segments.rb $1 $2 -113.7 31.52 -111.36 31.43 0.09
+    ruby scan_segments.rb $1 $2 -113.7 31.43 -111.09 31.34 0.09
+    ruby scan_segments.rb $1 $2 -113.7 31.34 -108.66 31.25 0.09
+    ruby scan_segments.rb $1 $2 -113.34 31.25 -108.66 31.16 0.09
+    ruby scan_segments.rb $1 $2 -113.16 31.16 -108.66 31.07 0.09
+    ruby scan_segments.rb $1 $2 -113.34 31.07 -108.66 30.98 0.09
+    ruby scan_segments.rb $1 $2 -113.16 30.98 -108.66 30.89 0.09
+    ruby scan_segments.rb $1 $2 -113.16 30.89 -108.57 30.8 0.09
+    ruby scan_segments.rb $1 $2 -113.16 30.8 -108.57 30.71 0.09
+    ruby scan_segments.rb $1 $2 -113.16 30.71 -108.57 30.62 0.09
+    ruby scan_segments.rb $1 $2 -113.07 30.62 -108.57 30.53 0.09
+    ruby scan_segments.rb $1 $2 -113.07 30.53 -108.48 30.44 0.09
+    ruby scan_segments.rb $1 $2 -112.89 30.44 -108.48 30.35 0.09
+    ruby scan_segments.rb $1 $2 -112.89 30.35 -108.48 30.26 0.09
+    ruby scan_segments.rb $1 $2 -112.89 30.26 -108.48 30.17 0.09
+    ruby scan_segments.rb $1 $2 -112.8 30.17 -108.48 30.08 0.09
+    ruby scan_segments.rb $1 $2 -112.8 30.08 -108.48 29.99 0.09
+    ruby scan_segments.rb $1 $2 -112.8 29.99 -108.48 29.9 0.09
+    ruby scan_segments.rb $1 $2 -112.71 29.9 -108.48 29.81 0.09
+    ruby scan_segments.rb $1 $2 -112.71 29.81 -108.48 29.72 0.09
+    ruby scan_segments.rb $1 $2 -112.62 29.72 -108.39 29.63 0.09
+    ruby scan_segments.rb $1 $2 -112.53 29.63 -108.39 29.54 0.09
+    ruby scan_segments.rb $1 $2 -112.44 29.54 -108.39 29.45 0.09
+    ruby scan_segments.rb $1 $2 -112.44 29.45 -108.48 29.36 0.09
+    ruby scan_segments.rb $1 $2 -112.53 29.36 -108.48 29.27 0.09
+    ruby scan_segments.rb $1 $2 -112.53 29.27 -108.48 29.18 0.09
+    ruby scan_segments.rb $1 $2 -112.53 29.18 -108.48 29.09 0.09
+    ruby scan_segments.rb $1 $2 -112.53 29.09 -108.48 29.0 0.09
+    ruby scan_segments.rb $1 $2 -112.53 29.0 -108.57 28.91 0.09
+    ruby scan_segments.rb $1 $2 -112.62 28.91 -112.17 28.82 0.09
+    ruby scan_segments.rb $1 $2 -112.08 28.91 -108.57 28.82 0.09
+    ruby scan_segments.rb $1 $2 -112.53 28.82 -112.17 28.73 0.09
+    ruby scan_segments.rb $1 $2 -111.99 28.82 -108.57 28.73 0.09
+    ruby scan_segments.rb $1 $2 -112.35 28.73 -112.26 28.64 0.09
+    ruby scan_segments.rb $1 $2 -111.99 28.73 -108.57 28.64 0.09
+    ruby scan_segments.rb $1 $2 -111.9 28.64 -108.57 28.55 0.09
+    ruby scan_segments.rb $1 $2 -111.81 28.55 -108.57 28.46 0.09
+    ruby scan_segments.rb $1 $2 -112.35 28.46 -112.26 28.37 0.09
+    ruby scan_segments.rb $1 $2 -111.72 28.46 -108.48 28.37 0.09
+    ruby scan_segments.rb $1 $2 -111.54 28.37 -108.48 28.28 0.09
+    ruby scan_segments.rb $1 $2 -111.45 28.28 -108.93 28.19 0.09
+    ruby scan_segments.rb $1 $2 -108.75 28.28 -108.66 28.19 0.09
+    ruby scan_segments.rb $1 $2 -111.36 28.19 -108.93 28.1 0.09
+    ruby scan_segments.rb $1 $2 -111.36 28.1 -108.84 28.01 0.09
+    ruby scan_segments.rb $1 $2 -111.45 28.01 -111.36 27.92 0.09
+    ruby scan_segments.rb $1 $2 -111.27 28.01 -108.75 27.92 0.09
+    ruby scan_segments.rb $1 $2 -111.0 27.92 -108.75 27.83 0.09
+    ruby scan_segments.rb $1 $2 -110.64 27.83 -108.75 27.74 0.09
+    ruby scan_segments.rb $1 $2 -110.64 27.74 -108.66 27.65 0.09
+    ruby scan_segments.rb $1 $2 -110.64 27.65 -108.57 27.56 0.09
+    ruby scan_segments.rb $1 $2 -110.64 27.56 -108.57 27.47 0.09
+    ruby scan_segments.rb $1 $2 -110.64 27.47 -108.48 27.38 0.09
+    ruby scan_segments.rb $1 $2 -110.64 27.38 -108.48 27.29 0.09
+    ruby scan_segments.rb $1 $2 -110.55 27.29 -108.57 27.2 0.09
+    ruby scan_segments.rb $1 $2 -110.37 27.2 -108.57 27.11 0.09
+    ruby scan_segments.rb $1 $2 -110.19 27.11 -108.3 27.02 0.09
+    ruby scan_segments.rb $1 $2 -110.01 27.02 -108.3 26.93 0.09
+    ruby scan_segments.rb $1 $2 -109.92 26.93 -108.3 26.84 0.09
+    ruby scan_segments.rb $1 $2 -109.92 26.84 -108.39 26.75 0.09
+    ruby scan_segments.rb $1 $2 -109.83 26.75 -108.39 26.66 0.09
+    ruby scan_segments.rb $1 $2 -109.47 26.66 -108.48 26.57 0.09
+    ruby scan_segments.rb $1 $2 -109.38 26.57 -108.66 26.48 0.09
+    ruby scan_segments.rb $1 $2 -109.29 26.48 -108.75 26.39 0.09
+    ruby scan_segments.rb $1 $2 -109.29 26.39 -108.84 26.3 0.09
+  ;;
+  TB)
+    ruby scan_segments.rb $1 $2 -92.79 18.66 -92.43 18.57 0.09
+    ruby scan_segments.rb $1 $2 -92.88 18.57 -92.34 18.48 0.09
+    ruby scan_segments.rb $1 $2 -93.6 18.48 -92.16 18.39 0.09
+    ruby scan_segments.rb $1 $2 -93.87 18.39 -92.16 18.3 0.09
+    ruby scan_segments.rb $1 $2 -94.14 18.3 -92.16 18.21 0.09
+    ruby scan_segments.rb $1 $2 -94.14 18.21 -92.07 18.12 0.09
+    ruby scan_segments.rb $1 $2 -94.14 18.12 -91.98 18.03 0.09
+    ruby scan_segments.rb $1 $2 -91.62 18.12 -91.26 18.03 0.09
+    ruby scan_segments.rb $1 $2 -94.14 18.03 -91.8 17.94 0.09
+    ruby scan_segments.rb $1 $2 -91.62 18.03 -91.17 17.94 0.09
+    ruby scan_segments.rb $1 $2 -94.14 17.94 -93.33 17.85 0.09
+    ruby scan_segments.rb $1 $2 -93.24 17.94 -90.9 17.85 0.09
+    ruby scan_segments.rb $1 $2 -94.14 17.85 -93.33 17.76 0.09
+    ruby scan_segments.rb $1 $2 -93.06 17.85 -91.89 17.76 0.09
+    ruby scan_segments.rb $1 $2 -91.8 17.85 -90.9 17.76 0.09
+    ruby scan_segments.rb $1 $2 -93.96 17.76 -93.33 17.67 0.09
+    ruby scan_segments.rb $1 $2 -93.06 17.76 -92.16 17.67 0.09
+    ruby scan_segments.rb $1 $2 -91.8 17.76 -90.9 17.67 0.09
+    ruby scan_segments.rb $1 $2 -93.78 17.67 -93.33 17.58 0.09
+    ruby scan_segments.rb $1 $2 -93.06 17.67 -92.25 17.58 0.09
+    ruby scan_segments.rb $1 $2 -91.71 17.67 -90.9 17.58 0.09
+    ruby scan_segments.rb $1 $2 -93.78 17.58 -93.42 17.49 0.09
+    ruby scan_segments.rb $1 $2 -92.97 17.58 -92.34 17.49 0.09
+    ruby scan_segments.rb $1 $2 -91.71 17.58 -90.9 17.49 0.09
+    ruby scan_segments.rb $1 $2 -93.78 17.49 -93.42 17.4 0.09
+    ruby scan_segments.rb $1 $2 -92.88 17.49 -92.52 17.4 0.09
+    ruby scan_segments.rb $1 $2 -91.71 17.49 -90.9 17.4 0.09
+    ruby scan_segments.rb $1 $2 -93.69 17.4 -93.51 17.31 0.09
+    ruby scan_segments.rb $1 $2 -92.88 17.4 -92.61 17.31 0.09
+    ruby scan_segments.rb $1 $2 -91.53 17.4 -90.9 17.31 0.09
+    ruby scan_segments.rb $1 $2 -91.44 17.31 -90.9 17.22 0.09
+  ;;
+  TL)
+    ruby scan_segments.rb $1 $2 -98.32 19.77 -97.87 19.68 0.09
+    ruby scan_segments.rb $1 $2 -98.59 19.68 -97.78 19.59 0.09
+    ruby scan_segments.rb $1 $2 -98.68 19.59 -97.6 19.5 0.09
+    ruby scan_segments.rb $1 $2 -98.68 19.5 -97.51 19.41 0.09
+    ruby scan_segments.rb $1 $2 -98.5 19.41 -97.51 19.32 0.09
+    ruby scan_segments.rb $1 $2 -98.41 19.32 -97.6 19.23 0.09
+    ruby scan_segments.rb $1 $2 -98.32 19.23 -97.78 19.14 0.09
+    ruby scan_segments.rb $1 $2 -98.14 19.14 -98.05 19.05 0.09
+  ;;
+  TM)
+    ruby scan_segments.rb $1 $2 -99.86 27.68 -99.5 27.59 0.09
+    ruby scan_segments.rb $1 $2 -99.95 27.59 -99.41 27.5 0.09
+    ruby scan_segments.rb $1 $2 -99.95 27.5 -99.41 27.41 0.09
+    ruby scan_segments.rb $1 $2 -99.86 27.41 -99.41 27.32 0.09
+    ruby scan_segments.rb $1 $2 -99.77 27.32 -99.41 27.23 0.09
+    ruby scan_segments.rb $1 $2 -99.77 27.23 -99.41 27.14 0.09
+    ruby scan_segments.rb $1 $2 -99.77 27.14 -99.41 27.05 0.09
+    ruby scan_segments.rb $1 $2 -99.86 27.05 -99.32 26.96 0.09
+    ruby scan_segments.rb $1 $2 -99.86 26.96 -99.23 26.87 0.09
+    ruby scan_segments.rb $1 $2 -99.86 26.87 -99.23 26.78 0.09
+    ruby scan_segments.rb $1 $2 -99.77 26.78 -99.14 26.69 0.09
+    ruby scan_segments.rb $1 $2 -99.77 26.69 -99.14 26.6 0.09
+    ruby scan_segments.rb $1 $2 -99.59 26.6 -99.05 26.51 0.09
+    ruby scan_segments.rb $1 $2 -99.5 26.51 -99.05 26.42 0.09
+    ruby scan_segments.rb $1 $2 -99.5 26.42 -98.69 26.33 0.09
+    ruby scan_segments.rb $1 $2 -99.41 26.33 -98.51 26.24 0.09
+    ruby scan_segments.rb $1 $2 -99.32 26.24 -98.33 26.15 0.09
+    ruby scan_segments.rb $1 $2 -99.23 26.15 -97.79 26.06 0.09
+    ruby scan_segments.rb $1 $2 -99.05 26.06 -97.61 25.97 0.09
+    ruby scan_segments.rb $1 $2 -98.96 25.97 -98.78 25.88 0.09
+    ruby scan_segments.rb $1 $2 -98.6 25.97 -97.07 25.88 0.09
+    ruby scan_segments.rb $1 $2 -98.6 25.88 -97.07 25.79 0.09
+    ruby scan_segments.rb $1 $2 -98.6 25.79 -97.07 25.7 0.09
+    ruby scan_segments.rb $1 $2 -98.6 25.7 -97.16 25.61 0.09
+    ruby scan_segments.rb $1 $2 -98.6 25.61 -97.16 25.52 0.09
+    ruby scan_segments.rb $1 $2 -98.51 25.52 -97.25 25.43 0.09
+    ruby scan_segments.rb $1 $2 -98.6 25.43 -97.25 25.34 0.09
+    ruby scan_segments.rb $1 $2 -98.78 25.34 -97.34 25.25 0.09
+    ruby scan_segments.rb $1 $2 -99.14 25.25 -99.05 25.16 0.09
+    ruby scan_segments.rb $1 $2 -98.96 25.25 -97.61 25.16 0.09
+    ruby scan_segments.rb $1 $2 -97.52 25.25 -97.34 25.16 0.09
+    ruby scan_segments.rb $1 $2 -99.23 25.16 -97.43 25.07 0.09
+    ruby scan_segments.rb $1 $2 -99.23 25.07 -97.43 24.98 0.09
+    ruby scan_segments.rb $1 $2 -99.23 24.98 -97.52 24.89 0.09
+    ruby scan_segments.rb $1 $2 -99.41 24.89 -97.52 24.8 0.09
+    ruby scan_segments.rb $1 $2 -99.59 24.8 -97.52 24.71 0.09
+    ruby scan_segments.rb $1 $2 -99.68 24.71 -97.61 24.62 0.09
+    ruby scan_segments.rb $1 $2 -99.77 24.62 -97.61 24.53 0.09
+    ruby scan_segments.rb $1 $2 -99.86 24.53 -97.61 24.44 0.09
+    ruby scan_segments.rb $1 $2 -99.68 24.44 -97.61 24.35 0.09
+    ruby scan_segments.rb $1 $2 -99.68 24.35 -97.7 24.26 0.09
+    ruby scan_segments.rb $1 $2 -99.77 24.26 -97.7 24.17 0.09
+    ruby scan_segments.rb $1 $2 -99.77 24.17 -97.7 24.08 0.09
+    ruby scan_segments.rb $1 $2 -99.68 24.08 -97.7 23.99 0.09
+    ruby scan_segments.rb $1 $2 -99.59 23.99 -97.7 23.9 0.09
+    ruby scan_segments.rb $1 $2 -99.59 23.9 -97.7 23.81 0.09
+    ruby scan_segments.rb $1 $2 -99.86 23.81 -97.7 23.72 0.09
+    ruby scan_segments.rb $1 $2 -99.95 23.72 -97.7 23.63 0.09
+    ruby scan_segments.rb $1 $2 -100.04 23.63 -97.7 23.54 0.09
+    ruby scan_segments.rb $1 $2 -100.04 23.54 -97.7 23.45 0.09
+    ruby scan_segments.rb $1 $2 -100.04 23.45 -97.7 23.36 0.09
+    ruby scan_segments.rb $1 $2 -100.13 23.36 -97.7 23.27 0.09
+    ruby scan_segments.rb $1 $2 -100.13 23.27 -97.7 23.18 0.09
+    ruby scan_segments.rb $1 $2 -100.13 23.18 -97.7 23.09 0.09
+    ruby scan_segments.rb $1 $2 -100.04 23.09 -97.7 23.0 0.09
+    ruby scan_segments.rb $1 $2 -100.04 23.0 -97.7 22.91 0.09
+    ruby scan_segments.rb $1 $2 -100.04 22.91 -97.7 22.82 0.09
+    ruby scan_segments.rb $1 $2 -100.04 22.82 -97.7 22.73 0.09
+    ruby scan_segments.rb $1 $2 -99.95 22.73 -97.79 22.64 0.09
+    ruby scan_segments.rb $1 $2 -99.41 22.64 -97.79 22.55 0.09
+    ruby scan_segments.rb $1 $2 -99.32 22.55 -97.79 22.46 0.09
+    ruby scan_segments.rb $1 $2 -99.32 22.46 -97.79 22.37 0.09
+    ruby scan_segments.rb $1 $2 -98.87 22.37 -98.78 22.28 0.09
+    ruby scan_segments.rb $1 $2 -98.15 22.37 -97.79 22.28 0.09
+    ruby scan_segments.rb $1 $2 -97.97 22.28 -97.7 22.19 0.09
+  ;;
+  VE)
+    ruby scan_segments.rb $1 $2 -98.72 22.47 -98.09 22.38 0.09
+    ruby scan_segments.rb $1 $2 -98.72 22.38 -97.91 22.29 0.09
+    ruby scan_segments.rb $1 $2 -98.45 22.29 -97.73 22.2 0.09
+    ruby scan_segments.rb $1 $2 -98.54 22.2 -97.73 22.11 0.09
+    ruby scan_segments.rb $1 $2 -98.54 22.11 -97.73 22.02 0.09
+    ruby scan_segments.rb $1 $2 -98.63 22.02 -97.64 21.93 0.09
+    ruby scan_segments.rb $1 $2 -98.63 21.93 -97.55 21.84 0.09
+    ruby scan_segments.rb $1 $2 -98.54 21.84 -97.46 21.75 0.09
+    ruby scan_segments.rb $1 $2 -98.72 21.75 -97.37 21.66 0.09
+    ruby scan_segments.rb $1 $2 -98.63 21.66 -97.28 21.57 0.09
+    ruby scan_segments.rb $1 $2 -98.63 21.57 -97.19 21.48 0.09
+    ruby scan_segments.rb $1 $2 -98.63 21.48 -97.19 21.39 0.09
+    ruby scan_segments.rb $1 $2 -98.54 21.39 -97.37 21.3 0.09
+    ruby scan_segments.rb $1 $2 -98.54 21.3 -97.37 21.21 0.09
+    ruby scan_segments.rb $1 $2 -98.45 21.21 -97.37 21.12 0.09
+    ruby scan_segments.rb $1 $2 -97.28 21.21 -97.19 21.12 0.09
+    ruby scan_segments.rb $1 $2 -98.18 21.12 -97.28 21.03 0.09
+    ruby scan_segments.rb $1 $2 -98.27 21.03 -97.28 20.94 0.09
+    ruby scan_segments.rb $1 $2 -98.36 20.94 -97.19 20.85 0.09
+    ruby scan_segments.rb $1 $2 -98.45 20.85 -97.19 20.76 0.09
+    ruby scan_segments.rb $1 $2 -98.54 20.76 -97.1 20.67 0.09
+    ruby scan_segments.rb $1 $2 -98.54 20.67 -97.91 20.58 0.09
+    ruby scan_segments.rb $1 $2 -97.73 20.67 -97.1 20.58 0.09
+    ruby scan_segments.rb $1 $2 -98.54 20.58 -98.0 20.49 0.09
+    ruby scan_segments.rb $1 $2 -97.64 20.58 -97.01 20.49 0.09
+    ruby scan_segments.rb $1 $2 -98.54 20.49 -98.18 20.4 0.09
+    ruby scan_segments.rb $1 $2 -97.73 20.49 -96.92 20.4 0.09
+    ruby scan_segments.rb $1 $2 -98.54 20.4 -98.27 20.31 0.09
+    ruby scan_segments.rb $1 $2 -97.73 20.4 -96.83 20.31 0.09
+    ruby scan_segments.rb $1 $2 -97.73 20.31 -96.74 20.22 0.09
+    ruby scan_segments.rb $1 $2 -97.73 20.22 -97.37 20.13 0.09
+    ruby scan_segments.rb $1 $2 -97.19 20.22 -96.65 20.13 0.09
+    ruby scan_segments.rb $1 $2 -97.19 20.13 -96.56 20.04 0.09
+    ruby scan_segments.rb $1 $2 -97.28 20.04 -96.47 19.95 0.09
+    ruby scan_segments.rb $1 $2 -97.28 19.95 -96.38 19.86 0.09
+    ruby scan_segments.rb $1 $2 -97.28 19.86 -96.38 19.77 0.09
+    ruby scan_segments.rb $1 $2 -97.37 19.77 -96.38 19.68 0.09
+    ruby scan_segments.rb $1 $2 -97.37 19.68 -96.29 19.59 0.09
+    ruby scan_segments.rb $1 $2 -97.37 19.59 -96.29 19.5 0.09
+    ruby scan_segments.rb $1 $2 -97.37 19.5 -96.29 19.41 0.09
+    ruby scan_segments.rb $1 $2 -97.28 19.41 -96.29 19.32 0.09
+    ruby scan_segments.rb $1 $2 -97.19 19.32 -96.02 19.23 0.09
+    ruby scan_segments.rb $1 $2 -97.19 19.23 -96.02 19.14 0.09
+    ruby scan_segments.rb $1 $2 -95.93 19.23 -95.75 19.14 0.09
+    ruby scan_segments.rb $1 $2 -97.19 19.14 -95.75 19.05 0.09
+    ruby scan_segments.rb $1 $2 -97.19 19.05 -95.93 18.96 0.09
+    ruby scan_segments.rb $1 $2 -97.28 18.96 -95.84 18.87 0.09
+    ruby scan_segments.rb $1 $2 -97.28 18.87 -95.66 18.78 0.09
+    ruby scan_segments.rb $1 $2 -97.28 18.78 -95.12 18.69 0.09
+    ruby scan_segments.rb $1 $2 -97.28 18.69 -95.03 18.6 0.09
+    ruby scan_segments.rb $1 $2 -97.1 18.6 -94.76 18.51 0.09
+    ruby scan_segments.rb $1 $2 -97.01 18.51 -96.83 18.42 0.09
+    ruby scan_segments.rb $1 $2 -96.74 18.51 -94.67 18.42 0.09
+    ruby scan_segments.rb $1 $2 -96.56 18.42 -94.58 18.33 0.09
+    ruby scan_segments.rb $1 $2 -96.47 18.33 -94.58 18.24 0.09
+    ruby scan_segments.rb $1 $2 -94.13 18.33 -93.95 18.24 0.09
+    ruby scan_segments.rb $1 $2 -96.29 18.24 -93.95 18.15 0.09
+    ruby scan_segments.rb $1 $2 -95.93 18.15 -94.04 18.06 0.09
+    ruby scan_segments.rb $1 $2 -95.93 18.06 -94.04 17.97 0.09
+    ruby scan_segments.rb $1 $2 -95.93 17.97 -94.04 17.88 0.09
+    ruby scan_segments.rb $1 $2 -96.02 17.88 -93.95 17.79 0.09
+    ruby scan_segments.rb $1 $2 -96.02 17.79 -93.77 17.7 0.09
+    ruby scan_segments.rb $1 $2 -95.93 17.7 -93.68 17.61 0.09
+    ruby scan_segments.rb $1 $2 -95.93 17.61 -95.48 17.52 0.09
+    ruby scan_segments.rb $1 $2 -95.39 17.61 -93.68 17.52 0.09
+    ruby scan_segments.rb $1 $2 -95.3 17.52 -93.68 17.43 0.09
+    ruby scan_segments.rb $1 $2 -95.21 17.43 -93.59 17.34 0.09
+    ruby scan_segments.rb $1 $2 -95.12 17.34 -93.59 17.25 0.09
+    ruby scan_segments.rb $1 $2 -95.03 17.25 -93.68 17.16 0.09
+    ruby scan_segments.rb $1 $2 -94.04 17.16 -93.86 17.07 0.09
+  ;;
+  YU)
+    ruby scan_segments.rb $1 $2 -89.79 22.54 -89.7 22.45 0.09
+    ruby scan_segments.rb $1 $2 -89.79 22.45 -89.61 22.36 0.09
+    ruby scan_segments.rb $1 $2 -91.41 22.18 -91.32 22.09 0.09
+    ruby scan_segments.rb $1 $2 -91.05 22.09 -90.96 22.0 0.09
+    ruby scan_segments.rb $1 $2 -91.05 22.0 -90.96 21.91 0.09
+    ruby scan_segments.rb $1 $2 -88.53 21.64 -87.72 21.55 0.09
+    ruby scan_segments.rb $1 $2 -88.71 21.55 -87.45 21.46 0.09
+    ruby scan_segments.rb $1 $2 -89.07 21.46 -87.45 21.37 0.09
+    ruby scan_segments.rb $1 $2 -89.79 21.37 -87.45 21.28 0.09
+    ruby scan_segments.rb $1 $2 -90.06 21.28 -87.45 21.19 0.09
+    ruby scan_segments.rb $1 $2 -90.24 21.19 -87.54 21.1 0.09
+    ruby scan_segments.rb $1 $2 -90.42 21.1 -87.45 21.01 0.09
+    ruby scan_segments.rb $1 $2 -90.42 21.01 -87.45 20.92 0.09
+    ruby scan_segments.rb $1 $2 -90.42 20.92 -87.54 20.83 0.09
+    ruby scan_segments.rb $1 $2 -90.42 20.83 -87.54 20.74 0.09
+    ruby scan_segments.rb $1 $2 -90.42 20.74 -87.63 20.65 0.09
+    ruby scan_segments.rb $1 $2 -90.42 20.65 -87.63 20.56 0.09
+    ruby scan_segments.rb $1 $2 -90.42 20.56 -87.81 20.47 0.09
+    ruby scan_segments.rb $1 $2 -90.24 20.47 -87.9 20.38 0.09
+    ruby scan_segments.rb $1 $2 -89.97 20.38 -88.17 20.29 0.09
+    ruby scan_segments.rb $1 $2 -89.97 20.29 -88.17 20.2 0.09
+    ruby scan_segments.rb $1 $2 -89.88 20.2 -88.35 20.11 0.09
+    ruby scan_segments.rb $1 $2 -89.88 20.11 -88.62 20.02 0.09
+    ruby scan_segments.rb $1 $2 -89.7 20.02 -88.71 19.93 0.09
+    ruby scan_segments.rb $1 $2 -89.61 19.93 -88.98 19.84 0.09
+    ruby scan_segments.rb $1 $2 -89.52 19.84 -89.16 19.75 0.09
+    ruby scan_segments.rb $1 $2 -89.52 19.75 -89.34 19.66 0.09
+    ruby scan_segments.rb $1 $2 -89.43 19.66 -89.34 19.57 0.09
+  ;;
+  ZA)
+    ruby scan_segments.rb $1 $2 -102.75 25.16 -102.03 25.07 0.09
+    ruby scan_segments.rb $1 $2 -102.75 25.07 -101.85 24.98 0.09
+    ruby scan_segments.rb $1 $2 -102.75 24.98 -101.76 24.89 0.09
+    ruby scan_segments.rb $1 $2 -102.75 24.89 -101.58 24.8 0.09
+    ruby scan_segments.rb $1 $2 -102.66 24.8 -101.13 24.71 0.09
+    ruby scan_segments.rb $1 $2 -102.66 24.71 -101.13 24.62 0.09
+    ruby scan_segments.rb $1 $2 -102.66 24.62 -100.77 24.53 0.09
+    ruby scan_segments.rb $1 $2 -103.47 24.53 -103.38 24.44 0.09
+    ruby scan_segments.rb $1 $2 -102.66 24.53 -100.86 24.44 0.09
+    ruby scan_segments.rb $1 $2 -103.56 24.44 -100.86 24.35 0.09
+    ruby scan_segments.rb $1 $2 -103.65 24.35 -100.95 24.26 0.09
+    ruby scan_segments.rb $1 $2 -103.74 24.26 -101.04 24.17 0.09
+    ruby scan_segments.rb $1 $2 -103.83 24.17 -101.13 24.08 0.09
+    ruby scan_segments.rb $1 $2 -103.92 24.08 -101.31 23.99 0.09
+    ruby scan_segments.rb $1 $2 -103.92 23.99 -101.22 23.9 0.09
+    ruby scan_segments.rb $1 $2 -103.92 23.9 -101.31 23.81 0.09
+    ruby scan_segments.rb $1 $2 -103.92 23.81 -101.31 23.72 0.09
+    ruby scan_segments.rb $1 $2 -103.92 23.72 -101.58 23.63 0.09
+    ruby scan_segments.rb $1 $2 -103.92 23.63 -101.58 23.54 0.09
+    ruby scan_segments.rb $1 $2 -104.01 23.54 -101.67 23.45 0.09
+    ruby scan_segments.rb $1 $2 -104.1 23.45 -101.85 23.36 0.09
+    ruby scan_segments.rb $1 $2 -104.1 23.36 -101.94 23.27 0.09
+    ruby scan_segments.rb $1 $2 -104.1 23.27 -102.21 23.18 0.09
+    ruby scan_segments.rb $1 $2 -104.19 23.18 -102.21 23.09 0.09
+    ruby scan_segments.rb $1 $2 -104.19 23.09 -102.21 23.0 0.09
+    ruby scan_segments.rb $1 $2 -104.19 23.0 -102.21 22.91 0.09
+    ruby scan_segments.rb $1 $2 -104.19 22.91 -102.21 22.82 0.09
+    ruby scan_segments.rb $1 $2 -104.19 22.82 -102.03 22.73 0.09
+    ruby scan_segments.rb $1 $2 -104.19 22.73 -101.85 22.64 0.09
+    ruby scan_segments.rb $1 $2 -101.49 22.73 -101.22 22.64 0.09
+    ruby scan_segments.rb $1 $2 -104.37 22.64 -101.85 22.55 0.09
+    ruby scan_segments.rb $1 $2 -101.58 22.64 -101.22 22.55 0.09
+    ruby scan_segments.rb $1 $2 -104.37 22.55 -101.22 22.46 0.09
+    ruby scan_segments.rb $1 $2 -104.37 22.46 -103.83 22.37 0.09
+    ruby scan_segments.rb $1 $2 -103.65 22.46 -101.31 22.37 0.09
+    ruby scan_segments.rb $1 $2 -104.37 22.37 -104.19 22.28 0.09
+    ruby scan_segments.rb $1 $2 -104.1 22.37 -103.83 22.28 0.09
+    ruby scan_segments.rb $1 $2 -103.65 22.37 -101.31 22.28 0.09
+    ruby scan_segments.rb $1 $2 -104.37 22.28 -104.28 22.19 0.09
+    ruby scan_segments.rb $1 $2 -104.01 22.28 -103.83 22.19 0.09
+    ruby scan_segments.rb $1 $2 -103.65 22.28 -102.48 22.19 0.09
+    ruby scan_segments.rb $1 $2 -102.21 22.28 -101.31 22.19 0.09
+    ruby scan_segments.rb $1 $2 -104.01 22.19 -103.83 22.1 0.09
+    ruby scan_segments.rb $1 $2 -103.74 22.19 -103.29 22.1 0.09
+    ruby scan_segments.rb $1 $2 -103.2 22.19 -102.66 22.1 0.09
+    ruby scan_segments.rb $1 $2 -102.12 22.19 -101.31 22.1 0.09
+    ruby scan_segments.rb $1 $2 -103.74 22.1 -103.38 22.01 0.09
+    ruby scan_segments.rb $1 $2 -103.2 22.1 -102.66 22.01 0.09
+    ruby scan_segments.rb $1 $2 -102.03 22.1 -101.31 22.01 0.09
+    ruby scan_segments.rb $1 $2 -103.29 22.01 -102.75 21.92 0.09
+    ruby scan_segments.rb $1 $2 -101.85 22.01 -101.31 21.92 0.09
+    ruby scan_segments.rb $1 $2 -103.47 21.92 -102.75 21.83 0.09
+    ruby scan_segments.rb $1 $2 -101.76 21.92 -101.4 21.83 0.09
+    ruby scan_segments.rb $1 $2 -103.56 21.83 -102.84 21.74 0.09
+    ruby scan_segments.rb $1 $2 -101.58 21.83 -101.49 21.74 0.09
+    ruby scan_segments.rb $1 $2 -103.65 21.74 -102.75 21.65 0.09
+    ruby scan_segments.rb $1 $2 -103.65 21.65 -102.75 21.56 0.09
+    ruby scan_segments.rb $1 $2 -103.74 21.56 -102.57 21.47 0.09
+    ruby scan_segments.rb $1 $2 -103.74 21.47 -102.57 21.38 0.09
+    ruby scan_segments.rb $1 $2 -103.74 21.38 -102.57 21.29 0.09
+    ruby scan_segments.rb $1 $2 -103.83 21.29 -102.75 21.2 0.09
+    ruby scan_segments.rb $1 $2 -103.83 21.2 -102.84 21.11 0.09
+    ruby scan_segments.rb $1 $2 -103.65 21.11 -103.02 21.02 0.09
+    ruby scan_segments.rb $1 $2 -103.47 21.02 -103.2 20.93 0.09
+  ;;
+  *)
+    echo "Sintaxe: buscaSegments_Mexico.sh <usuario> <senha> <abbreviation de el estado>"
+    exit 1
+esac
 
 psql -h $POSTGRESQL_DB_HOST -d $POSTGRESQL_DB_NAME -U $POSTGRESQL_DB_USERNAME -c 'update segments set city_id = (select gid from cities_mapraid where ST_Contains(geom, ST_SetSRID(ST_Point(segments.longitude, segments.latitude), 4326)) limit 1) where city_id is null;'
 psql -h $POSTGRESQL_DB_HOST -d $POSTGRESQL_DB_NAME -U $POSTGRESQL_DB_USERNAME -c 'delete from segments where city_id is null;'

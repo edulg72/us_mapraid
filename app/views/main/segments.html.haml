@@ -74,3 +74,22 @@
                     %a{href: "https://www.waze.com/editor/?zoom=5&lat=#{segment.latitude}&lon=#{segment.longitude}&segments=#{segment.id}", target: 'WME'}= segment.id
                   %td= segment.last_edit_on.strftime('%d/%m/%Y %H:%M')
                   %td= "#{segment.editor.username}(#{segment.editor.rank})"
+    - if @area.segments.important.without_speed.count > 0
+      .panel.panel-default
+        #noname.panel-heading{:role => "tab"}
+          %h4.panel-title
+            %a{:role => "button", 'data-toggle' => "collapse", 'data-parent' => "#accordion", :href => "#noname-body", 'aria-expanded' => "true", 'aria-controls' => "noname-body"} 
+              Segmentos sin velocidad
+              %span.badge= @area.segments.important.without_speed.count
+        #noname-body.panel-collapse.collapse{:role => "tabpanel", 'arialabelledby' => "noname"}
+          %table.table.table-condensed.table-hover
+            %thead
+              %tr
+                %th Ubicaci&oacute;n de Segmento
+                %th Tipo de vía
+            %tbody
+              - @area.segments.important.without_speed.order("city_id").each do |segment|
+                %tr
+                  %td
+                    %a{href: "https://www.waze.com/editor/?zoom=5&lat=#{segment.latitude}&lon=#{segment.longitude}&segments=#{segment.id}", target: 'WME'}= "#{(segment.street_id.nil? ? t('no-street') : (segment.street.isempty ? t('no-street') : segment.street.name.to_s) + ', ' + (segment.street.city_id.nil? ? t('no-city') : (segment.street.city.isempty ? t('no-city') : segment.street.city.name.to_s) + ', ' + segment.street.city.state.name.to_s))}"
+                  %td= roadtype_name(segment.roadtype)

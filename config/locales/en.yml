@@ -20,4 +20,26 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  app-title: "MapRaid México"
+  app-title: "México"
+  density: "Density"
+  nav-first-page: "First page"
+  no-city: "No city"
+  no-street: "No street"
+  updated-at: "Updated at"
+  
+  # Road types
+  freeway: "Freeway"
+  major-highway: "Major Highway"
+  minor-highway: "Minor Highway"
+  ramp: "Ramp"
+  primary-street: "Primary Street"
+  street: "Street"
+  dirt-road: "Dirt road / 4X4 Trail"
+  parking-lot-road: "Parking Lot Road"
+  private-road: "Private Road"
+  walking-trail: "Walking Trail"
+  pedestrian-boardwalk: "Pedestrian Boardwalk"
+  stairway: "Stairway"
+  railroad: "Railroad"
+  runway: "Runway/Taxiway"
+  ferry: "Ferry"
