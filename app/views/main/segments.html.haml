@@ -76,12 +76,12 @@
                   %td= "#{segment.editor.username}(#{segment.editor.rank})"
     - if @area.segments.important.without_speed.count > 0
       .panel.panel-default
-        #noname.panel-heading{:role => "tab"}
+        #nospeed.panel-heading{:role => "tab"}
           %h4.panel-title
-            %a{:role => "button", 'data-toggle' => "collapse", 'data-parent' => "#accordion", :href => "#noname-body", 'aria-expanded' => "true", 'aria-controls' => "noname-body"} 
+            %a{:role => "button", 'data-toggle' => "collapse", 'data-parent' => "#accordion", :href => "#nospeed-body", 'aria-expanded' => "true", 'aria-controls' => "nospeed-body"} 
               Segmentos sin velocidad
               %span.badge= @area.segments.important.without_speed.count
-        #noname-body.panel-collapse.collapse{:role => "tabpanel", 'arialabelledby' => "noname"}
+        #nospeed-body.panel-collapse.collapse{:role => "tabpanel", 'arialabelledby' => "nospeed"}
           %table.table.table-condensed.table-hover
             %thead
               %tr
