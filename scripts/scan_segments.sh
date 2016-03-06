@@ -5,7 +5,7 @@ cd /var/www/states/scripts/
 echo "Start: $(date '+%d/%m/%Y %H:%M:%S')"
 
 case "$3" in
-  AG)
+  AGS)
     ruby scan_segments.rb $1 $2 -102.43 22.43 -102.16 22.34 0.09
     ruby scan_segments.rb $1 $2 -102.61 22.34 -102.07 22.25 0.09
     ruby scan_segments.rb $1 $2 -102.7 22.25 -101.98 22.16 0.09
@@ -17,7 +17,7 @@ case "$3" in
     ruby scan_segments.rb $1 $2 -102.88 21.71 -102.7 21.62 0.09
     ruby scan_segments.rb $1 $2 -102.52 21.71 -102.07 21.62 0.09
   ;;
-  BN)
+  BC)
     ruby scan_segments.rb $1 $2 -115.86 32.73 -114.69 32.64 0.09
     ruby scan_segments.rb $1 $2 -116.94 32.64 -114.69 32.55 0.09
     ruby scan_segments.rb $1 $2 -117.21 32.55 -114.78 32.46 0.09
@@ -98,7 +98,7 @@ case "$3" in
     ruby scan_segments.rb $1 $2 -114.33 28.05 -112.71 27.96 0.09
     ruby scan_segments.rb $1 $2 -114.33 27.96 -112.71 27.87 0.09
   ;;
-  BS)
+  BCS)
     ruby scan_segments.rb $1 $2 -115.24 27.96 -115.15 27.87 0.09
     ruby scan_segments.rb $1 $2 -114.43 27.96 -112.72 27.87 0.09
     ruby scan_segments.rb $1 $2 -115.24 27.87 -112.63 27.78 0.09
@@ -190,7 +190,7 @@ case "$3" in
     ruby scan_segments.rb $1 $2 -111.1 18.78 -110.83 18.69 0.09
     ruby scan_segments.rb $1 $2 -114.79 18.42 -114.61 18.33 0.09
   ;;
-  CA)
+  COAH)
     ruby scan_segments.rb $1 $2 -102.42 29.89 -101.79 29.8 0.09
     ruby scan_segments.rb $1 $2 -101.61 29.89 -101.52 29.8 0.09
     ruby scan_segments.rb $1 $2 -102.78 29.8 -101.34 29.71 0.09
@@ -261,7 +261,7 @@ case "$3" in
     ruby scan_segments.rb $1 $2 -101.25 24.67 -100.71 24.58 0.09
     ruby scan_segments.rb $1 $2 -101.16 24.58 -100.8 24.49 0.09
   ;;
-  CH)
+  CHIH)
     ruby scan_segments.rb $1 $2 -108.23 31.79 -106.34 31.7 0.09
     ruby scan_segments.rb $1 $2 -108.23 31.7 -106.25 31.61 0.09
     ruby scan_segments.rb $1 $2 -108.23 31.61 -106.16 31.52 0.09
@@ -338,7 +338,7 @@ case "$3" in
     ruby scan_segments.rb $1 $2 -107.24 25.76 -106.52 25.67 0.09
     ruby scan_segments.rb $1 $2 -106.97 25.67 -106.61 25.58 0.09
   ;;
-  CL)
+  COL)
     ruby scan_segments.rb $1 $2 -103.72 19.57 -103.54 19.48 0.09
     ruby scan_segments.rb $1 $2 -104.08 19.48 -103.54 19.39 0.09
     ruby scan_segments.rb $1 $2 -104.44 19.39 -103.45 19.3 0.09
@@ -350,7 +350,7 @@ case "$3" in
     ruby scan_segments.rb $1 $2 -103.99 18.85 -103.63 18.76 0.09
     ruby scan_segments.rb $1 $2 -103.9 18.76 -103.72 18.67 0.09
   ;;
-  CM)
+  CAMP)
     ruby scan_segments.rb $1 $2 -92.39 20.97 -92.21 20.88 0.09
     ruby scan_segments.rb $1 $2 -90.41 20.88 -90.32 20.79 0.09
     ruby scan_segments.rb $1 $2 -90.5 20.79 -90.32 20.7 0.09
@@ -394,7 +394,7 @@ case "$3" in
     ruby scan_segments.rb $1 $2 -91.13 17.91 -89.06 17.82 0.09
     ruby scan_segments.rb $1 $2 -91.04 17.82 -89.06 17.73 0.09
   ;;
-  CP)
+  CHIS)
     ruby scan_segments.rb $1 $2 -93.36 17.98 -93.09 17.89 0.09
     ruby scan_segments.rb $1 $2 -92.01 17.98 -91.92 17.89 0.09
     ruby scan_segments.rb $1 $2 -93.45 17.89 -92.91 17.8 0.09
@@ -441,7 +441,7 @@ case "$3" in
     ruby scan_segments.rb $1 $2 -92.37 14.65 -92.1 14.56 0.09
     ruby scan_segments.rb $1 $2 -92.28 14.56 -92.19 14.47 0.09
   ;;
-  DF)
+  CDMX)
     ruby scan_segments.rb $1 $2 -99.25 19.55 -98.98 19.46 0.09
     ruby scan_segments.rb $1 $2 -99.25 19.46 -98.98 19.37 0.09
     ruby scan_segments.rb $1 $2 -99.34 19.37 -98.89 19.28 0.09
@@ -449,7 +449,7 @@ case "$3" in
     ruby scan_segments.rb $1 $2 -99.34 19.19 -98.8 19.1 0.09
     ruby scan_segments.rb $1 $2 -99.25 19.1 -98.8 19.01 0.09
   ;;
-  DU)
+  DGO)
     ruby scan_segments.rb $1 $2 -106.29 26.85 -105.93 26.76 0.09
     ruby scan_segments.rb $1 $2 -104.49 26.85 -103.86 26.76 0.09
     ruby scan_segments.rb $1 $2 -106.29 26.76 -105.84 26.67 0.09
@@ -512,7 +512,7 @@ case "$3" in
     ruby scan_segments.rb $1 $2 -104.67 22.44 -104.31 22.35 0.09
     ruby scan_segments.rb $1 $2 -104.67 22.35 -104.4 22.26 0.09
   ;;
-  GJ)
+  GTO)
     ruby scan_segments.rb $1 $2 -101.6 21.87 -101.15 21.78 0.09
     ruby scan_segments.rb $1 $2 -101.69 21.78 -100.88 21.69 0.09
     ruby scan_segments.rb $1 $2 -100.52 21.78 -100.34 21.69 0.09
@@ -540,7 +540,7 @@ case "$3" in
     ruby scan_segments.rb $1 $2 -101.51 20.07 -100.25 19.98 0.09
     ruby scan_segments.rb $1 $2 -101.06 19.98 -100.43 19.89 0.09
   ;;
-  GR)
+  GRO)
     ruby scan_segments.rb $1 $2 -100.58 19.07 -100.4 18.98 0.09
     ruby scan_segments.rb $1 $2 -100.67 18.98 -100.4 18.89 0.09
     ruby scan_segments.rb $1 $2 -100.85 18.89 -100.4 18.8 0.09
@@ -580,7 +580,7 @@ case "$3" in
     ruby scan_segments.rb $1 $2 -98.78 16.46 -98.33 16.37 0.09
     ruby scan_segments.rb $1 $2 -98.6 16.37 -98.42 16.28 0.09
   ;;
-  HI)
+  HGO)
     ruby scan_segments.rb $1 $2 -98.7 21.43 -98.43 21.34 0.09
     ruby scan_segments.rb $1 $2 -99.06 21.34 -98.88 21.25 0.09
     ruby scan_segments.rb $1 $2 -98.79 21.34 -98.43 21.25 0.09
@@ -611,7 +611,7 @@ case "$3" in
     ruby scan_segments.rb $1 $2 -98.7 19.72 -98.07 19.63 0.09
     ruby scan_segments.rb $1 $2 -98.7 19.63 -98.25 19.54 0.09
   ;;
-  JA)
+  JAL)
     ruby scan_segments.rb $1 $2 -104.09 22.68 -103.73 22.59 0.09
     ruby scan_segments.rb $1 $2 -104.09 22.59 -103.73 22.5 0.09
     ruby scan_segments.rb $1 $2 -104.18 22.5 -103.55 22.41 0.09
@@ -676,7 +676,7 @@ case "$3" in
     ruby scan_segments.rb $1 $2 -103.55 19.08 -103.01 18.99 0.09
     ruby scan_segments.rb $1 $2 -103.55 18.99 -103.1 18.9 0.09
   ;;
-  MC)
+  MICH)
     ruby scan_segments.rb $1 $2 -102.59 20.39 -101.96 20.3 0.09
     ruby scan_segments.rb $1 $2 -101.69 20.39 -101.42 20.3 0.09
     ruby scan_segments.rb $1 $2 -102.68 20.3 -101.33 20.21 0.09
@@ -717,7 +717,7 @@ case "$3" in
     ruby scan_segments.rb $1 $2 -102.32 17.96 -102.05 17.87 0.09
     ruby scan_segments.rb $1 $2 -102.95 17.42 -102.86 17.33 0.09
   ;;
-  MR)
+  MOR)
     ruby scan_segments.rb $1 $2 -99.3 19.09 -98.76 19.0 0.09
     ruby scan_segments.rb $1 $2 -98.67 19.09 -98.49 19.0 0.09
     ruby scan_segments.rb $1 $2 -99.39 19.0 -98.49 18.91 0.09
@@ -730,7 +730,7 @@ case "$3" in
     ruby scan_segments.rb $1 $2 -98.67 18.46 -98.58 18.37 0.09
     ruby scan_segments.rb $1 $2 -99.03 18.37 -98.94 18.28 0.09
   ;;
-  MX)
+  EM)
     ruby scan_segments.rb $1 $2 -100.04 20.32 -99.68 20.23 0.09
     ruby scan_segments.rb $1 $2 -100.04 20.23 -99.41 20.14 0.09
     ruby scan_segments.rb $1 $2 -100.13 20.14 -99.41 20.05 0.09
@@ -764,7 +764,7 @@ case "$3" in
     ruby scan_segments.rb $1 $2 -100.4 18.43 -100.13 18.34 0.09
     ruby scan_segments.rb $1 $2 -100.31 18.34 -100.22 18.25 0.09
   ;;
-  NA)
+  NAY)
     ruby scan_segments.rb $1 $2 -105.45 23.06 -105.09 22.97 0.09
     ruby scan_segments.rb $1 $2 -105.54 22.97 -104.91 22.88 0.09
     ruby scan_segments.rb $1 $2 -105.54 22.88 -104.82 22.79 0.09
@@ -864,7 +864,7 @@ case "$3" in
     ruby scan_segments.rb $1 $2 -100.55 23.29 -100.01 23.2 0.09
     ruby scan_segments.rb $1 $2 -100.46 23.2 -100.28 23.11 0.09
   ;;
-  OA)
+  OAX)
     ruby scan_segments.rb $1 $2 -96.68 18.64 -96.41 18.55 0.09
     ruby scan_segments.rb $1 $2 -96.68 18.55 -96.41 18.46 0.09
     ruby scan_segments.rb $1 $2 -96.77 18.46 -96.41 18.37 0.09
@@ -906,7 +906,7 @@ case "$3" in
     ruby scan_segments.rb $1 $2 -96.95 15.76 -96.05 15.67 0.09
     ruby scan_segments.rb $1 $2 -96.59 15.67 -96.41 15.58 0.09
   ;;
-  PU)
+  PUE)
     ruby scan_segments.rb $1 $2 -97.91 20.86 -97.64 20.77 0.09
     ruby scan_segments.rb $1 $2 -98.0 20.77 -97.64 20.68 0.09
     ruby scan_segments.rb $1 $2 -98.0 20.68 -97.55 20.59 0.09
@@ -952,7 +952,7 @@ case "$3" in
     ruby scan_segments.rb $1 $2 -97.82 17.98 -97.64 17.89 0.09
     ruby scan_segments.rb $1 $2 -97.46 17.98 -97.28 17.89 0.09
   ;;
-  QE)
+  QRO)
     ruby scan_segments.rb $1 $2 -99.87 21.6 -99.6 21.51 0.09
     ruby scan_segments.rb $1 $2 -99.42 21.6 -99.24 21.51 0.09
     ruby scan_segments.rb $1 $2 -99.78 21.51 -99.15 21.42 0.09
@@ -1031,7 +1031,7 @@ case "$3" in
     ruby scan_segments.rb $1 $2 -89.16 18.01 -88.71 17.92 0.09
     ruby scan_segments.rb $1 $2 -88.98 17.92 -88.8 17.83 0.09
   ;;
-  SI)
+  SIN)
     ruby scan_segments.rb $1 $2 -108.38 27.05 -108.02 26.96 0.09
     ruby scan_segments.rb $1 $2 -108.47 26.96 -107.93 26.87 0.09
     ruby scan_segments.rb $1 $2 -108.56 26.87 -107.93 26.78 0.09
@@ -1087,7 +1087,7 @@ case "$3" in
     ruby scan_segments.rb $1 $2 -105.86 22.64 -105.41 22.55 0.09
     ruby scan_segments.rb $1 $2 -105.77 22.55 -105.41 22.46 0.09
   ;;
-  SL)
+  SLP)
     ruby scan_segments.rb $1 $2 -100.95 24.55 -100.68 24.46 0.09
     ruby scan_segments.rb $1 $2 -101.04 24.46 -100.59 24.37 0.09
     ruby scan_segments.rb $1 $2 -101.13 24.37 -100.59 24.28 0.09
@@ -1132,7 +1132,7 @@ case "$3" in
     ruby scan_segments.rb $1 $2 -99.15 21.31 -98.61 21.22 0.09
     ruby scan_segments.rb $1 $2 -98.97 21.22 -98.7 21.13 0.09
   ;;
-  SO)
+  SON)
     ruby scan_segments.rb $1 $2 -114.96 32.51 -114.51 32.42 0.09
     ruby scan_segments.rb $1 $2 -115.05 32.42 -114.24 32.33 0.09
     ruby scan_segments.rb $1 $2 -115.05 32.33 -113.97 32.24 0.09
@@ -1210,7 +1210,7 @@ case "$3" in
     ruby scan_segments.rb $1 $2 -109.29 26.48 -108.75 26.39 0.09
     ruby scan_segments.rb $1 $2 -109.29 26.39 -108.84 26.3 0.09
   ;;
-  TB)
+  TAB)
     ruby scan_segments.rb $1 $2 -92.79 18.66 -92.43 18.57 0.09
     ruby scan_segments.rb $1 $2 -92.88 18.57 -92.34 18.48 0.09
     ruby scan_segments.rb $1 $2 -93.6 18.48 -92.16 18.39 0.09
@@ -1243,7 +1243,7 @@ case "$3" in
     ruby scan_segments.rb $1 $2 -91.53 17.4 -90.9 17.31 0.09
     ruby scan_segments.rb $1 $2 -91.44 17.31 -90.9 17.22 0.09
   ;;
-  TL)
+  TLAX)
     ruby scan_segments.rb $1 $2 -98.32 19.77 -97.87 19.68 0.09
     ruby scan_segments.rb $1 $2 -98.59 19.68 -97.78 19.59 0.09
     ruby scan_segments.rb $1 $2 -98.68 19.59 -97.6 19.5 0.09
@@ -1253,7 +1253,7 @@ case "$3" in
     ruby scan_segments.rb $1 $2 -98.32 19.23 -97.78 19.14 0.09
     ruby scan_segments.rb $1 $2 -98.14 19.14 -98.05 19.05 0.09
   ;;
-  TM)
+  TAMS)
     ruby scan_segments.rb $1 $2 -99.86 27.68 -99.5 27.59 0.09
     ruby scan_segments.rb $1 $2 -99.95 27.59 -99.41 27.5 0.09
     ruby scan_segments.rb $1 $2 -99.95 27.5 -99.41 27.41 0.09
@@ -1320,7 +1320,7 @@ case "$3" in
     ruby scan_segments.rb $1 $2 -98.15 22.37 -97.79 22.28 0.09
     ruby scan_segments.rb $1 $2 -97.97 22.28 -97.7 22.19 0.09
   ;;
-  VE)
+  VER)
     ruby scan_segments.rb $1 $2 -98.72 22.47 -98.09 22.38 0.09
     ruby scan_segments.rb $1 $2 -98.72 22.38 -97.91 22.29 0.09
     ruby scan_segments.rb $1 $2 -98.45 22.29 -97.73 22.2 0.09
@@ -1392,7 +1392,7 @@ case "$3" in
     ruby scan_segments.rb $1 $2 -95.03 17.25 -93.68 17.16 0.09
     ruby scan_segments.rb $1 $2 -94.04 17.16 -93.86 17.07 0.09
   ;;
-  YU)
+  YUC)
     ruby scan_segments.rb $1 $2 -89.79 22.54 -89.7 22.45 0.09
     ruby scan_segments.rb $1 $2 -89.79 22.45 -89.61 22.36 0.09
     ruby scan_segments.rb $1 $2 -91.41 22.18 -91.32 22.09 0.09
@@ -1422,7 +1422,7 @@ case "$3" in
     ruby scan_segments.rb $1 $2 -89.52 19.75 -89.34 19.66 0.09
     ruby scan_segments.rb $1 $2 -89.43 19.66 -89.34 19.57 0.09
   ;;
-  ZA)
+  ZAC)
     ruby scan_segments.rb $1 $2 -102.75 25.16 -102.03 25.07 0.09
     ruby scan_segments.rb $1 $2 -102.75 25.07 -101.85 24.98 0.09
     ruby scan_segments.rb $1 $2 -102.75 24.98 -101.76 24.89 0.09
@@ -1497,7 +1497,8 @@ psql -h $POSTGRESQL_DB_HOST -d $POSTGRESQL_DB_NAME -U $POSTGRESQL_DB_USERNAME -c
 psql -h $POSTGRESQL_DB_HOST -d $POSTGRESQL_DB_NAME -U $POSTGRESQL_DB_USERNAME -c 'delete from segments where city_id is null;'
 psql -h $POSTGRESQL_DB_HOST -d $POSTGRESQL_DB_NAME -U $POSTGRESQL_DB_USERNAME -c 'delete from streets where id in (select id from streets except select distinct street_id from segments);'
 psql -h $POSTGRESQL_DB_HOST -d $POSTGRESQL_DB_NAME -U $POSTGRESQL_DB_USERNAME -c 'update segments s1 set dc_density = (select count(*) from segments s2 where not s2.connected and s2.latitude between (s1.latitude - 0.01) and (s1.latitude + 0.01) and s2.longitude between (s1.longitude - 0.01) and (s1.longitude + 0.01)) where not s1.connected and s1.dc_density is null;'
-psql -h $POSTGRESQL_DB_HOST -d $POSTGRESQL_DB_NAME -U $POSTGRESQL_DB_USERNAME -c "update updates set updated_at = current_timestamp where object = 'segments';"
+psql -h $POSTGRESQL_DB_HOST -d $POSTGRESQL_DB_NAME -U $POSTGRESQL_DB_USERNAME -c "delete from updates where object = '$3';"
+psql -h $POSTGRESQL_DB_HOST -d $POSTGRESQL_DB_NAME -U $POSTGRESQL_DB_USERNAME -c "insert into updates (updated_at, object) values (current_timestamp,'$3');"
 psql -h $POSTGRESQL_DB_HOST -d $POSTGRESQL_DB_NAME -U $POSTGRESQL_DB_USERNAME -c "refresh materialized view vw_segments;"
 psql -h $POSTGRESQL_DB_HOST -d $POSTGRESQL_DB_NAME -U $POSTGRESQL_DB_USERNAME -c "refresh materialized view vw_streets;"
 psql -h $POSTGRESQL_DB_HOST -d $POSTGRESQL_DB_NAME -U $POSTGRESQL_DB_USERNAME -c 'vacuum analyze;'
