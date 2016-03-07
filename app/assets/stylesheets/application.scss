@@ -2,6 +2,12 @@
 @import "bootstrap";
 @import "map";
 body { padding-top: 65px; }
+
+a.pl {color: #337AB7; text-decoration: none;}
+a.pl:visited {color: #F66; text-decoration: none;}
+a.pl:hover {color: #236AA7;}
+a.pl:active {color: #FCC;}
+
 footer {
   margin-top: 10px;
   padding-top: 5px;
