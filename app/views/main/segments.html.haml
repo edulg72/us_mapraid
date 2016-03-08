@@ -32,7 +32,7 @@
                 %tr
                   %td.text-center= segment.dc_density
                   %td
-                    %a{:href => "https://www.waze.com/editor/?zoom=5&lat=#{segment.latitude}&lon=#{segment.longitude}&segments=#{segment.id}", :target => 'WME'}= "#{(segment.street_id.nil? ? t('no-street') : (segment.street.isempty ? t('no-street') : segment.street.name.to_s) + ', ' + (segment.street.city_id.nil? ? t('no-city') : (segment.street.city.isempty ? t('no-city') : segment.street.city.name.to_s) + ', ' + segment.street.city.state.name.to_s))}"
+                    %a.pl{:href => "https://www.waze.com/editor/?zoom=5&lat=#{segment.latitude}&lon=#{segment.longitude}&segments=#{segment.id}", :target => 'WME'}= "#{(segment.street_id.nil? ? t('no-street') : (segment.street.isempty ? t('no-street') : segment.street.name.to_s) + ', ' + (segment.street.city_id.nil? ? t('no-city') : (segment.street.city.isempty ? t('no-city') : segment.street.city.name.to_s) + ', ' + segment.street.city.state.name.to_s))}"
 
     - if @area.segments.where('level < -3 or level > 3').size > 0
       .panel.panel-default
@@ -52,7 +52,7 @@
                 %tr
                   %td.text-center= segment.level
                   %td
-                    %a{href: "https://www.waze.com/editor/?zoom=5&lat=#{segment.latitude}&lon=#{segment.longitude}&segments=#{segment.id}", target: 'WME'}= "#{(segment.street_id.nil? ? t('no-street') : (segment.street.isempty ? t('no-street') : segment.street.name.to_s) + ', ' + (segment.street.city_id.nil? ? t('no-city') : (segment.street.city.isempty ? t('no-city') : segment.street.city.name.to_s) + ', ' + segment.street.city.state.name.to_s))}"
+                    %a.pl{href: "https://www.waze.com/editor/?zoom=5&lat=#{segment.latitude}&lon=#{segment.longitude}&segments=#{segment.id}", target: 'WME'}= "#{(segment.street_id.nil? ? t('no-street') : (segment.street.isempty ? t('no-street') : segment.street.name.to_s) + ', ' + (segment.street.city_id.nil? ? t('no-city') : (segment.street.city.isempty ? t('no-city') : segment.street.city.name.to_s) + ', ' + segment.street.city.state.name.to_s))}"
     - if @area.segments.where('street_id is null').size > 0
       .panel.panel-default
         #noname.panel-heading{:role => "tab"}
@@ -71,7 +71,7 @@
               - @area.segments.no_name.order("last_edit_on").each do |segment|
                 %tr
                   %td
-                    %a{href: "https://www.waze.com/editor/?zoom=5&lat=#{segment.latitude}&lon=#{segment.longitude}&segments=#{segment.id}", target: 'WME'}= segment.id
+                    %a.pl{href: "https://www.waze.com/editor/?zoom=5&lat=#{segment.latitude}&lon=#{segment.longitude}&segments=#{segment.id}", target: 'WME'}= segment.id
                   %td= segment.last_edit_on.strftime('%d/%m/%Y %H:%M')
                   %td= "#{segment.editor.username}(#{segment.editor.rank})"
     - if @area.segments.important.without_speed.count > 0
@@ -91,5 +91,5 @@
               - @area.segments.important.without_speed.order("city_id").each do |segment|
                 %tr
                   %td
-                    %a{href: "https://www.waze.com/editor/?zoom=5&lat=#{segment.latitude}&lon=#{segment.longitude}&segments=#{segment.id}", target: 'WME'}= "#{(segment.street_id.nil? ? t('no-street') : (segment.street.isempty ? t('no-street') : segment.street.name.to_s) + ', ' + (segment.street.city_id.nil? ? t('no-city') : (segment.street.city.isempty ? t('no-city') : segment.street.city.name.to_s) + ', ' + segment.street.city.state.name.to_s))}"
+                    %a.pl{href: "https://www.waze.com/editor/?zoom=5&lat=#{segment.latitude}&lon=#{segment.longitude}&segments=#{segment.id}", target: 'WME'}= "#{(segment.street_id.nil? ? t('no-street') : (segment.street.isempty ? t('no-street') : segment.street.name.to_s) + ', ' + (segment.street.city_id.nil? ? t('no-city') : (segment.street.city.isempty ? t('no-city') : segment.street.city.name.to_s) + ', ' + segment.street.city.state.name.to_s))}"
                   %td= roadtype_name(segment.roadtype)
