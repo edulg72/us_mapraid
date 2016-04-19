@@ -9,7 +9,7 @@
 # scan_UR.rb <user> <password> <west longitude> <north latitude> <east longitude> <south latitude> <step*>
 #
 # * Defines the size in degrees (width and height) of the area to be analyzed. On very dense areas use small values to avoid server overload.
-# 
+#
 require 'mechanize'
 require 'pg'
 require 'json'
@@ -35,12 +35,12 @@ rescue Mechanize::ResponseCodeError
 end
 login = agent.post('https://www.waze.com/login/create', {"user_id" => USER, "password" => PASS}, {"X-CSRF-Token" => csrf_token})
 
-db = PG::Connection.new(:hostaddr => ENV['POSTGRESQL_DB_HOST'], :dbname => ENV['POSTGRESQL_DB_NAME'], :user => ENV['POSTGRESQL_DB_USERNAME'], :password => ENV['POSTGRESQL_DB_PASSWORD'])
+db = PG::Connection.new(:hostaddr => ENV['POSTGRESQL_DB_HOST'], :dbname => 'mapraid', :user => ENV['POSTGRESQL_DB_USERNAME'], :password => ENV['POSTGRESQL_DB_PASSWORD'])
 db.prepare('insert_user','insert into users (id, username, rank) values ($1,$2,$3)')
 db.prepare('update_user','update users set username = $2, rank = $3 where id = $1')
 db.prepare('insert_mp','insert into mp (id,resolved_by,resolved_on,weight,position,resolution) values ($1,$2,$3,$4,ST_SetSRID(ST_Point($5, $6), 4326),$7)')
 db.prepare('insert_ur',"insert into ur (id,position,resolved_by,resolved_on,created_on,resolution) values ($1,ST_SetSRID(ST_Point($2, $3), 4326),$4,$5,$6,$7)")
-db.prepare('update_ur','update ur set comments = $1, last_comment = $2, last_comment_on = $3, last_comment_by = $4, first_comment_on = $5 where id = $6') 
+db.prepare('update_ur','update ur set comments = $1, last_comment = $2, last_comment_on = $3, last_comment_by = $4, first_comment_on = $5 where id = $6')
 
 $users = {}
 db.exec('select * from users').each {|u| $users[u['id']] = u['rank']}
@@ -87,19 +87,19 @@ def scan_UR(db,agent,longWest,latNorth,longEast,latSouth,step,exec)
 
         urs_area = []
         # Search IDs from area  URs
-        json['mapUpdateRequests']['objects'].each do |u| 
+        json['mapUpdateRequests']['objects'].each do |u|
           begin
             db.exec_prepared('insert_ur', [u['id'], u['geometry']['coordinates'][0], u['geometry']['coordinates'][1], u['resolvedBy'], (u['resolvedOn'].nil? ? nil : Time.at(u['resolvedOn']/1000)), Time.at(u['driveDate']/1000), u['resolution'] ] ) if db.exec_params('select id from ur where id = $1',[u['id']]).count == 0
-            urs_area << u['id'] 
+            urs_area << u['id']
           rescue PG::UniqueViolation
             puts '.'
           end
         end
 
         # Collect data from URs
-        if urs_area.size > 0 
+        if urs_area.size > 0
           ur = JSON.parse(agent.get("https://www.waze.com/row-Descartes-live/app/MapProblems/UpdateRequests?ids=#{urs_area.join('%2C')}").body)
-       
+
           ur['updateRequestSessions']['objects'].each do |u|
             begin
               db.exec_prepared('update_ur', [(u.has_key?('comments') and u['comments'].size > 0 ? u['comments'].size : 0 ),(u.has_key?('comments') and u['comments'].size > 0 ? u['comments'][-1]['text'].gsub('"',"'") : nil), (u.has_key?('comments') and u['comments'].size > 0 ? Time.at(u['comments'][-1]['createdOn']/1000) : nil), (u.has_key?('comments') and u['comments'].size > 0 ? u['comments'][-1]['userID'] : nil), (u.has_key?('comments') and u['comments'].size > 0 ? Time.at(u['comments'][0]['createdOn']/1000) : nil), u['id']] )

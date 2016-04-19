@@ -9,7 +9,7 @@
 # scan_PU.rb <user> <password> <west longitude> <north latitude> <east longitude> <south latitude> <step*>
 #
 # * Defines the size in degrees (width and height) of the area to be analyzed. On very dense areas use small values to avoid server overload.
-# 
+#
 require 'mechanize'
 require 'pg'
 require 'json'
@@ -35,7 +35,7 @@ rescue Mechanize::ResponseCodeError
 end
 login = agent.post('https://www.waze.com/login/create', {"user_id" => USER, "password" => PASS}, {"X-CSRF-Token" => csrf_token})
 
-db = PG::Connection.new(:hostaddr => ENV['POSTGRESQL_DB_HOST'], :dbname => ENV['POSTGRESQL_DB_NAME'], :user => ENV['POSTGRESQL_DB_USERNAME'], :password => ENV['POSTGRESQL_DB_PASSWORD'])
+db = PG::Connection.new(:hostaddr => ENV['POSTGRESQL_DB_HOST'], :dbname => 'mapraid', :user => ENV['POSTGRESQL_DB_USERNAME'], :password => ENV['POSTGRESQL_DB_PASSWORD'])
 db.prepare('insert_user','insert into users (id, username, rank) values ($1,$2,$3)')
 db.prepare('insert_pu','insert into pu (id, created_by, created_on, position, staff, place_id) values ($1,$2,$3,ST_SetSRID(ST_Point($4,$5),4326),$6,$7)')
 db.prepare('insert_place','insert into places (id,name,street_id,created_on,created_by,updated_on,updated_by,position,lock,approved,residential,category,ad_locked) values ($1,$2,$3,$4,$5,$6,$7,ST_SetSRID(ST_Point($8,$9),4326),$10,$11,$12,$13,$14)')

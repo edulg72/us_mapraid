@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /var/www/states/scripts/
+cd /var/www/mapraid/scripts/
 
 echo "Start: $(date '+%d/%m/%Y %H:%M:%S')"
 
@@ -1493,14 +1493,14 @@ case "$3" in
     exit 1
 esac
 
-psql -h $POSTGRESQL_DB_HOST -d $POSTGRESQL_DB_NAME -U $POSTGRESQL_DB_USERNAME -c 'update segments set city_id = (select gid from cities_mapraid where ST_Contains(geom, ST_SetSRID(ST_Point(segments.longitude, segments.latitude), 4326)) limit 1) where city_id is null;'
-psql -h $POSTGRESQL_DB_HOST -d $POSTGRESQL_DB_NAME -U $POSTGRESQL_DB_USERNAME -c 'delete from segments where city_id is null;'
-psql -h $POSTGRESQL_DB_HOST -d $POSTGRESQL_DB_NAME -U $POSTGRESQL_DB_USERNAME -c 'delete from streets where id in (select id from streets except select distinct street_id from segments);'
-psql -h $POSTGRESQL_DB_HOST -d $POSTGRESQL_DB_NAME -U $POSTGRESQL_DB_USERNAME -c 'update segments s1 set dc_density = (select count(*) from segments s2 where not s2.connected and s2.latitude between (s1.latitude - 0.01) and (s1.latitude + 0.01) and s2.longitude between (s1.longitude - 0.01) and (s1.longitude + 0.01)) where not s1.connected and s1.dc_density is null;'
-psql -h $POSTGRESQL_DB_HOST -d $POSTGRESQL_DB_NAME -U $POSTGRESQL_DB_USERNAME -c "delete from updates where object = '$3';"
-psql -h $POSTGRESQL_DB_HOST -d $POSTGRESQL_DB_NAME -U $POSTGRESQL_DB_USERNAME -c "insert into updates (updated_at, object) values (current_timestamp,'$3');"
-psql -h $POSTGRESQL_DB_HOST -d $POSTGRESQL_DB_NAME -U $POSTGRESQL_DB_USERNAME -c "refresh materialized view vw_segments;"
-psql -h $POSTGRESQL_DB_HOST -d $POSTGRESQL_DB_NAME -U $POSTGRESQL_DB_USERNAME -c "refresh materialized view vw_streets;"
-psql -h $POSTGRESQL_DB_HOST -d $POSTGRESQL_DB_NAME -U $POSTGRESQL_DB_USERNAME -c 'vacuum analyze;'
+psql -h $POSTGRESQL_DB_HOST -d mapraid -U $POSTGRESQL_DB_USERNAME -c 'update segments set city_id = (select gid from cities_mapraid where ST_Contains(geom, ST_SetSRID(ST_Point(segments.longitude, segments.latitude), 4326)) limit 1) where city_id is null;'
+psql -h $POSTGRESQL_DB_HOST -d mapraid -U $POSTGRESQL_DB_USERNAME -c 'delete from segments where city_id is null;'
+psql -h $POSTGRESQL_DB_HOST -d mapraid -U $POSTGRESQL_DB_USERNAME -c 'delete from streets where id in (select id from streets except select distinct street_id from segments);'
+psql -h $POSTGRESQL_DB_HOST -d mapraid -U $POSTGRESQL_DB_USERNAME -c 'update segments s1 set dc_density = (select count(*) from segments s2 where not s2.connected and s2.latitude between (s1.latitude - 0.01) and (s1.latitude + 0.01) and s2.longitude between (s1.longitude - 0.01) and (s1.longitude + 0.01)) where not s1.connected and s1.dc_density is null;'
+psql -h $POSTGRESQL_DB_HOST -d mapraid -U $POSTGRESQL_DB_USERNAME -c "delete from updates where object = '$3';"
+psql -h $POSTGRESQL_DB_HOST -d mapraid -U $POSTGRESQL_DB_USERNAME -c "insert into updates (updated_at, object) values (current_timestamp,'$3');"
+psql -h $POSTGRESQL_DB_HOST -d mapraid -U $POSTGRESQL_DB_USERNAME -c "refresh materialized view vw_segments;"
+psql -h $POSTGRESQL_DB_HOST -d mapraid -U $POSTGRESQL_DB_USERNAME -c "refresh materialized view vw_streets;"
+psql -h $POSTGRESQL_DB_HOST -d mapraid -U $POSTGRESQL_DB_USERNAME -c 'vacuum analyze;'
 
 echo "End: $(date '+%d/%m/%Y %H:%M:%S')"
