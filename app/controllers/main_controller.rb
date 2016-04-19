@@ -1,11 +1,11 @@
 class MainController < ApplicationController
 
   def index
-    @areas = Area.all
+    @areas = Area.mapraid
     @update = Update.maximum('updated_at')
     @nav = [{ t('nav-first-page') => '/'}]
   end
-  
+
   def segments
     @area = CityMapraid.find(params['id'])
     begin
@@ -15,7 +15,7 @@ class MainController < ApplicationController
     end
     @nav = [{@area.name => "/segments/#{@area.gid}"},{@area.area.name => "/segments_area/#{@area.area.id}"},{ t('nav-first-page') => '/'}]
   end
-  
+
   def segments_area
     @area = Area.find(params[:id])
     begin

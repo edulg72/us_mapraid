@@ -20,13 +20,13 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  app-title: "México"
+  app-title: "MapRaid México"
   density: "Density"
   nav-first-page: "First page"
   no-city: "No city"
   no-street: "No street"
   updated-at: "Updated at"
-  
+
   # Road types
   freeway: "Freeway"
   major-highway: "Major Highway"

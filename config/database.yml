@@ -1,6 +1,6 @@
 postgresql: &postgresql
   adapter: postgresql
-  database: <%=ENV['POSTGRESQL_DB_NAME']%>
+  database: mapraid
   username: <%=ENV['POSTGRESQL_DB_USERNAME']%>
   password: <%=ENV['POSTGRESQL_DB_PASSWORD']%>
   host:     <%=ENV['POSTGRESQL_DB_HOST']%>
