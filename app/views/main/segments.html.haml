@@ -16,8 +16,8 @@
     - if @area.segments.drivable.disconnected.size > 0
       .panel.panel-default
         #disconnected.panel-heading{:role => "tab"}
-          %h4.panel-title 
-            %a{:role => "button", 'data-toggle' => "collapse", 'data-parent' => "#accordion", :href => "#disconnected-body", 'aria-expanded' => "true", 'aria-controls' => "disconnected-body"} 
+          %h4.panel-title
+            %a{:role => "button", 'data-toggle' => "collapse", 'data-parent' => "#accordion", :href => "#disconnected-body", 'aria-expanded' => "true", 'aria-controls' => "disconnected-body"}
               Segmentos desconectados
               %small o con conexiones deshabilitadas
               %span.badge= @area.segments.drivable.disconnected.size
@@ -27,7 +27,7 @@
               %tr
                 %th.text-center{:width => "100", 'data-toggle' => "tooltip", 'data-placement' => "top", :title => "N&uacute;mero de segmentos cercanos con problemas similares"}= t('density')
                 %th Ubicaci&oacute;n de Segmento
-            %tbody  
+            %tbody
               - @area.segments.drivable.disconnected.order('dc_density desc').each do |segment|
                 %tr
                   %td.text-center= segment.dc_density
@@ -38,7 +38,7 @@
       .panel.panel-default
         #level.panel-heading{:role => "tab"}
           %h4.panel-title
-            %a{:role => "button", 'data-toggle' => "collapse", 'data-parent' => "#accordion", :href => "#level-body", 'aria-expanded' => "true", 'aria-controls' => "level-body"} 
+            %a{:role => "button", 'data-toggle' => "collapse", 'data-parent' => "#accordion", :href => "#level-body", 'aria-expanded' => "true", 'aria-controls' => "level-body"}
               Segmentos con elevaci&oacute;n exagerada
               %span.badge= @area.segments.where('level < -3 or level > 3').size
         #level-body.panel-collapse.collapse{:role => "tabpanel", 'arialabelledby' => "level"}
@@ -57,7 +57,7 @@
       .panel.panel-default
         #noname.panel-heading{:role => "tab"}
           %h4.panel-title
-            %a{:role => "button", 'data-toggle' => "collapse", 'data-parent' => "#accordion", :href => "#noname-body", 'aria-expanded' => "true", 'aria-controls' => "noname-body"} 
+            %a{:role => "button", 'data-toggle' => "collapse", 'data-parent' => "#accordion", :href => "#noname-body", 'aria-expanded' => "true", 'aria-controls' => "noname-body"}
               Segmentos sin nombre
               %span.badge= @area.segments.no_name.size
         #noname-body.panel-collapse.collapse{:role => "tabpanel", 'arialabelledby' => "noname"}
@@ -78,7 +78,7 @@
       .panel.panel-default
         #nospeed.panel-heading{:role => "tab"}
           %h4.panel-title
-            %a{:role => "button", 'data-toggle' => "collapse", 'data-parent' => "#accordion", :href => "#nospeed-body", 'aria-expanded' => "true", 'aria-controls' => "nospeed-body"} 
+            %a{:role => "button", 'data-toggle' => "collapse", 'data-parent' => "#accordion", :href => "#nospeed-body", 'aria-expanded' => "true", 'aria-controls' => "nospeed-body"}
               Segmentos sin velocidad
               %span.badge= @area.segments.important.without_speed.count
         #nospeed-body.panel-collapse.collapse{:role => "tabpanel", 'arialabelledby' => "nospeed"}
@@ -92,4 +92,23 @@
                 %tr
                   %td
                     %a.pl{href: "https://www.waze.com/editor/?zoom=5&lat=#{segment.latitude}&lon=#{segment.longitude}&segments=#{segment.id}", target: 'WME'}= "#{(segment.street_id.nil? ? t('no-street') : (segment.street.isempty ? t('no-street') : segment.street.name.to_s) + ', ' + (segment.street.city_id.nil? ? t('no-city') : (segment.street.city.isempty ? t('no-city') : segment.street.city.name.to_s) + ', ' + segment.street.city.state.name.to_s))}"
+                  %td= roadtype_name(segment.roadtype)
+    - if @area.segments.unverified_speed.count > 0
+      .panel.panel-default
+        #unverifiedspeed.panel-heading{:role => "tab"}
+          %h4.panel-title
+            %a{:role => "button", 'data-toggle' => "collapse", 'data-parent' => "#accordion", :href => "#unverifiedspeed-body", 'aria-expanded' => "true", 'aria-controls' => "unverifiedspeed-body"}
+              Unverified Speed
+              %span.badge= @area.segments.unverified_speed.count
+        #unverifiedspeed-body.panel-collapse.collapse{:role => "tabpanel", 'arialabelledby' => "unverifiedspeed"}
+          %table.table.table-condensed.table-hover
+            %thead
+              %tr
+                %th Ubicaci&oacute;n de Segmento
+                %th Tipo de vía
+            %tbody
+              - @area.segments.unverified_speed.order("city_id").each do |segment|
+                %tr
+                  %td
+                    %a.pl{:href => segment.permalink('ROW'), :target => 'WME'}= segment.location
                   %td= roadtype_name(segment.roadtype)

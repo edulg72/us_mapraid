@@ -17,3 +17,6 @@
                 %li.list-group-item
                   %a{:href => "/segments_area/#{a.id}"} Segmentos sin velocidad
                   %span.badge= a.segments.important.without_speed.count
+                %li.list-group-item
+                  %a{:href => "/segments_area/#{a.id}"} Unverified speed
+                  %span.badge= a.segments.unverified_speed.count
