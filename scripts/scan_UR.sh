@@ -22,6 +22,7 @@ ruby scan_UR.rb $1 $2 -103.5 20.04 -103.05 19.95 0.09
 
 psql -h $POSTGRESQL_DB_HOST -d mapraid -U $POSTGRESQL_DB_USERNAME -c 'update ur set city_id = (select gid from cities_mapraid where ST_Contains(geom, ur.position) limit 1) where city_id is null;'
 psql -h $POSTGRESQL_DB_HOST -d mapraid -U $POSTGRESQL_DB_USERNAME -c 'update mp set city_id = (select gid from cities_mapraid where ST_Contains(geom, mp.position) limit 1) where city_id is null;'
+psql -h $POSTGRESQL_DB_HOST -d mapraid -U $POSTGRESQL_DB_USERNAME -c 'update mp set weight = 0 where weight is null;'
 psql -h $POSTGRESQL_DB_HOST -d mapraid -U $POSTGRESQL_DB_USERNAME -c 'delete from ur where city_id is null; delete from mp where city_id is null;'
 psql -h $POSTGRESQL_DB_HOST -d mapraid -U $POSTGRESQL_DB_USERNAME -c 'refresh materialized view vw_ur;'
 psql -h $POSTGRESQL_DB_HOST -d mapraid -U $POSTGRESQL_DB_USERNAME -c 'refresh materialized view vw_mp;'
