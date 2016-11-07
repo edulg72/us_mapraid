@@ -2,15 +2,6 @@
   .page-header
     %h3
       = @area.name
-      - if @area.class.to_s == 'Area'
-        %small.dropdown
-          %button.btn.btn-default.dropdown-toggle{'type' => "button", 'id' => "dropdownCities", 'data-toggle' => "dropdown", 'aria-haspopup' => "true", 'aria-expanded' => "true"}
-            Cidade
-            %span.caret
-          %ul.dropdown-menu{ 'aria-labelledby' => "dropdownCities"}
-            - @area.cities.order(:name).each do |c|
-              %li
-                %a{:href => "/segments/#{c.gid}"}= c.name
       %small= "#{t('updated-at')} #{ @update.updated_at.strftime('%d/%m/%Y %H:%M')}"
   #accordion.panel-group{:role => "tablist", 'aria-multiselecttable' => "true"}
     - if @area.segments.drivable.disconnected.size > 0
@@ -74,41 +65,24 @@
                     %a.pl{href: "https://www.waze.com/editor/?zoom=5&lat=#{segment.latitude}&lon=#{segment.longitude}&segments=#{segment.id}", target: 'WME'}= segment.id
                   %td= segment.last_edit_on.strftime('%d/%m/%Y %H:%M')
                   %td= "#{segment.editor.username}(#{segment.editor.rank})"
-    - if @area.segments.important.without_speed.count > 0
+    - if @area.segments.low_lock.size > 0
       .panel.panel-default
-        #nospeed.panel-heading{:role => "tab"}
+        #low-lock.panel-heading{:role => "tab"}
           %h4.panel-title
-            %a{:role => "button", 'data-toggle' => "collapse", 'data-parent' => "#accordion", :href => "#nospeed-body", 'aria-expanded' => "true", 'aria-controls' => "nospeed-body"}
-              Segmentos sin velocidad
-              %span.badge= @area.segments.important.without_speed.count
-        #nospeed-body.panel-collapse.collapse{:role => "tabpanel", 'arialabelledby' => "nospeed"}
+            %a{:role => "button", 'data-toggle' => "collapse", 'data-parent' => "#accordion", :href => "#low-lock-body", 'aria-expanded' => "true", 'aria-controls' => "low-lock-body"}
+              = t('low-lock')
+              %span.badge= @area.segments.low_lock.size
+        #low-lock-body.panel-collapse.collapse{:role => "tabpanel", 'arialabelledby' => "low-lock"}
           %table.table.table-condensed.table-hover
             %thead
               %tr
+                %th.text-center= t('roadtype')
+                %th.text-center= t('lock')
                 %th Ubicaci&oacute;n de Segmento
-                %th Tipo de vía
             %tbody
-              - @area.segments.important.without_speed.order("city_id").each do |segment|
+              - @area.segments.low_lock.order('roadtype, lock, street_id').each do |segment|
                 %tr
-                  %td
-                    %a.pl{href: "https://www.waze.com/editor/?zoom=5&lat=#{segment.latitude}&lon=#{segment.longitude}&segments=#{segment.id}", target: 'WME'}= "#{(segment.street_id.nil? ? t('no-street') : (segment.street.isempty ? t('no-street') : segment.street.name.to_s) + ', ' + (segment.street.city_id.nil? ? t('no-city') : (segment.street.city.isempty ? t('no-city') : segment.street.city.name.to_s) + ', ' + segment.street.city.state.name.to_s))}"
                   %td= roadtype_name(segment.roadtype)
-    - if @area.segments.unverified_speed.count > 0
-      .panel.panel-default
-        #unverifiedspeed.panel-heading{:role => "tab"}
-          %h4.panel-title
-            %a{:role => "button", 'data-toggle' => "collapse", 'data-parent' => "#accordion", :href => "#unverifiedspeed-body", 'aria-expanded' => "true", 'aria-controls' => "unverifiedspeed-body"}
-              Unverified Speed
-              %span.badge= @area.segments.unverified_speed.count
-        #unverifiedspeed-body.panel-collapse.collapse{:role => "tabpanel", 'arialabelledby' => "unverifiedspeed"}
-          %table.table.table-condensed.table-hover
-            %thead
-              %tr
-                %th Ubicaci&oacute;n de Segmento
-                %th Tipo de vía
-            %tbody
-              - @area.segments.unverified_speed.order("city_id").each do |segment|
-                %tr
+                  %td.text-center= (segment.lock.nil? ? t('automatic') : segment.lock)
                   %td
-                    %a.pl{:href => segment.permalink('ROW'), :target => 'WME'}= segment.location
-                  %td= roadtype_name(segment.roadtype)
+                    %a.pl{:href => "https://www.waze.com/editor/?zoom=5&lat=#{segment.latitude}&lon=#{segment.longitude}&segments=#{segment.id}", :target => 'WME'}= "#{(segment.street_id.nil? ? t('no-street') : (segment.street.isempty ? t('no-street') : segment.street.name.to_s) + ', ' + (segment.street.city_id.nil? ? t('no-city') : (segment.street.city.isempty ? t('no-city') : segment.street.city.name.to_s) + ', ' + segment.street.city.state.name.to_s))}"

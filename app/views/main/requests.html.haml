@@ -1,0 +1,4 @@
+- cache [@area.gid,@area.urs.count,@upd_ur.updated_at,@upd_pu.updated_at] do
+  %h1{:align => 'center'}
+    = @area.name
+  = render partial: 'data', locals: {area: @area}

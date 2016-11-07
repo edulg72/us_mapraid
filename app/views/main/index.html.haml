@@ -1,22 +1,102 @@
 - cache [@update] do
   .container
     .row
-      - @areas.order('name').each do |a|
-        - if (a.segments.drivable.disconnected.count + a.segments.where('level < -3 or level > 3').count + a.segments.important.without_speed.count) > 0
-          .col-sm-12.col-md-6.col-lg-4
+      .col-sm-3.col-md-3.col-lg-3
+        .panel.panel-default
+          .panel-heading
+            %img{ :src => "#{asset_path 'ur.png'}" }
+            %span.panel-title User Requests (UR)
+          %table.table
+            %tbody
+              - @areas.order('name').each do |s|
+                - if s.urs.open.count > 0
+                  %tr
+                    %td.text-left
+                      %a{href: "/requests/#{s.gid}"}= s.name
+                    %td.text-right= s.urs.open.count
+            %tfoot
+              %tr
+                %th.text-right= t('ur-total')
+                %th.text-right= @ur.open.count
+      .col-sm-3.col-md-3.col-lg-3
+        .panel.panel-default
+          .panel-heading
+            %img{ :src => "#{asset_path 'mp.png'}" }
+            %span.panel-title Map Problems (MP)
+          %table.table
+            %tbody
+              - @areas.order('name').each do |s|
+                - if s.mps.open.count > 0
+                  %tr
+                    %td.text-left
+                      %a{href: "/requests/#{s.gid}"}= s.name
+                    %td.text-right= s.mps.open.count
+            %tfoot
+              %tr
+                %th.text-right= t('mp-total')
+                %th.text-right= @mp.open.count
+      .col-sm-3.col-md-3.col-lg-3
+        .panel.panel-default
+          .panel-heading
+            %img{ :src => "#{asset_path 'pu.png'}" }
+            %span.panel-title Place Updates (PU)
+          %table.table
+            %tbody
+              - @areas.order('name').each do |s|
+                - if s.pus.editable.count > 0
+                  %tr
+                    %td.text-left
+                      %a{href: "/requests/#{s.gid}"}= s.name
+                    %td.text-right= s.pus.editable.count
+              %tr
+                %td
+                  %a{:href => '/staff'} Staff-blocked
+                %td.text-right= @pu.blocked.count
+            %tfoot
+              %tr
+                %th.text-right Total
+                %th.text-right= @pu.count
+      .col-sm-3.col-md-3.col-lg-3
+        .panel.panel-default
+          .panel-heading
+            %span.panel-title Segmentos
+          #accordion.panel-group{:role => "tablist", 'aria-multiselecttable' => "true"}
             .panel.panel-default
-              .panel-heading
-                .panel-title= a.name
-              %ul.list-group
-                %li.list-group-item
-                  %a{:href => "/segments_area/#{a.id}"} Segmentos desconectados
-                  %span.badge= a.segments.drivable.disconnected.count
-                %li.list-group-item
-                  %a{:href => "/segments_area/#{a.id}"} Segmentos con elevaci&oacute;n exagerada
-                  %span.badge= a.segments.where('level < -3 or level > 3').count
-                %li.list-group-item
-                  %a{:href => "/segments_area/#{a.id}"} Segmentos sin velocidad
-                  %span.badge= a.segments.important.without_speed.count
-                %li.list-group-item
-                  %a{:href => "/segments_area/#{a.id}"} Unverified speed
-                  %span.badge= a.segments.unverified_speed.count
+              #disconnected.panel-heading{:role => "tab"}
+                %h4.panel-title
+                  %a{:role => "button", 'data-toggle' => "collapse", 'data-parent' => "#accordion", :href => "#disconnected-body", 'aria-expanded' => "true", 'aria-controls' => "disconnected-body"}
+                    =t('disconnected')
+                    %span.badge.text-right= @segments.drivable.disconnected.count
+              #disconnected-body.panel-collapse.collapse{:role => "tabpanel", 'arialabelledby' => "disconnected"}
+                %ul.list-group
+                  - @areas.order('name').each do |s|
+                    - if s.segments.drivable.disconnected.count > 0
+                      %li.list-group-item
+                        %a{:href => "/segments/#{s.gid}"}= s.name
+                        %span.badge= s.segments.drivable.disconnected.count
+            .panel.panel-default
+              #level.panel-heading{:role => "tab"}
+                %h4.panel-title
+                  %a{:role => "button", 'data-toggle' => "collapse", 'data-parent' => "#accordion", :href => "#level-body", 'aria-expanded' => "true", 'aria-controls' => "level-body"}
+                    Con elevaci&oacute;n exagerada
+                    %span.badge.text-right= @segments.where('level < -3 or level > 3').count
+              #level-body.panel-collapse.collapse{:role => "tabpanel", 'arialabelledby' => "level"}
+                %ul.list-group
+                  - @areas.order('name').each do |s|
+                    - if s.segments.where('level < -3 or level > 3').count > 0
+                      %li.list-group-item
+                        %a{:href => "/segments/#{s.gid}"}= s.name
+                        %span.badge= s.segments.where('level < -3 or level > 3').count
+            .panel.panel-default
+              #low-lock.panel-heading{:role => "tab"}
+                %h4.panel-title
+                  %a{:role => "button", 'data-toggle' => "collapse", 'data-parent' => "#accordion", :href => "#low-lock-body", 'aria-expanded' => "true", 'aria-controls' => "low-lock-body"}
+                    =t('low-lock')
+                    %span.badge.text-right= @segments.low_lock.count
+              #low-lock-body.panel-collapse.collapse{:role => "tabpanel", 'arialabelledby' => "low-lock"}
+                %ul.list-group
+                  - @areas.order('name').each do |s|
+                    - if s.segments.low_lock.count > 0
+                      %li.list-group-item
+                        %a{:href => "/segments/#{s.gid}"}= s.name
+                        %span.badge= s.segments.low_lock.count

@@ -1,29 +1,25 @@
 class MainController < ApplicationController
 
   def index
-    @areas = Area.mapraid
+    @areas = CityMapraid.all
     @update = Update.maximum('updated_at')
+    @segments = Segment.all
+    @pu = PU.all
+    @ur = UR.all
+    @mp = MP.all
     @nav = [{ t('nav-first-page') => '/'}]
   end
 
   def segments
     @area = CityMapraid.find(params['id'])
-    begin
-      @update = Update.find(@area.area.abbreviation)
-    rescue
-      @update = Update.find('segments')
-    end
-    @nav = [{@area.name => "/segments/#{@area.gid}"},{@area.area.name => "/segments_area/#{@area.area.id}"},{ t('nav-first-page') => '/'}]
+    @update = Update.find('segments')
+    @nav = [{@area.name => "/segments/#{@area.gid}"},{ t('nav-first-page') => '/'}]
   end
 
-  def segments_area
-    @area = Area.find(params[:id])
-    begin
-      @update = Update.find(@area.abbreviation)
-    rescue
-      @update = Update.find('segments')
-    end
-    @nav = [{@area.name => "#"},{ t('nav-first-page') => '/'}]
-    render :segments
+  def requests
+    @area = CityMapraid.find(params[:id])
+    @upd_ur = Update.find('ur')
+    @upd_pu = Update.find('pu')
+    @nav = [{@area.name => "/requests/#{@area.gid}"},{ t('nav-first-page') => '/'}]
   end
 end
