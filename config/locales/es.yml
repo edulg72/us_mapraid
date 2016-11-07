@@ -21,7 +21,9 @@
 
 es:
   app-title: "MapRaid Guadalajara"
+  area: "Area"
   automatic: "Automatico"
+  blocked-places: "Lugares bloqueados por el staff"
   comment: "comentario"
   comments: "comentarios"
   date: "Data"
@@ -37,7 +39,7 @@ es:
   no-city: "Sin ciudad"
   no-street: "Sin nombre"
   noname: "Sin nombre"
-  place-name: "Place name"
+  place-name: "Nombre"
   roadtype: "Tipo"
   solution: "Solución"
   state: "Estado"

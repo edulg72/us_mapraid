@@ -22,4 +22,10 @@ class MainController < ApplicationController
     @upd_pu = Update.find('pu')
     @nav = [{@area.name => "/requests/#{@area.gid}"},{ t('nav-first-page') => '/'}]
   end
+
+  def staff
+    @places = PU.blocked
+    @upd_pu = Update.find('pu')
+    @nav = [{'Staff' => '#'},{ t('nav-first-page') => '/'}]
+  end
 end
