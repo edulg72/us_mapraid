@@ -12,7 +12,7 @@ class Segment < ActiveRecord::Base
   scope :with_speed, -> {where('(not fwddirection or fwdmaxspeed is not null) and (not revdirection or revmaxspeed is not null)')}
   scope :without_speed, -> {where('((fwddirection and fwdmaxspeed is null) or (revdirection and revmaxspeed is null))')}
   scope :unverified_speed, -> {where('((fwddirection and fwdmaxspeedunverified) or (revdirection and revmaxspeedunverified))')}
-  scope :low_lock, -> {where('(roadtype in (2,3,4,6,7,15,18) and lock is null) or (roadtype = 3 and lock < 5) or (roadtype = 4 and lock < 4) or (roadtype = 18 and lock < 2) or (roadtype = 6 and lock < 4) or (roadtype = 7 and lock < 2) or (roadtype = 15 and lock < 5)')}
+  scope :low_lock, -> {where('(roadtype in (3,4,6,7,15,18) and lock is null) or (roadtype = 3 and lock < 5) or (roadtype = 4 and lock < 4) or (roadtype = 18 and lock < 2) or (roadtype = 6 and lock < 4) or (roadtype = 7 and lock < 2) or (roadtype = 15 and lock < 5)')}
 
   def permalink(server = 'ROW')
     env = {'ROW' => 'row', 'NA' => 'usa'}
