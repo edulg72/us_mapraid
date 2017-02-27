@@ -3,7 +3,7 @@ require 'pg'
 if ARGV.size > 0
   passo = ARGV[0].to_f
 else
-  passo = 0.08
+  passo = 0.09
 end
 
 if ARGV.size > 1
@@ -45,6 +45,4 @@ db.exec("select ST_Xmin(ST_Envelope(geom)) as longoeste, ST_Xmax(ST_Envelope(geo
   end
   puts "  ;;"
 end
-puts "  *)\n    echo \"Sintaxe: buscaSegments_Brasil.sh <usuario> <senha> <sigla do estado>\"\n    exit 1\nesac\n"
-
-puts "psql -h 192.168.1.7 -d wazedb -U waze -c 'delete from segment where id in (select id from segment except select s.id from segment s, node n1, node n2 where s.tonodeid = n1.id and s.fromnodeid = n2.id)'\npsql -h 192.168.1.7 -d wazedb -U waze -c 'update segment set municipioid = (select cd_geocmu from municipios where ST_Contains(geom, ST_StartPoint(segment.geometry))) where municipioid is null;'\npsql -h 192.168.1.7 -d wazedb -U waze -c 'refresh materialized view vw_segments;'\npsql -h 192.168.1.7 -d wazedb -U waze -c 'refresh materialized view vw_ruas;'\npsql -h 192.168.1.7 -d wazedb -U waze -c 'refresh materialized view vw_cidades;'\npsql -h 192.168.1.7 -d wazedb -U waze -c \"update atualizacao set data = current_timestamp where objeto = 'segments';\"\n\necho \"Fim de execucao: $(date '+%d/%m/%Y %H:%M:%S')\""
+puts "  *)\n    echo \"Usage: script_name.sh <user> <password> <state code>\"\n    exit 1\nesac\n"

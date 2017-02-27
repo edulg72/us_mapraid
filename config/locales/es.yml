@@ -20,7 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 es:
-  app-title: "MapRaid Guadalajara"
+  app-title: "MapRaid West Virginia"
   area: "Area"
   automatic: "Automatico"
   blocked-places: "Lugares bloqueados por el staff"
@@ -30,7 +30,13 @@ es:
   date-format: "%d/%m/%Y %H:%M"
   density: "Densidad"
   disconnected: "Desconectados"
+  disconnected-segments: "Segmentos desconectados"
+  disconnected-segments-small: "o con conexiones deshabilitadas"
   editor: "Editor"
+  elevation: "Elevación"
+  env: "usa"
+  exaggerated-elevation: "Segmentos con elevación exagerada"
+  last-edit: "Última edición"
   last-comment: "Último comentario"
   lock: "Bloqueo"
   low-lock: 'Bloqueo insuficiente'
@@ -41,8 +47,10 @@ es:
   noname: "Sin nombre"
   place-name: "Nombre"
   roadtype: "Tipo"
+  segment-location: "Ubicación de Segmento"
   solution: "Solución"
   state: "Estado"
+  unnamed-segments: "Segmentos sin nombre"
   updated-at: "Actualizado en"
   ur-awaiting-answer: "Esperando respuesta"
   ur-closed: "URs cerradas"

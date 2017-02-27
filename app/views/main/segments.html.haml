@@ -2,68 +2,68 @@
   .page-header
     %h3
       = @area.name
-      %small= "#{t('updated-at')} #{ @update.updated_at.strftime('%d/%m/%Y %H:%M')}"
+      %small= "#{t('updated-at')} #{ @update.updated_at.strftime(t('date-format'))}"
   #accordion.panel-group{:role => "tablist", 'aria-multiselecttable' => "true"}
     - if @area.segments.drivable.disconnected.size > 0
       .panel.panel-default
         #disconnected.panel-heading{:role => "tab"}
           %h4.panel-title
             %a{:role => "button", 'data-toggle' => "collapse", 'data-parent' => "#accordion", :href => "#disconnected-body", 'aria-expanded' => "true", 'aria-controls' => "disconnected-body"}
-              Segmentos desconectados
-              %small o con conexiones deshabilitadas
+              = t('disconnected-segments')
+              %small= t('disconnected-segments-small')
               %span.badge= @area.segments.drivable.disconnected.size
         #disconnected-body.panel-collapse.collapse{:role => "tabpanel", 'arialabelledby' => "disconnected"}
           %table.table.table-condensed.table-hover
             %thead
               %tr
                 %th.text-center{:width => "100", 'data-toggle' => "tooltip", 'data-placement' => "top", :title => "N&uacute;mero de segmentos cercanos con problemas similares"}= t('density')
-                %th Ubicaci&oacute;n de Segmento
+                %th= t('segment-location')
             %tbody
               - @area.segments.drivable.disconnected.order('dc_density desc').each do |segment|
                 %tr
                   %td.text-center= segment.dc_density
                   %td
-                    %a.pl{:href => "https://www.waze.com/editor/?zoom=7&lat=#{segment.latitude}&lon=#{segment.longitude}&segments=#{segment.id}", :target => 'WME'}= "#{(segment.street_id.nil? ? t('no-street') : (segment.street.isempty ? t('no-street') : segment.street.name.to_s) + ', ' + (segment.street.city_id.nil? ? t('no-city') : (segment.street.city.isempty ? t('no-city') : segment.street.city.name.to_s) + ', ' + segment.street.city.state.name.to_s))}"
+                    %a.pl{:href => "https://www.waze.com/editor/?env=#{t('env')}&zoom=7&lat=#{segment.latitude}&lon=#{segment.longitude}&segments=#{segment.id}", :target => 'WME'}= "#{(segment.street_id.nil? ? t('no-street') : (segment.street.isempty ? t('no-street') : segment.street.name.to_s) + ', ' + (segment.street.city_id.nil? ? t('no-city') : (segment.street.city.isempty ? t('no-city') : segment.street.city.name.to_s) + ', ' + segment.street.city.state.name.to_s))}"
 
     - if @area.segments.where('level < -3 or level > 3').size > 0
       .panel.panel-default
         #level.panel-heading{:role => "tab"}
           %h4.panel-title
             %a{:role => "button", 'data-toggle' => "collapse", 'data-parent' => "#accordion", :href => "#level-body", 'aria-expanded' => "true", 'aria-controls' => "level-body"}
-              Segmentos con elevaci&oacute;n exagerada
+              = t('exaggerated-elevation')
               %span.badge= @area.segments.where('level < -3 or level > 3').size
         #level-body.panel-collapse.collapse{:role => "tabpanel", 'arialabelledby' => "level"}
           %table.table.table-condensed.table-hover
             %thead
               %tr
-                %th.text-center{:width => '100'} Elevaci&oacute;n
-                %th Ubicaci&oacute;n de Segmento
+                %th.text-center{:width => '100'}= t('elevation')
+                %th= t('segment-location')
             %tbody
               - @area.segments.where('level < -3 or level > 3').order("level desc").each do |segment|
                 %tr
                   %td.text-center= segment.level
                   %td
-                    %a.pl{href: "https://www.waze.com/editor/?zoom=7&lat=#{segment.latitude}&lon=#{segment.longitude}&segments=#{segment.id}", target: 'WME'}= "#{(segment.street_id.nil? ? t('no-street') : (segment.street.isempty ? t('no-street') : segment.street.name.to_s) + ', ' + (segment.street.city_id.nil? ? t('no-city') : (segment.street.city.isempty ? t('no-city') : segment.street.city.name.to_s) + ', ' + segment.street.city.state.name.to_s))}"
+                    %a.pl{href: "https://www.waze.com/editor/?env=#{t('env')}&zoom=7&lat=#{segment.latitude}&lon=#{segment.longitude}&segments=#{segment.id}", target: 'WME'}= "#{(segment.street_id.nil? ? t('no-street') : (segment.street.isempty ? t('no-street') : segment.street.name.to_s) + ', ' + (segment.street.city_id.nil? ? t('no-city') : (segment.street.city.isempty ? t('no-city') : segment.street.city.name.to_s) + ', ' + segment.street.city.state.name.to_s))}"
     - if @area.segments.where('street_id is null').size > 0
       .panel.panel-default
         #noname.panel-heading{:role => "tab"}
           %h4.panel-title
             %a{:role => "button", 'data-toggle' => "collapse", 'data-parent' => "#accordion", :href => "#noname-body", 'aria-expanded' => "true", 'aria-controls' => "noname-body"}
-              Segmentos sin nombre
+              = t('unnamed-segments')
               %span.badge= @area.segments.no_name.size
         #noname-body.panel-collapse.collapse{:role => "tabpanel", 'arialabelledby' => "noname"}
           %table.table.table-condensed.table-hover
             %thead
               %tr
                 %th.text-center{:width => '100'} ID
-                %th &Uacute;ltima edici&oacute;n
-                %th Editor
+                %th= t('last-edit')
+                %th= t('editor')
             %tbody
               - @area.segments.no_name.order("last_edit_on").each do |segment|
                 %tr
                   %td
-                    %a.pl{href: "https://www.waze.com/editor/?zoom=7&lat=#{segment.latitude}&lon=#{segment.longitude}&segments=#{segment.id}", target: 'WME'}= segment.id
-                  %td= segment.last_edit_on.strftime('%d/%m/%Y %H:%M')
+                    %a.pl{href: "https://www.waze.com/editor/?env=#{t('env')}&zoom=7&lat=#{segment.latitude}&lon=#{segment.longitude}&segments=#{segment.id}", target: 'WME'}= segment.id
+                  %td= segment.last_edit_on.strftime(t('date-format'))
                   %td= "#{segment.editor.username}(#{segment.editor.rank})"
     - if @area.segments.low_lock.size > 0
       .panel.panel-default
@@ -78,11 +78,11 @@
               %tr
                 %th.text-center= t('roadtype')
                 %th.text-center= t('lock')
-                %th Ubicaci&oacute;n de Segmento
+                %th= t('segment-location')
             %tbody
               - @area.segments.low_lock.order('roadtype, lock, street_id').each do |segment|
                 %tr
                   %td= roadtype_name(segment.roadtype)
                   %td.text-center= (segment.lock.nil? ? t('automatic') : segment.lock)
                   %td
-                    %a.pl{:href => "https://www.waze.com/editor/?zoom=7&lat=#{segment.latitude}&lon=#{segment.longitude}&segments=#{segment.id}", :target => 'WME'}= "#{(segment.street_id.nil? ? t('no-street') : (segment.street.isempty ? t('no-street') : segment.street.name.to_s) + ', ' + (segment.street.city_id.nil? ? t('no-city') : (segment.street.city.isempty ? t('no-city') : segment.street.city.name.to_s) + ', ' + segment.street.city.state.name.to_s))}"
+                    %a.pl{:href => "https://www.waze.com/editor/?env=#{t('env')}&zoom=7&lat=#{segment.latitude}&lon=#{segment.longitude}&segments=#{segment.id}", :target => 'WME'}= "#{(segment.street_id.nil? ? t('no-street') : (segment.street.isempty ? t('no-street') : segment.street.name.to_s) + ', ' + (segment.street.city_id.nil? ? t('no-city') : (segment.street.city.isempty ? t('no-city') : segment.street.city.name.to_s) + ', ' + segment.street.city.state.name.to_s))}"

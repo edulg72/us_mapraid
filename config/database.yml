@@ -1,6 +1,5 @@
 postgresql: &postgresql
   adapter: postgresql
-  database: mapraid
   username: <%=ENV['POSTGRESQL_DB_USERNAME']%>
   password: <%=ENV['POSTGRESQL_DB_PASSWORD']%>
   host:     <%=ENV['POSTGRESQL_DB_HOST']%>
@@ -15,10 +14,13 @@ defaults: &defaults
   <<: *<%= ENV['RAILS_DB'] || "postgresql" %>
 
 development:
+  database: mapraid
   <<: *defaults
 
 test: &test
+  database: mapraid
   <<: *defaults
 
 production:
+  database: mapraid
   <<: *defaults
