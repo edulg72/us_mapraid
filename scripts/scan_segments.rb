@@ -37,7 +37,7 @@ rescue Mechanize::ResponseCodeError
 end
 login = agent.post('https://www.waze.com/login/create', {"user_id" => USER, "password" => PASS}, {"X-CSRF-Token" => csrf_token})
 
-db = PG::Connection.new(:hostaddr => ENV['POSTGRESQL_DB_HOST'], :dbname => 'mapraid', :user => ENV['POSTGRESQL_DB_USERNAME'], :password => ENV['POSTGRESQL_DB_PASSWORD'])
+db = PG::Connection.new(:hostaddr => ENV['POSTGRESQL_DB_HOST'], :dbname => 'us_mapraid', :user => ENV['POSTGRESQL_DB_USERNAME'], :password => ENV['POSTGRESQL_DB_PASSWORD'])
 #db.prepare('insere_usuario','insert into users (id, username, rank) values ($1,$2,$3)')
 #db.prepare('insere_rua','insert into streets (id,name,city_id,isempty) values ($1,$2,$3,$4)')
 #db.prepare('insere_cidade','insert into cities (id,name,state_id,isempty) values ($1,$2,$3,$4)')

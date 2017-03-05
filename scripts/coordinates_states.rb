@@ -14,7 +14,7 @@ end
 
 puts "#!/bin/bash\n\necho \"Start: $(date '+%d/%m/%Y %H:%M:%S')\"\n\ncase \"$3\" in"
 
-db = PG::Connection.new(:hostaddr => '127.0.0.1', :dbname => 'mapraid', :user => 'waze', :password => 'waze')
+db = PG::Connection.new(:hostaddr => '127.0.0.1', :dbname => 'us_mapraid', :user => 'waze', :password => 'waze')
 db.prepare('box_estado','select name from cities_mapraid where (ST_Overlaps(geom,ST_SetSRID(ST_MakeBox2D(ST_Point($1,$2),ST_Point($3,$4)),4326)) or ST_Contains(geom,ST_SetSRID(ST_MakeBox2D(ST_Point($1,$2),ST_Point($3,$4)),4326)))')
 
 db.exec("select ST_Xmin(ST_Envelope(geom)) as longoeste, ST_Xmax(ST_Envelope(geom)), ST_Ymax(ST_Envelope(geom)) as latnorte, ST_Ymin(ST_Envelope(geom)) as latsul from (select ST_Union(geom) as geom from cities_mapraid) as cities").each do |estado|

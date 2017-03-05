@@ -14,13 +14,13 @@ defaults: &defaults
   <<: *<%= ENV['RAILS_DB'] || "postgresql" %>
 
 development:
-  database: mapraid
+  database: us_mapraid
   <<: *defaults
 
 test: &test
-  database: mapraid
+  database: us_mapraid
   <<: *defaults
 
 production:
-  database: mapraid
+  database: us_mapraid
   <<: *defaults
