@@ -38,7 +38,7 @@ login = agent.post('https://www.waze.com/login/create', {"user_id" => USER, "pas
 db = PG::Connection.new(:hostaddr => ENV['POSTGRESQL_DB_HOST'], :dbname => 'us_mapraid', :user => ENV['POSTGRESQL_DB_USERNAME'], :password => ENV['POSTGRESQL_DB_PASSWORD'])
 db.prepare('insert_user','insert into users (id, username, rank) values ($1,$2,$3)')
 db.prepare('update_user','update users set username = $2, rank = $3 where id = $1')
-db.prepare('insert_mp','insert into mp (id,resolved_by,resolved_on,weight,position,resolution,type) values ($1,$2,$3,$4,ST_SetSRID(ST_Point($5, $6), 4326),$7,$8)')
+db.prepare('insert_mp','insert into mp (id,resolved_by,resolved_on,weight,position,resolution,mp_type) values ($1,$2,$3,$4,ST_SetSRID(ST_Point($5, $6), 4326),$7,$8)')
 db.prepare('insert_ur',"insert into ur (id,position,resolved_by,resolved_on,created_on,resolution,ur_type) values ($1,ST_SetSRID(ST_Point($2, $3), 4326),$4,$5,$6,$7,$8)")
 db.prepare('update_ur','update ur set comments = $1, last_comment = $2, last_comment_on = $3, last_comment_by = $4, first_comment_on = $5 where id = $6')
 
