@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.4'
 
 # Fix the conflict with the system 'rake':
-gem 'rake', '0.9.6'
+#gem 'rake', '0.9.6'
 
 # Support for databases and environment.
 # Use 'sqlite3' for testing and development and mysql and postgresql
@@ -31,7 +31,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use Bootstrap
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'autoprefixer-rails'
-gem 'font-awesome-sass'
+gem 'font-awesome-sass', '~> 4.7.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
