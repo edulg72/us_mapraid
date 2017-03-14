@@ -65,7 +65,7 @@
               #disconnected.panel-heading{:role => "tab"}
                 %h4.panel-title
                   %a{:role => "button", 'data-toggle' => "collapse", 'data-parent' => "#accordion", :href => "#disconnected-body", 'aria-expanded' => "true", 'aria-controls' => "disconnected-body"}
-                    =t('disconnected')
+                    = t('disconnected-segments')
                     %span.badge.text-right= @segments.drivable.disconnected.count
               #disconnected-body.panel-collapse.collapse{:role => "tabpanel", 'arialabelledby' => "disconnected"}
                 %ul.list-group
@@ -78,7 +78,7 @@
               #level.panel-heading{:role => "tab"}
                 %h4.panel-title
                   %a{:role => "button", 'data-toggle' => "collapse", 'data-parent' => "#accordion", :href => "#level-body", 'aria-expanded' => "true", 'aria-controls' => "level-body"}
-                    Con elevaci&oacute;n exagerada
+                    = t('exaggerated-elevation')
                     %span.badge.text-right= @segments.where('level < -3 or level > 3').count
               #level-body.panel-collapse.collapse{:role => "tabpanel", 'arialabelledby' => "level"}
                 %ul.list-group
@@ -87,6 +87,19 @@
                       %li.list-group-item
                         %a{:href => "/segments/#{s.gid}"}= s.name
                         %span.badge= s.segments.where('level < -3 or level > 3').count
+            .panel.panel-default
+              #noname.panel-heading{:role => "tab"}
+                %h4.panel-title
+                  %a{:role => "button", 'data-toggle' => "collapse", 'data-parent' => "#accordion", :href => "#noname-body", 'aria-expanded' => "true", 'aria-controls' => "noname-body"}
+                    = t('unnamed-segments')
+                    %span.badge.text-right= @segments.no_name.size
+              #noname-body.panel-collapse.collapse{:role => "tabpanel", 'arialabelledby' => "noname"}
+                %ul.list-group
+                  - @areas.order('name').each do |s|
+                    - if s.segments.no_name.size > 0
+                      %li.list-group-item
+                        %a{:href => "/segments/#{s.gid}"}= s.name
+                        %span.badge= s.segments.no_name.size
             .panel.panel-default
               #low-lock.panel-heading{:role => "tab"}
                 %h4.panel-title

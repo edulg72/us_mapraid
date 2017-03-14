@@ -14,4 +14,4 @@
           %td= p.citymapraid.name
           %td= (p.name.nil? or p.name.strip.empty? ? "[#{t('noname')}]": p.name)
           %td
-            %a{:href => "https://www.waze.com#{t('wme')}/editor/?env=#{t('env')}\&zoom=7\&lat=#{p.latitude}\&lon=#{p.longitude}\&layers=453\&showpur=#{p.id}\&endshow", :target => "WME"}= "https://www.waze.com#{t('wme')}/editor/?env=#{t('env')}\&zoom=7\&lat=#{p.latitude}\&lon=#{p.longitude}\&showpur=#{p.id}\&endshow"
+            %a{:href => p.permalink, :target => "WME"}= p.permalink

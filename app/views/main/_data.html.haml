@@ -30,7 +30,7 @@
       .panel-body
         .row
           - area.urs.open.without_comments.order(:created_on).each do |u|
-            %a.btn.btn-sm{ 'style' => "margin-top: 5px;", :class => "#{(Time.now - u.created_on) < 172800 ? 'btn-success' : ((Time.now - u.created_on) < 1209600 ? 'btn-warning' : 'btn-danger')}", :href => "https://www.waze.com#{t('wme')}/editor/?env=#{t('env')}&zoom=7\&lat=#{u.latitude}\&lon=#{u.longitude}\&mapUpdateRequest=#{u.id}", 'data-toggle' => 'tooltip', 'data-placement' => 'top', 'title' => "#{type_ur(u.ur_type)}", :target => "WME"}
+            %a.btn.btn-sm{ 'style' => "margin-top: 5px;", :class => "#{(Time.now - u.created_on) < 172800 ? 'btn-success' : ((Time.now - u.created_on) < 1209600 ? 'btn-warning' : 'btn-danger')}", :href => u.permalink, 'data-toggle' => 'tooltip', 'data-placement' => 'top', 'title' => "#{type_ur(u.ur_type)}", :target => "WME"}
               %i{'class' => "fa #{icon_ur(u.ur_type)}", 'aria-hidden' => 'true'}
               = u.id
     .panel.panel-default
@@ -38,7 +38,7 @@
       .panel-body
         .row
           - area.urs.open.with_answer.order(:last_comment_on).each do |u|
-            %a.btn.btn-sm{ 'style' => "margin-top: 5px;", :class => "#{(Time.now - u.last_comment_on) < 172800 ? 'btn-success' : ((Time.now - u.last_comment_on) < 1209600 ? 'btn-warning' : 'btn-danger')}", :href => "https://www.waze.com#{t('wme')}/editor/?env=#{t('env')}\&zoom=7\&lat=#{u.latitude}\&lon=#{u.longitude}\&mapUpdateRequest=#{u.id}",  'data-toggle' => 'tooltip', 'data-placement' => 'top', 'title' => "#{type_ur(u.ur_type)}",:target => "WME"}
+            %a.btn.btn-sm{ 'style' => "margin-top: 5px;", :class => "#{(Time.now - u.last_comment_on) < 172800 ? 'btn-success' : ((Time.now - u.last_comment_on) < 1209600 ? 'btn-warning' : 'btn-danger')}", :href => u.permalink,  'data-toggle' => 'tooltip', 'data-placement' => 'top', 'title' => "#{type_ur(u.ur_type)}",:target => "WME"}
               %i{'class' => "fa #{icon_ur(u.ur_type)}", 'aria-hidden' => 'true'}
               = u.id
               %br
@@ -48,7 +48,7 @@
       .panel-body
         .row
           - area.urs.open.without_answer.order("comments desc, last_comment_on").each do |u|
-            %a.btn.btn-sm{ 'style' => "margin-top: 5px;", :class => "#{(Time.now - u.last_comment_on) < 172800 ? 'btn-success' : ((Time.now - u.last_comment_on) < 1209600 ? 'btn-warning' : 'btn-danger')}", :href => "https://www.waze.com#{t('wme')}/editor/?env=#{t('env')}\&zoom=7\&lat=#{u.latitude}\&lon=#{u.longitude}\&mapUpdateRequest=#{u.id}",  'data-toggle' => 'tooltip', 'data-placement' => 'top', 'title' => "#{type_ur(u.ur_type)}", :target => "WME"}
+            %a.btn.btn-sm{ 'style' => "margin-top: 5px;", :class => "#{(Time.now - u.last_comment_on) < 172800 ? 'btn-success' : ((Time.now - u.last_comment_on) < 1209600 ? 'btn-warning' : 'btn-danger')}", :href => u.permalink,  'data-toggle' => 'tooltip', 'data-placement' => 'top', 'title' => "#{type_ur(u.ur_type)}", :target => "WME"}
               %i{'class' => "fa #{icon_ur(u.ur_type)}", 'aria-hidden' => 'true'}
               = u.id
               %br
@@ -68,7 +68,7 @@
           %td{:align => 'center'}= u.resolved_on.strftime(t('date-format'))
           %td
             - if not u.operator.nil?
-              %a{:href => "https://www.waze.com#{t('wme')}/editor/?env=#{t('env')}\&zoom=7\&lat=#{u.latitude}\&lon=#{u.longitude}\&mapUpdateRequest=#{u.id}", :target => "WME"}
+              %a{:href => u.permalink, :target => "WME"}
                 = "#{u.operator.username} (#{u.operator.rank})"
           %td{:align => 'center'}= (u.resolution == 0 ? t('ur-result-solved') : t('ur-result-ni'))
           %td
@@ -81,7 +81,7 @@
         %span.text-right.small= "#{t('updated-at')} #{@upd_ur.updated_at.strftime(t('date-format'))}"
     .row{'style' => 'margin-left: 5px; margin-right: 0;'}
       - area.mps.open.order("weight desc").each do |m|
-        %a.btn.btn-sm{ 'style' => "margin-top: 5px;", :class => "#{m.weight < 4 ? 'btn-success' : (m.weight < 8 ? 'btn-warning' : 'btn-danger')}", :href => "https://www.waze.com#{t('wme')}/editor/?env=#{t('env')}\&zoom=7\&lat=#{m.latitude}\&lon=#{m.longitude}\&mapProblem=#{m.id}", 'data-toggle' => 'tooltip', 'data-placement' => 'top', 'title' => "#{type_mp(m.mp_type)}", :target => "WME"}
+        %a.btn.btn-sm{ 'style' => "margin-top: 5px;", :class => "#{m.weight < 4 ? 'btn-success' : (m.weight < 8 ? 'btn-warning' : 'btn-danger')}", :href => m.permalink, 'data-toggle' => 'tooltip', 'data-placement' => 'top', 'title' => "#{type_mp(m.mp_type)}", :target => "WME"}
           %i{'class' => "fa #{icon_ur(m.mp_type)}", 'aria-hidden' => 'true'}
           = m.id
   #pus.tab-pane.fade{ 'role' => 'tabpanel' }
@@ -90,7 +90,7 @@
         %span.text-right.small= "#{t('updated-at')} #{@upd_pu.updated_at.strftime(t('date-format'))}"
     .row{'style' => 'margin-left: 5px; margin-right: 0;'}
       - area.pus.editable.order("created_on").each do |p|
-        %a.btn.btn-sm{ 'style' => "margin-top: 5px;", :class => "#{(Time.now - p.created_on) < 172800 ? 'btn-success' : ((Time.now - p.created_on) < 1209600 ? 'btn-warning' : 'btn-danger')}", :href => "https://www.waze.com#{t('wme')}/editor/?env=#{t('env')}\&zoom=7\&lat=#{p.latitude}\&lon=#{p.longitude}\&showpur=#{p.id}\&endshow", 'data-toggle' => 'tooltip', 'data-placement' => 'top', 'title' => "#{type_pu(p.pu_type,p.subtype)}", :target => "WME"}
+        %a.btn.btn-sm{ 'style' => "margin-top: 5px;", :class => "#{(Time.now - p.created_on) < 172800 ? 'btn-success' : ((Time.now - p.created_on) < 1209600 ? 'btn-warning' : 'btn-danger')}", :href => p.permalink, 'data-toggle' => 'tooltip', 'data-placement' => 'top', 'title' => "#{type_pu(p.pu_type,p.subtype)}", :target => "WME"}
           - if p.category == 'RESIDENCE_HOME'
             %i.fa.fa-home{'aria-hidden' => 'true'}
           - if p.category == 'PARKING_LOT'

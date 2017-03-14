@@ -4,6 +4,8 @@ cd /var/www/us_mapraid/scripts/
 
 echo "Start: $(date '+%d/%m/%Y %H:%M:%S')"
 
+psql -h $POSTGRESQL_DB_HOST -d us_mapraid -U $POSTGRESQL_DB_USERNAME -c 'delete from segments;'
+
 ruby scan_segments.rb $1 $2 -80.67 40.65 -80.49 40.2 0.09
 ruby scan_segments.rb $1 $2 -80.76 40.2 -80.49 40.02 0.09
 ruby scan_segments.rb $1 $2 -80.85 40.02 -80.49 39.84 0.09

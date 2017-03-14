@@ -6,4 +6,8 @@ class PU < ActiveRecord::Base
   scope :national, -> { where("city_id is not null") }
   scope :editable, -> { where("not staff")}
   scope :blocked, -> { where("staff")}
+
+  def permalink
+    "https://www.waze.com/editor/?env=#{I18n.t('env')}\&zoom=7\&lat=#{self.latitude}\&lon=#{self.longitude}\&showpur=#{self.id}\&endshow"
+  end
 end

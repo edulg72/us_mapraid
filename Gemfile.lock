@@ -131,13 +131,12 @@ DEPENDENCIES
   autoprefixer-rails
   bootstrap-sass (~> 3.3.5)
   coffee-rails (~> 4.0.0)
-  font-awesome-sass
+  font-awesome-sass (~> 4.7.0)
   haml
   jbuilder (~> 2.0)
   jquery-rails
   pg
   rails (= 4.1.4)
-  rake (= 0.9.6)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   spring
@@ -146,4 +145,4 @@ DEPENDENCIES
   uglifier
 
 BUNDLED WITH
-   1.13.6
+   1.14.6

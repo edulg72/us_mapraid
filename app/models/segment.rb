@@ -14,12 +14,11 @@ class Segment < ActiveRecord::Base
   scope :unverified_speed, -> {where('((fwddirection and fwdmaxspeedunverified) or (revdirection and revmaxspeedunverified))')}
   scope :low_lock, -> {where('(roadtype in (3,4,6,7,15,18) and lock is null) or (roadtype = 3 and lock < 5) or (roadtype = 4 and lock < 4) or (roadtype = 18 and lock < 2) or (roadtype = 6 and lock < 4) or (roadtype = 7 and lock < 3) or (roadtype = 15 and lock < 5)')}
 
-  def permalink(server = 'ROW')
-    env = {'ROW' => 'row', 'NA' => 'usa'}
-    "https://www.waze.com/editor/?env=#{env[server]}&zoom=5&lat=#{latitude}&lon=#{longitude}&segments=#{id}"
+  def permalink
+    "https://www.waze.com/editor/?env=#{I18n.t('env')}&zoom=7&lat=#{self.latitude}&lon=#{self.longitude}&segments=#{self.id}"
   end
 
   def location
-    "#{(street_id.nil? ? I18n.t('no-street') : (street.isempty ? I18n.t('no-street') : street.name.to_s) + ', ' + (street.city_id.nil? ? I18n.t('no-city') : (street.city.isempty ? I18n.t('no-city') : street.city.name.to_s) + ', ' + (street.city.state_id.nil? ? I18n.t('no-state') : street.city.state.name.to_s)))}"
+    "#{(self.street_id.nil? ? I18n.t('no-street') : (self.street.isempty ? I18n.t('no-street') : self.street.name.to_s) + ', ' + (self.street.city_id.nil? ? I18n.t('no-city') : (self.street.city.isempty ? I18n.t('no-city') : self.street.city.name.to_s) + ', ' + self.street.city.state.name.to_s))}"
   end
 end

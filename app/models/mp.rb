@@ -7,4 +7,8 @@ class MP < ActiveRecord::Base
   scope :national, -> { where("city_id is not null") }
   scope :open, -> { where("resolved_on is null")}
   scope :closed, -> { where("resolved_on is not null")}
+
+  def permalink
+    "https://www.waze.com/editor/?env=#{I18n.t('env')}\&zoom=7\&lat=#{self.latitude}\&lon=#{self.longitude}\&mapProblem=#{self.id}"
+  end
 end
