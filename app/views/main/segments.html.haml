@@ -19,7 +19,7 @@
                 %th.text-center{:width => "100", 'data-toggle' => "tooltip", 'data-placement' => "top", :title => "N&uacute;mero de segmentos cercanos con problemas similares"}= t('density')
                 %th= t('segment-location')
             %tbody
-              - @area.segments.drivable.disconnected.order('dc_density desc').each do |segment|
+              - @area.segments.drivable.disconnected.order('dc_density desc').limit(5000).each do |segment|
                 %tr
                   %td.text-center= segment.dc_density
                   %td
@@ -39,7 +39,7 @@
                 %th.text-center{:width => '100'}= t('elevation')
                 %th= t('segment-location')
             %tbody
-              - @area.segments.where('level < -3 or level > 3').order("level desc").each do |segment|
+              - @area.segments.where('level < -3 or level > 3').order("level desc").limit(5000).each do |segment|
                 %tr
                   %td.text-center= segment.level
                   %td
@@ -59,7 +59,7 @@
                 %th= t('last-edit')
                 %th= t('editor')
             %tbody
-              - @area.segments.no_name.order("last_edit_on").each do |segment|
+              - @area.segments.no_name.order("last_edit_on").limit(5000).each do |segment|
                 %tr
                   %td
                     %a.pl{href: segment.permalink, target: 'WME'}= segment.id
@@ -80,7 +80,7 @@
                 %th.text-center= t('lock')
                 %th= t('segment-location')
             %tbody
-              - @area.segments.low_lock.order('roadtype, lock, street_id').each do |segment|
+              - @area.segments.low_lock.order('roadtype, lock, street_id').limit(5000).each do |segment|
                 %tr
                   %td= roadtype_name(segment.roadtype)
                   %td.text-center= (segment.lock.nil? ? t('automatic') : segment.lock)
